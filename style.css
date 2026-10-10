@@ -240,11 +240,12 @@ table.hs tr.me { background: #ffe4ef; }
 .title .names.player input { width: 230px; }
 .title .names input.need { border-color: #ff5a5a; background: #ffe8e8; }
 
-/* Russian: VT323 has no Cyrillic letters, so swap it for Tiny5 (Press Start 2P has Cyrillic) */
-body.ru, body.ru button, body.ru input, body.ru div, body.ru span, body.ru li, body.ru p, body.ru label, body.ru td, body.ru b, body.ru a { font-family: 'Tiny5', 'Courier New', monospace; }
-body.ru .hbtn { font-size: 14px; padding: 2px 7px; }
-body.ru { font-size: 16px; }
-body.ru #hud .lbl, body.ru #hPhase { font-size: 12px; }
+/* Russian: VT323 has no Cyrillic letters, so use PT Sans Narrow (clear Cyrillic, narrow enough for longer Russian words) */
+body.ru, body.ru button, body.ru input, body.ru div, body.ru span, body.ru li, body.ru p, body.ru label, body.ru td, body.ru b, body.ru a { font-family: 'PT Sans Narrow', 'Arial Narrow', sans-serif; }
+body.ru .hbtn { font-size: 17px; font-weight: 700; padding: 2px 8px; }
+body.ru { font-size: 18px; }
+body.ru #hud .lbl, body.ru #hPhase { font-size: 14px; }
 .lang { display: flex; justify-content: center; gap: 8px; margin: 4px 0 8px; }
 .lang button { font-size: 18px; padding: 2px 12px; }
 .lang button.on { background: var(--rose); color: #fff; }
+body.ru .title .logo span { font-family: 'Press Start 2P', monospace; }

@@ -76,14 +76,14 @@ function tr(s) {
   return r;
 }
 // fonts that have Cyrillic letters
-const UI_FONT = LANG === 'ru' ? '"Tiny5", "Courier New", monospace' : '"VT323", "Courier New", monospace';
+const UI_FONT = LANG === 'ru' ? '"PT Sans Narrow", "Arial Narrow", sans-serif' : '"VT323", "Courier New", monospace';
 
 // ---------- page text ----------
 (function () {
   if (LANG !== 'ru') return;
   document.documentElement.lang = 'ru';
   const l = document.createElement('link'); l.rel = 'stylesheet';
-  l.href = 'https://fonts.googleapis.com/css2?family=Tiny5&display=swap'; document.head.appendChild(l);
+  l.href = 'https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap'; document.head.appendChild(l);
   document.body.classList.add('ru');
   const SKIP = { INPUT: 1, TEXTAREA: 1, SCRIPT: 1, STYLE: 1 };
   const doText = (n) => { if (n.parentNode && SKIP[n.parentNode.nodeName]) return; const v = n.nodeValue, t = tr(v); if (t !== v) n.nodeValue = t; };
