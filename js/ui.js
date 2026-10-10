@@ -605,16 +605,17 @@ function drawCouple(canvas) {
 function showTitle() {
   $('topinfo').innerHTML = ''; $('feed').innerHTML = ''; $('side').classList.add('hidden'); $('info').classList.add('hidden'); $('placebar').classList.add('hidden'); $('advisor').classList.add('hidden'); sideMode = null;
   const GL = window.GUEST_LIST || {};
-  let gn = store.get('tw_g', GL.groom || 'Nick'), bn = store.get('tw_b', GL.bride || 'Olga');
-  if (gn === 'Callum' && bn === 'Sophie') { gn = GL.groom || 'Nick'; bn = GL.bride || 'Olga'; }
+  const gn = GL.groom || 'Nick', bn = GL.bride || 'Olga'; // the couple's names are fixed
+  const pn = store.get('tw_player', '');
   const hs = store.get('tw_scores', []);
   const day = store.get('tw_day', 1);
-  const tbl = hs.length ? '<table class="hs">' + hs.slice(0, 5).map((s, i) => `<tr><td>${i + 1}.</td><td>${esc(s.couple)}</td><td>Day ${s.day}</td><td class="r">${s.score.toLocaleString('en-GB')}</td></tr>`).join('') + '</table>' : '<p class="dim">No weddings yet. Make history!</p>';
+  const tbl = hs.length ? '<table class="hs">' + hs.slice(0, 5).map((s, i) => `<tr><td>${i + 1}.</td><td>${esc(s.player || s.couple)}</td><td>Day ${s.day}</td><td class="r">${s.score.toLocaleString('en-GB')}</td></tr>`).join('') + '</table>' : '<p class="dim">No weddings yet. Make history!</p>';
   const box = openModal(`
     <div class="logo">THEME<br><span>WEDDING</span></div>
     <p class="tag">One day. The same day. Over and over. Make it perfect.</p>
     <canvas id="tcouple" width="432" height="336" style="width:216px;height:168px"></canvas>
-    <div class="names"><label>Groom<input id="nG" maxlength="14" value="${esc(gn)}"></label><span class="amp">&amp;</span><label>Bride<input id="nB" maxlength="14" value="${esc(bn)}"></label></div>
+    <div class="names"><label>Groom<input id="nG" value="${esc(gn)}" readonly tabindex="-1"></label><span class="amp">&amp;</span><label>Bride<input id="nB" value="${esc(bn)}" readonly tabindex="-1"></label></div>
+    <div class="names player"><label>Your name<input id="nP" maxlength="14" placeholder="Enter your name" autocomplete="nickname" value="${esc(pn)}"></label></div>
     <button id="bStart" class="big">${day > 1 ? 'RELIVE THE BIG DAY (Day ' + day + ')' : 'BEGIN THE BIG DAY'}</button>
     <div class="cols"><div><h3>HOW TO PLAY</h3><ul>
       <li>Run the wedding day from 09:30 to midnight.</li>
@@ -622,17 +623,16 @@ function showTitle() {
       <li>Keep guests fed, watered, relieved and entertained.</li>
       <li>Random chaos will happen. Every day has a different <b>twist</b>.</li>
       <li>Not enough cleaners? <b>Rats!</b> ${IS_TOUCH ? 'Tap' : 'Click'} them to shoot them.</li>
-      <li>Olga's Russian family have <b>traditions</b>. Respect them.</li>
-      <li>Edit <b>guest-names.js</b> to invite your own friends &amp; family.</li></ul></div>
+      <li>Olga's Russian family have <b>traditions</b>. Respect them.</li></ul></div>
       <div><h3>BEST WEDDINGS</h3>${tbl}</div></div>
   `, 'title');
   drawCouple(box.querySelector('#tcouple'));
   box.querySelector('#bStart').onclick = () => {
     auInit(); SFX.bells();
-    const g = (box.querySelector('#nG').value || 'Nick').trim().slice(0, 14) || 'Nick';
-    const b = (box.querySelector('#nB').value || 'Olga').trim().slice(0, 14) || 'Olga';
-    store.set('tw_g', g); store.set('tw_b', b);
-    startDay(store.get('tw_day', 1), g, b);
+    const pi = box.querySelector('#nP'), player = pi.value.trim().slice(0, 14);
+    if (!player) { pi.focus(); pi.classList.add('need'); return; }
+    store.set('tw_player', player);
+    startDay(store.get('tw_day', 1), gn, bn);
   };
 }
 const DAY_LINES = [
@@ -748,7 +748,7 @@ function showEndScreen(s) {
   const starStr = '★'.repeat(s.stars) + '☆'.repeat(5 - s.stars);
   const mem = G.memories.length ? G.memories.map(m => `<li><span>${fmtTime(m.time)}</span> ${esc(m.text)} <b>+${m.pts}</b></li>`).join('') : '<li class="dim">Nothing memorable happened. Somehow.</li>';
   const hs = store.get('tw_scores', []);
-  const tbl = '<table class="hs">' + hs.slice(0, 5).map((h, i) => `<tr class="${h.score === s.total && h.day === G.day ? 'me' : ''}"><td>${i + 1}.</td><td>${esc(h.couple)}</td><td>Day ${h.day}</td><td class="r">${h.score.toLocaleString('en-GB')}</td></tr>`).join('') + '</table>';
+  const tbl = '<table class="hs">' + hs.slice(0, 5).map((h, i) => `<tr class="${h.score === s.total && h.day === G.day ? 'me' : ''}"><td>${i + 1}.</td><td>${esc(h.player || h.couple)}</td><td>Day ${h.day}</td><td class="r">${h.score.toLocaleString('en-GB')}</td></tr>`).join('') + '</table>';
   const box = openModal(`
     <div class="faxhead"><span>DAY ${G.day} COMPLETE</span><span>00:00</span></div>
     <h2>${esc(s.title)}</h2>

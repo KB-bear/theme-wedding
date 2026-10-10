@@ -729,7 +729,7 @@ function endDay() {
   $('info').classList.add('hidden'); $('side').classList.add('hidden'); sideMode = null;
   const s = computeScore();
   const hs = store.get('tw_scores', []);
-  hs.push({ score: s.total, day: G.day, couple: G.gName + ' & ' + G.bName, title: s.title, date: new Date().toLocaleDateString('en-GB') });
+  hs.push({ score: s.total, day: G.day, couple: G.gName + ' & ' + G.bName, player: store.get('tw_player', ''), title: s.title, date: new Date().toLocaleDateString('en-GB') });
   hs.sort((a, b) => b.score - a.score);
   store.set('tw_scores', hs.slice(0, 8));
   store.set('tw_day', G.day + 1);

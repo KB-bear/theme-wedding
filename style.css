@@ -233,3 +233,9 @@ table.hs tr.me { background: #ffe4ef; }
 .photo { text-align: center; margin: 8px 0 10px; }
 .photo canvas { width: 96%; height: auto; transform: rotate(-1.2deg); box-shadow: 4px 6px 0 rgba(0,0,0,.35); image-rendering: pixelated; }
 .photo a { display: block; margin-top: 6px; color: var(--gold); font-size: 18px; }
+
+/* title screen: fixed couple names + required player name */
+.title .names input[readonly] { background: #d9d4bd; color: #555; cursor: default; }
+.title .names.player { margin-top: 0; }
+.title .names.player input { width: 230px; }
+.title .names input.need { border-color: #ff5a5a; background: #ffe8e8; }
