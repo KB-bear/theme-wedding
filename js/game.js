@@ -317,7 +317,10 @@ function arrive(p) {
   p.present = true; p.x = rnd(6.2, 7.8); p.y = 23.4; p.state = 'idle'; p.idleT = 0;
   if (G.phase === 'setup' || G.phase === 'arrive') think(p, 'heart', 3);
   const line = catchphraseFor(p);
-  if (line) { shout(p, line, 9); msg(p.name + ': "' + line + '"', 'gold'); toast(p.name.toUpperCase() + ': "' + line.toUpperCase() + '"', 'gold'); SFX.boom(); }
+  if (line) later(4, () => { // wait until they've walked in a bit
+    if (!p.present || p.hidden) return;
+    shout(p, line, 9); msg(p.name + ': "' + line + '"', 'gold'); toast(p.name.toUpperCase() + ': "' + line.toUpperCase() + '"', 'gold'); SFX.boom();
+  });
 }
 
 // ---------- guest-names.js specials: catchphrases, the exploding guest, the dog ----------
