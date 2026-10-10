@@ -602,6 +602,19 @@ function drawCouple(canvas) {
   }
   c.restore();
 }
+// Global leaderboard table (falls back silently to the local one already on screen)
+function lbTable(rows, meName, meScore) {
+  return '<table class="hs">' + rows.map((h, i) => `<tr class="${h.player === meName && h.score === meScore ? 'me' : ''}"><td>${i + 1}.</td><td>${esc(h.player)}</td><td>Day ${h.day}</td><td class="r">${h.score.toLocaleString('en-GB')}</td></tr>`).join('') + '</table>';
+}
+function fillGlobalBoard(box, wait, meScore) {
+  const el = box.querySelector('.hsbox'); if (!el || !LB.on) return;
+  el.insertAdjacentHTML('afterbegin', '<p class="dim">Loading global scores…</p>');
+  Promise.resolve(wait).then(() => LB.top(10)).then(rows => {
+    if (!box.isConnected) return;
+    if (rows && rows.length) el.innerHTML = lbTable(rows, store.get('tw_player', ''), meScore);
+    else el.querySelector('.dim') && el.querySelector('.dim').remove();
+  });
+}
 function showTitle() {
   $('topinfo').innerHTML = ''; $('feed').innerHTML = ''; $('side').classList.add('hidden'); $('info').classList.add('hidden'); $('placebar').classList.add('hidden'); $('advisor').classList.add('hidden'); sideMode = null;
   const GL = window.GUEST_LIST || {};
@@ -624,8 +637,9 @@ function showTitle() {
       <li>Random chaos will happen. Every day has a different <b>twist</b>.</li>
       <li>Not enough cleaners? <b>Rats!</b> ${IS_TOUCH ? 'Tap' : 'Click'} them to shoot them.</li>
       <li>Olga's Russian family have <b>traditions</b>. Respect them.</li></ul></div>
-      <div><h3>BEST WEDDINGS</h3>${tbl}</div></div>
+      <div><h3>BEST WEDDINGS${LB.on ? ' (EVERYONE)' : ''}</h3><div class="hsbox">${tbl}</div></div></div>
   `, 'title');
+  fillGlobalBoard(box, null);
   drawCouple(box.querySelector('#tcouple'));
   box.querySelector('#bStart').onclick = () => {
     auInit(); SFX.bells();
@@ -767,12 +781,13 @@ function showEndScreen(s) {
       <li>Photo booth snaps <b>${st.photos}</b></li><li>Times someone was sick <b>${st.vomits}</b></li><li>Fights <b>${st.fights}</b></li>
       <li>Rats shot <b>${st.rats || 0}</b></li><li>Loo accidents <b>${st.accidents}</b></li><li>Slips &amp; falls <b>${st.falls}</b></li><li>Stormed off <b>${st.stormed}</b></li>
       <li>Sent home in a taxi <b>${st.taxis}</b></li><li>Messes cleaned <b>${st.cleaned}</b></li></ul>
-      <h3>BEST WEDDINGS</h3>${tbl}</div></div>
+      <h3>BEST WEDDINGS${LB.on ? ' (EVERYONE)' : ''}</h3><div class="hsbox">${tbl}</div></div></div>
     <div class="row"><button class="ok big" id="bAgain">RELIVE THE DAY (Day ${G.day + 1})</button><button id="bTitle">Title screen</button></div>`, 'fax end');
   const ph = box.querySelector('#ephoto'); drawWeddingPhoto(ph);
   const url = photoDownloadLink(ph); if (url) { const l = box.querySelector('#bPhoto'); l.href = url; l.classList.remove('hidden'); }
   box.querySelector('#bAgain').onclick = () => { SFX.bells(); startDay(G.day + 1, G.gName, G.bName); };
   box.querySelector('#bTitle').onclick = () => { closeModal(); G = null; showTitle(); };
+  fillGlobalBoard(box, G.lbSent, s.total);
   SFX.memory();
 }
 

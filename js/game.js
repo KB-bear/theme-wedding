@@ -733,6 +733,7 @@ function endDay() {
   hs.sort((a, b) => b.score - a.score);
   store.set('tw_scores', hs.slice(0, 8));
   store.set('tw_day', G.day + 1);
+  G.lbSent = LB.submit(store.get('tw_player', ''), s.total, G.day, s.title);
   const seen = store.get('tw_seen', {});
   for (const id of G.seenToday) seen[id] = G.day;
   store.set('tw_seen', seen);
