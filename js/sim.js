@@ -744,6 +744,7 @@ function animalBrain(a) {
   a.munch = false;
   if (a.role === 'rat') { ratBrain(a); return; }
   if (a.role === 'dog') {
+    if (a.aisle) return; // walking down the aisle (dogAisleWalk)
     if (['dinner', 'speeches', 'evening', 'firstdance', 'party', 'sendoff', 'end'].includes(G.phase)) { a.leaving = true; msg(a.name + ' has been taken home for his dinner. Bye, ' + a.name + '!', 'good'); return; }
     if (a.poopAt && G.time >= a.poopAt && !a.moving) {
       a.poopAt = 0;

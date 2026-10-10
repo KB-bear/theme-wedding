@@ -1150,6 +1150,7 @@ function evSendoff() {
 // ===================== NEW CEREMONY EVENTS =====================
 EVENTS.push(
   { id: 'dog', pool: 'ceremony', build() {
+    if (G.dogSeen) return null; // our own dog does the aisle walk instead
     const owner = anyGuest(); const dog = pick(['spaniel', 'sausage dog', 'enormous Great Dane', 'very muddy Labrador', 'tiny fluffy Pomeranian']); const dn = pick(['Biscuit', 'Barry', 'Sputnik', 'Mr Wiggles', 'Boris', 'Pickle']);
     return { title: 'WOOF!', text: `Halfway through the readings a ${dog} called ${dn} comes bombing down the aisle, ears flapping, chased by ${owner ? owner.name : 'its red-faced owner'}. It skids to a halt at ${gN()}'s feet and sits, like it was invited.`, choices: [
       { label: 'Make it an honorary guest', fn() { joy(45); heartsAt(6, 3, 8); memory(`${dn} the wedding dog`, 40); return `${dn} sits patiently through the vows and howls at "you may kiss the bride". Best behaved guest of the day.`; } },

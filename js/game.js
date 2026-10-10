@@ -364,8 +364,42 @@ function explodeGuest(p) {
 function spawnDog() {
   const GL = window.GUEST_LIST || {};
   const d = spawnAnimal('dog', true); d.name = GL.dog || 'Barnie'; G.dogSeen = d;
-  d.x = 7.2; d.y = 23.2; d.spd = 1.7; d.poopAt = G.time + rnd(30, 150);
+  d.x = 7.2; d.y = 23.2; d.spd = 1.7; d.poopAt = rnd(725, 790); // after the ceremony (the aisle walk may beat him to it)
   msg(d.name + ' the golden retriever has arrived with the guests. Good boy!', 'good');
+}
+// during the vows the dog trots down the aisle to the couple... and half the time stops halfway for a poo
+function dogAisleWalk() {
+  const d = G.dogSeen;
+  if (!d || !d.present || d.leaving || d.aisle) return;
+  d.aisle = true; interrupt(d); d.spd = 1.3; d.state = 'walk';
+  const poos = chance(0.5), mid = ri(6, 9);
+  const down = (from, to) => { const p = []; for (let y = from; y >= to; y--) p.push([6, y]); return p; };
+  const atAltar = (q) => {
+    q.state = 'idle'; q.idleT = 6; heartsAt(q.x, q.y, 4);
+    later(4, () => { q.aisle = false; });
+  };
+  const middle = (q) => {
+    if (!poos) { q.path = down(mid - 1, 4); q.onArrive = atAltar; return; }
+    q.poopAt = 0; q.munch = true;
+    spawnMess('poop', q.x, q.y); crowdReact('angry', 0.3); bliss(-2);
+    msg(q.name + ' has stopped halfway down the aisle... and done his business. Right in front of everyone.', 'bad');
+    later(1.5, () => {
+      q.munch = false; q.path = down(mid - 1, 4); q.onArrive = atAltar;
+      if (!staffOf('cleaner').some(c => c.present)) dogPooPrompt(q);
+      else msg('Your cleaner is already on it with a bag and a brave face.', 'good');
+    });
+  };
+  const start = () => { d.path = down(21, mid); d.onArrive = middle; };
+  if (!goTo(d, 6, 22, start)) { d.x = 6.5; d.y = 22.5; start(); }
+  msg(d.name + ' has decided he is part of the ceremony and is trotting down the aisle. Aww!', 'good');
+  crowdReact('heart', 0.3);
+}
+function dogPooPrompt(d) {
+  const cost = STAFF.cleaner.cost; let want = false;
+  queueEvent({ title: "WHO'S A GOOD BOY?", text: `${d.name} has left a steaming present in the middle of the aisle. The front rows are holding their breath, and you don't have a Cleaner. Someone has to deal with it before the photos.`, choices: [
+    { label: `Hire a Cleaner (${fmtMoney(cost)})`, fn() { want = true; return IS_TOUCH ? 'Good call. Tap where your new Cleaner should start and they will deal with it.' : 'Good call. Click where your new Cleaner should start and they will deal with it.'; } },
+    { label: 'Leave it', fn() { bliss(-3); return `Everyone steps around it for the rest of the morning. ${nameOr(G.mob, bN() + "'s mum")} is not impressed.`; } },
+  ], after() { if (want) hire('cleaner'); } });
 }
 
 // ---------- phases ----------
@@ -464,6 +498,7 @@ function startBrideWalk() {
 }
 function brideArrives() {
   G.brideArrived = true; G.kissAt = G.time + 6;
+  later(2, dogAisleWalk);
   later(3, () => { if (G.groom.present) shout(G.groom, 'I do!', 2.5); });
   later(4.5, () => { if (G.bride.present) shout(G.bride, 'I do!', 2.5); });
   const all = guests().filter(p => !p.evening);

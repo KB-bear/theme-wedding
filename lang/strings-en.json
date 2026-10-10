@@ -6496,6 +6496,14 @@
   "file": "js/game.js"
  },
  {
+  "en": "{0} has stopped halfway down the aisle... and done his business. Right in front of everyone.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} has decided he is part of the ceremony and is trotting down the aisle. Aww!",
+  "file": "js/game.js"
+ },
+ {
   "en": "Here comes the bride! {0} walks down the aisle.",
   "file": "js/game.js"
  },
@@ -6977,6 +6985,34 @@
  },
  {
   "en": "Is the bar still open?",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Your cleaner is already on it with a bag and a brave face.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "WHO'S A GOOD BOY?",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} has left a steaming present in the middle of the aisle. The front rows are holding their breath, and you don't have a Cleaner. Someone has to deal with it before the photos.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Hire a Cleaner ({0})",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Good call. Tap where your new Cleaner should start and they will deal with it.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Good call. Click where your new Cleaner should start and they will deal with it.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Everyone steps around it for the rest of the morning. {0} is not impressed.",
   "file": "js/game.js"
  },
  {
