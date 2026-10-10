@@ -10,18 +10,18 @@
    If an image fails to load we fall back to the procedural renderer.
    ========================================================= */
 const ASSET = { imgs: {}, total: 0, done: 0, onReady: [] };
-function loadImg(key, src) {
+function loadImg(key, src, then) {
   if (ASSET.imgs[key]) return ASSET.imgs[key];
   const im = new Image();
   ASSET.total++;
-  im.onload = () => { ASSET.done++; assetsMaybeReady(); };
-  im.onerror = () => { im._bad = true; ASSET.done++; assetsMaybeReady(); };
+  im.onload = () => { ASSET.done++; if (then) then(); assetsMaybeReady(); };
+  im.onerror = () => { im._bad = true; ASSET.done++; if (then) then(); assetsMaybeReady(); };
   im.src = src;
   ASSET.imgs[key] = im;
   return im;
 }
 function imgOk(im) { return !!(im && !im._bad && im.complete && im.naturalWidth > 0); }
-function assetsReady() { return ASSET.total > 0 && ASSET.done >= ASSET.total; }
+function assetsReady() { return ASSET.allQueued && ASSET.done >= ASSET.total; }
 function assetsMaybeReady() {
   if (!assetsReady()) return;
   const cbs = ASSET.onReady; ASSET.onReady = [];
@@ -518,8 +518,21 @@ drawPersonPreview = (function (orig) {
 })(drawPersonPreview);
 
 // ---------- boot: start loading everything ----------
-preloadSR();
-preloadChars();
+// The title-screen couple loads first so the title appears quickly; everything else follows.
+(function () {
+  const ci = CI(), first = [];
+  for (const id of ['groom', 'bride']) if (ci.chars[id]) for (const a of ['walk', 'idle', 'cast', 'hurt', 'sit']) if (ci.chars[id][a]) first.push([id, a]);
+  let left = first.length, rest = false;
+  const loadRest = () => { if (rest) return; rest = true; preloadSR(); preloadChars(); ASSET.allQueued = true; assetsMaybeReady(); };
+  const one = () => {
+    if (--left > 0) return;
+    const tc = document.getElementById('tcouple'); if (tc && typeof drawCouple === 'function') drawCouple(tc);
+    loadRest();
+  };
+  for (const [id, a] of first) loadImg('ch:' + id + ':' + a, ci.chars[id][a], one);
+  if (!first.length) loadRest();
+  setTimeout(loadRest, 3000); // don't hold everything else up for long on a slow connection
+})();
 whenAssetsReady(() => {
   // re-bake the floor and redraw any open title-screen art now the images exist
   if (typeof G !== 'undefined' && G) { drawFloor(); markStaticDirty(); }

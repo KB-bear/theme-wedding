@@ -8,7 +8,7 @@
 <title>Theme Wedding</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2026-10-10b">
+<link rel="stylesheet" href="style.css?v=2026-10-10c">
 </head>
 <body>
 <canvas id="screen"></canvas>
@@ -42,14 +42,19 @@
 
 <script>
 (function () {
-  var BUILD = '2026-10-10b'; // bump when deploying so phones fetch the new scripts instead of cached ones
-  var SCRIPTS = ['lang/ru.js', 'js/i18n.js', 'js/leaderboard.js', 'js/core.js', 'js/draw.js', 'assets/characters/index.js', 'assets/characters/faces.js', 'js/sprites.js',
-                 'js/sim.js', 'js/events.js', 'js/game.js', 'js/audio.js', 'js/ui.js'];
+  var BUILD = '2026-10-10c'; // bump when deploying so phones fetch the new scripts instead of cached ones
+  var RU = false; try { RU = localStorage.getItem('tw_lang') === 'ru'; } catch (e) {}
+  var SCRIPTS = (RU ? ['lang/ru.js'] : []).concat(['js/i18n.js', 'js/leaderboard.js', 'js/core.js', 'js/draw.js', 'assets/characters/index.js', 'assets/characters/faces.js', 'js/sprites.js',
+                 'js/sim.js', 'js/events.js', 'js/game.js', 'js/audio.js', 'js/ui.js']);
+  function url(src) { return src + (src.indexOf('//') < 0 ? '?v=' + BUILD : ''); }
   function load(src, ok, bad) {
-    var s = document.createElement('script'); s.src = src + (src.indexOf('//') < 0 ? '?v=' + BUILD : ''); s.async = false;
+    var s = document.createElement('script'); s.src = url(src); s.async = false;
     s.onload = ok; s.onerror = bad || ok; document.body.appendChild(s);
   }
-  function startGame() { (function next(i) { if (i < SCRIPTS.length) load(SCRIPTS[i], function () { next(i + 1); }); })(0); }
+  // start downloading the game scripts straight away, in parallel, while the guest list is unlocked
+  SCRIPTS.forEach(function (src) { var l = document.createElement('link'); l.rel = 'preload'; l.as = 'script'; l.href = url(src); document.head.appendChild(l); });
+  // then run them in order (async=false keeps the order without waiting for each one in turn)
+  function startGame() { SCRIPTS.forEach(function (src) { load(src); }); }
   function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
   // Guest list: use guest-names.js if present (local copy), else decrypt guest-names.enc.js with the key in the URL #hash.
   function decrypt() {
@@ -62,7 +67,9 @@
       return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(C.i) }, k, b64(C.d));
     }).then(function (buf) { (0, eval)(new TextDecoder().decode(buf)); }).catch(function () {}).then(startGame);
   }
-  load('guest-names.js', startGame, function () { load('guest-names.enc.js', decrypt, startGame); });
+  // the plain guest-names.js only exists on a local copy, so don't wait for a 404 on the website
+  if (/github\.io$/.test(location.hostname)) load('guest-names.enc.js', decrypt, startGame);
+  else load('guest-names.js', startGame, function () { load('guest-names.enc.js', decrypt, startGame); });
 })();
 </script>
 </body>
