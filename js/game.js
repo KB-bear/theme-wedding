@@ -367,16 +367,28 @@ function spawnDog() {
   d.x = 7.2; d.y = 23.2; d.spd = 1.7; d.poopAt = rnd(725, 790); // after the ceremony (the aisle walk may beat him to it)
   msg(d.name + ' the golden retriever has arrived with the guests. Good boy!', 'good');
 }
-// during the vows the dog trots down the aisle to the couple... and half the time stops halfway for a poo
-function dogAisleWalk() {
+// the dog leads the way: he waits at the end of the aisle while everyone sits down, then trots down it
+// just ahead of the bride... and half the time stops halfway for a poo
+const AISLE_TOP = 22; // the tile he waits on
+function dogGetReady() {
   const d = G.dogSeen;
   if (!d || !d.present || d.leaving || d.aisle) return;
-  d.aisle = true; interrupt(d); d.spd = 1.3; d.state = 'walk';
-  const poos = chance(0.5), mid = ri(6, 9);
+  d.aisle = true; interrupt(d); d.state = 'walk';
+  if (!goTo(d, 6, AISLE_TOP, (q) => { q.state = 'idle'; q.dir = 'up'; })) { d.x = 6.5; d.y = AISLE_TOP + 0.5; d.state = 'idle'; }
+}
+function dogAisleWalk() {
+  const d = G.dogSeen;
+  if (!d || !d.present || d.leaving) return;
+  if (!d.aisle) { d.aisle = true; interrupt(d); }
+  // not made it to the end of the aisle yet? he bounds over from wherever he is
+  if (Math.floor(d.x) !== 6 || Math.floor(d.y) !== AISLE_TOP) { d.x = 6.5; d.y = AISLE_TOP + 0.5; }
+  d.spd = 1.6; d.state = 'walk';
+  const poos = chance(0.5), mid = ri(7, 10);
   const down = (from, to) => { const p = []; for (let y = from; y >= to; y--) p.push([6, y]); return p; };
   const atAltar = (q) => {
-    q.state = 'idle'; q.idleT = 6; heartsAt(q.x, q.y, 4);
-    later(4, () => { q.aisle = false; });
+    q.state = 'idle'; q.dir = 'up'; heartsAt(q.x, q.y, 4);
+    const stay = () => { if (G.kissed) later(3, () => { q.aisle = false; }); else later(2, stay); }; // sits at the front until the kiss
+    stay();
   };
   const middle = (q) => {
     if (!poos) { q.path = down(mid - 1, 4); q.onArrive = atAltar; return; }
@@ -389,9 +401,8 @@ function dogAisleWalk() {
       else msg('Your cleaner is already on it with a bag and a brave face.', 'good');
     });
   };
-  const start = () => { d.path = down(21, mid); d.onArrive = middle; };
-  if (!goTo(d, 6, 22, start)) { d.x = 6.5; d.y = 22.5; start(); }
-  msg(d.name + ' has decided he is part of the ceremony and is trotting down the aisle. Aww!', 'good');
+  d.path = down(AISLE_TOP - 1, mid); d.onArrive = middle;
+  msg(d.name + ' leads the way down the aisle, tail wagging. Aww!', 'good');
   crowdReact('heart', 0.3);
 }
 function dogPooPrompt(d) {
@@ -426,6 +437,7 @@ function enterPhase(ph) {
   switch (ph.id) {
     case 'seat': {
       msg('Please take your seats for the ceremony!', '');
+      later(6, dogGetReady);
       const r = G.registrar; r.present = true; r.x = 6.5; r.y = 1.6; r.state = 'script';
       G.fob.fobWalk = true;
       break;
@@ -493,12 +505,12 @@ function startBrideWalk() {
   f.path = fp; f.onArrive = (q) => { q.state = 'seated'; q.sitting = true; q.x = 7.5; q.y = 4.5; q.spd = q.baseSpd; };
   const g = G.groom;
   if (g.state !== 'altar') { interrupt(g); g.x = 5.5; g.y = 2.5; g.state = 'altar'; }
+  dogAisleWalk();
   SFX.march();
   msg('Here comes the bride! ' + G.bName + ' walks down the aisle.', 'gold');
 }
 function brideArrives() {
   G.brideArrived = true; G.kissAt = G.time + 6;
-  later(2, dogAisleWalk);
   later(3, () => { if (G.groom.present) shout(G.groom, 'I do!', 2.5); });
   later(4.5, () => { if (G.bride.present) shout(G.bride, 'I do!', 2.5); });
   const all = guests().filter(p => !p.evening);
