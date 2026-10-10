@@ -52,7 +52,7 @@
   function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
   // Guest list: use guest-names.js if present (local copy), else decrypt guest-names.enc.js with the key in the URL #hash.
   function decrypt() {
-    var pass = decodeURIComponent(location.hash.slice(1));
+    var pass = decodeURIComponent(location.hash.slice(1)) || 'tulip-orchid-meadow-meadow-727'; // URL #key overrides the built-in default
     if (!pass || !window.GUEST_CIPHER || !(window.crypto && crypto.subtle)) return startGame();
     var C = window.GUEST_CIPHER, enc = new TextEncoder();
     crypto.subtle.importKey('raw', enc.encode(pass), 'PBKDF2', false, ['deriveKey']).then(function (k) {
