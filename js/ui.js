@@ -615,14 +615,37 @@ function fillGlobalBoard(box, wait, meScore) {
     else el.querySelector('.dim') && el.querySelector('.dim').remove();
   });
 }
+// Title screen "Hall of Fame": top 3 on a podium + a button for the full board
+function hofCards(rows) {
+  if (!rows.length) return '<p class="dim">No weddings yet. Be the first!</p>';
+  const nm = ['1ST', '2ND', '3RD'];
+  return '<div class="podium">' + rows.slice(0, 3).map((h, i) => `<div class="pod p${i + 1}"><div class="rk">${nm[i]}</div><div class="pn">${esc(h.player)}</div><div class="ps">${h.score.toLocaleString('en-GB')}</div><div class="pd">Day ${h.day}</div></div>`).join('') + '</div>';
+}
+function localBoard() { return store.get('tw_scores', []).map(x => ({ player: x.player || x.couple, score: x.score, day: x.day })); }
+function fillHof(box) {
+  const el = box.querySelector('#hofCards'); if (!el) return;
+  el.innerHTML = hofCards(localBoard());
+  if (!LB.on) return;
+  LB.top(3).then(rows => { if (rows && rows.length && box.querySelector('#hofCards') === el) el.innerHTML = hofCards(rows); });
+}
+function showFullBoard() {
+  const box = openModal(`
+    <div class="logo hofh">HALL OF FAME</div>
+    <p class="tag">${LB.on ? 'The best weddings from everyone who has played.' : 'Your best weddings on this device.'}</p>
+    <div id="fullBoard"><p class="dim">Loading…</p></div>
+    <div class="row"><button id="bBack" class="big">BACK</button></div>`, 'title');
+  box.querySelector('#bBack').onclick = () => showTitle();
+  const me = store.get('tw_player', '');
+  const draw = (rows) => { const el = box.querySelector('#fullBoard'); if (el) el.innerHTML = rows && rows.length ? lbTable(rows, me, -1) : '<p class="dim">No scores yet.</p>'; };
+  if (!LB.on) return draw(localBoard());
+  LB.top(50).then(rows => draw(rows || localBoard()));
+}
 function showTitle() {
   $('topinfo').innerHTML = ''; $('feed').innerHTML = ''; $('side').classList.add('hidden'); $('info').classList.add('hidden'); $('placebar').classList.add('hidden'); $('advisor').classList.add('hidden'); sideMode = null;
   const GL = window.GUEST_LIST || {};
   const gn = GL.groom || 'Nick', bn = GL.bride || 'Olga'; // the couple's names are fixed
   const pn = store.get('tw_player', '');
-  const hs = store.get('tw_scores', []);
   const day = store.get('tw_day', 1);
-  const tbl = hs.length ? '<table class="hs">' + hs.slice(0, 5).map((s, i) => `<tr><td>${i + 1}.</td><td>${esc(s.player || s.couple)}</td><td>Day ${s.day}</td><td class="r">${s.score.toLocaleString('en-GB')}</td></tr>`).join('') + '</table>' : '<p class="dim">No weddings yet. Make history!</p>';
   const box = openModal(`
     <div class="logo">THEME<br><span>WEDDING</span></div>
     <div class="lang"><button data-lang="en" class="${LANG === 'en' ? 'on' : ''}">English</button><button data-lang="ru" class="${LANG === 'ru' ? 'on' : ''}">Русский</button></div>
@@ -631,6 +654,7 @@ function showTitle() {
     <div class="names"><label>Groom<input id="nG" value="${esc(gn)}" readonly tabindex="-1"></label><span class="amp">&amp;</span><label>Bride<input id="nB" value="${esc(bn)}" readonly tabindex="-1"></label></div>
     <div class="names player"><label>Your name<input id="nP" maxlength="14" placeholder="Enter your name" autocomplete="nickname" value="${esc(pn)}"></label></div>
     <button id="bStart" class="big">${day > 1 ? 'RELIVE THE BIG DAY (Day ' + day + ')' : 'BEGIN THE BIG DAY'}</button>
+    <div class="hof"><div class="hofh">HALL OF FAME${LB.on ? ' · EVERYONE' : ''}</div><div id="hofCards"></div><button id="bFull" class="hofbtn">SEE FULL LEADERBOARD &#9656;</button></div>
     <div class="cols"><div><h3>HOW TO PLAY</h3><ul>
       <li>Run the wedding day from 09:30 to midnight.</li>
       <li><b>Furnish</b> bars, portaloos, fun stuff. <b>Hire</b> staff and drop them in.</li>
@@ -638,9 +662,11 @@ function showTitle() {
       <li>Random chaos will happen. Every day has a different <b>twist</b>.</li>
       <li>Not enough cleaners? <b>Rats!</b> ${IS_TOUCH ? 'Tap' : 'Click'} them to shoot them.</li>
       <li>Olga's Russian family have <b>traditions</b>. Respect them.</li></ul></div>
-      <div><h3>BEST WEDDINGS${LB.on ? ' (EVERYONE)' : ''}</h3><div class="hsbox">${tbl}</div></div></div>
   `, 'title');
-  fillGlobalBoard(box, null);
+  fillHof(box);
+  const pin = box.querySelector('#nP');
+  pin.oninput = () => { pin.classList.remove('need'); store.set('tw_player', pin.value.trim().slice(0, 14)); };
+  box.querySelector('#bFull').onclick = () => showFullBoard();
   drawCouple(box.querySelector('#tcouple'));
   box.querySelectorAll('[data-lang]').forEach(b => { b.onclick = () => { if (b.dataset.lang !== LANG) setLang(b.dataset.lang); }; });
   box.querySelector('#bStart').onclick = () => {

@@ -59,3 +59,15 @@ sit|сажают
 {0} slipped in the cake!|{0} поскользнулся на торте!
 {0} crowd-surfs|{0} прыгает в толпу
 Chaos|Хаос
+HALL OF FAME|ЗАЛ СЛАВЫ
+HALL OF FAME · EVERYONE|ЗАЛ СЛАВЫ · ВСЕ ИГРОКИ
+SEE FULL LEADERBOARD ▸|ВСЯ ТАБЛИЦА ЛИДЕРОВ ▸
+No weddings yet. Be the first!|Свадеб пока не было. Будьте первым!
+The best weddings from everyone who has played.|Лучшие свадьбы всех, кто играл.
+Your best weddings on this device.|Ваши лучшие свадьбы на этом устройстве.
+Loading…|Загрузка…
+No scores yet.|Рекордов пока нет.
+BACK|НАЗАД
+1ST|1-Е
+2ND|2-Е
+3RD|3-Е
