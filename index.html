@@ -8,7 +8,7 @@
 <title>Theme Wedding</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2026-10-10b">
 </head>
 <body>
 <canvas id="screen"></canvas>
@@ -42,10 +42,11 @@
 
 <script>
 (function () {
+  var BUILD = '2026-10-10b'; // bump when deploying so phones fetch the new scripts instead of cached ones
   var SCRIPTS = ['lang/ru.js', 'js/i18n.js', 'js/leaderboard.js', 'js/core.js', 'js/draw.js', 'assets/characters/index.js', 'assets/characters/faces.js', 'js/sprites.js',
                  'js/sim.js', 'js/events.js', 'js/game.js', 'js/audio.js', 'js/ui.js'];
   function load(src, ok, bad) {
-    var s = document.createElement('script'); s.src = src; s.async = false;
+    var s = document.createElement('script'); s.src = src + (src.indexOf('//') < 0 ? '?v=' + BUILD : ''); s.async = false;
     s.onload = ok; s.onerror = bad || ok; document.body.appendChild(s);
   }
   function startGame() { (function next(i) { if (i < SCRIPTS.length) load(SCRIPTS[i], function () { next(i + 1); }); })(0); }

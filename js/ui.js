@@ -137,7 +137,7 @@ function updateHover() {
   else if (G.hand) txt = 'Drop ' + G.hand.name.split(' (')[0] + ' here · right-click to cancel';
   else if (G.build) { const d = OT[G.build]; txt = d.name + ' · ' + fmtMoney(d.cost) + ' · right-click to stop'; }
   else { const p = pickPerson(w.x, w.y); if (p) txt = p.name + (p.kind === 'guest' && p.role !== 'Guest' ? ' · ' + p.role : ''); }
-  if (mouse.type === 'touch') txt = ''; // a tap has no hover, so the label would never go away
+  if (mouse.type !== 'mouse' && (IS_TOUCH || mouse.type === 'touch')) txt = ''; // a tap has no hover, so the label would never go away
   if (txt) { tip.textContent = txt; tip.style.display = 'block'; tip.style.left = (mouse.x + 16) + 'px'; tip.style.top = (mouse.y + 14) + 'px'; }
   else tip.style.display = 'none';
 }
