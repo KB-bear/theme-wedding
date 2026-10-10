@@ -1931,4 +1931,7 @@ window.LANG_RU = {"WC":"WC",
 "BACK":"НАЗАД",
 "1ST":"1-Е",
 "2ND":"2-Е",
-"3RD":"3-Е"};
+"3RD":"3-Е",
+"Up for grabs":"Место свободно",
+"FULL LEADERBOARD":"ВСЯ ТАБЛИЦА ЛИДЕРОВ",
+"Best weddings from everyone":"Лучшие свадьбы всех игроков"};

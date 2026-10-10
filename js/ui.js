@@ -617,9 +617,12 @@ function fillGlobalBoard(box, wait, meScore) {
 }
 // Title screen "Hall of Fame": top 3 on a podium + a button for the full board
 function hofCards(rows) {
-  if (!rows.length) return '<p class="dim">No weddings yet. Be the first!</p>';
-  const nm = ['1ST', '2ND', '3RD'];
-  return '<div class="podium">' + rows.slice(0, 3).map((h, i) => `<div class="pod p${i + 1}"><div class="rk">${nm[i]}</div><div class="pn">${esc(h.player)}</div><div class="ps">${h.score.toLocaleString('en-GB')}</div><div class="pd">Day ${h.day}</div></div>`).join('') + '</div>';
+  const me = store.get('tw_player', '').toLowerCase();
+  return [0, 1, 2].map(i => {
+    const h = rows[i], medal = `<span class="medal m${i + 1}"><i></i><b>${i + 1}</b></span>`;
+    if (!h) return `<div class="hrow r${i + 1} empty">${medal}<span class="hname">Up for grabs</span></div>`;
+    return `<div class="hrow r${i + 1}${h.player.toLowerCase() === me ? ' me' : ''}">${medal}<span class="hname">${esc(h.player)}</span><span class="hpts"><b>${h.score.toLocaleString('en-GB')}</b><small>Day ${h.day}</small></span></div>`;
+  }).join('');
 }
 function localBoard() { return store.get('tw_scores', []).map(x => ({ player: x.player || x.couple, score: x.score, day: x.day })); }
 function fillHof(box) {
@@ -654,14 +657,14 @@ function showTitle() {
     <div class="names"><label>Groom<input id="nG" value="${esc(gn)}" readonly tabindex="-1"></label><span class="amp">&amp;</span><label>Bride<input id="nB" value="${esc(bn)}" readonly tabindex="-1"></label></div>
     <div class="names player"><label>Your name<input id="nP" maxlength="14" placeholder="Enter your name" autocomplete="nickname" value="${esc(pn)}"></label></div>
     <button id="bStart" class="big">${day > 1 ? 'RELIVE THE BIG DAY (Day ' + day + ')' : 'BEGIN THE BIG DAY'}</button>
-    <div class="hof"><div class="hofh">HALL OF FAME${LB.on ? ' · EVERYONE' : ''}</div><div id="hofCards"></div><button id="bFull" class="hofbtn">SEE FULL LEADERBOARD &#9656;</button></div>
-    <div class="cols"><div><h3>HOW TO PLAY</h3><ul>
+    <div class="cols"><div class="hof"><div class="hofh">HALL OF FAME</div>${LB.on ? '<div class="hofsub">Best weddings from everyone</div>' : ''}<div id="hofCards"></div><button id="bFull" class="hofbtn">FULL LEADERBOARD</button></div>
+      <div><h3>HOW TO PLAY</h3><ul>
       <li>Run the wedding day from 09:30 to midnight.</li>
       <li><b>Furnish</b> bars, portaloos, fun stuff. <b>Hire</b> staff and drop them in.</li>
       <li>Keep guests fed, watered, relieved and entertained.</li>
       <li>Random chaos will happen. Every day has a different <b>twist</b>.</li>
       <li>Not enough cleaners? <b>Rats!</b> ${IS_TOUCH ? 'Tap' : 'Click'} them to shoot them.</li>
-      <li>Olga's Russian family have <b>traditions</b>. Respect them.</li></ul></div>
+      <li>Olga's Russian family have <b>traditions</b>. Respect them.</li></ul></div></div>
   `, 'title');
   fillHof(box);
   const pin = box.querySelector('#nP');
