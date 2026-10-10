@@ -1,0 +1,61 @@
+# Hand-written extras and overrides: English|Russian  ({0} etc. are names/numbers)
+# shorter words so the HUD and info card fit
+Happy|Настрой
+Bliss|Счастье
+BLISS|СЧАСТЬЕ
+Tipsy|Хмель
+Cut off drinks|Не наливать
+Allow drinks|Наливать
+Send home|Домой
+FURNISH|МЕБЕЛЬ
+Furnish (B)|Мебель (B)
+BAR: CASH|БАР: ПЛАТНО
+BAR: FREE|БАР: ДАРОМ
+BAR: DMITRI|БАР: ДМИТРИЙ
+· MOOD|· НАСТРОЙ
+{0} Bliss|{0} Счастья
+Couple's Bliss ({0} × 8{1})|Счастье пары ({0} × 8{1})
+Enter your name|Введите ваше имя
+English|English
+Day|День
+Best bit:|Лучший момент:
+# things built from several pieces at runtime
+A RAT has crawled out of the mess! Click it to shoot it!|Из мусора вылезла КРЫСА! Кликните по ней, чтобы застрелить!
+A RAT has crawled out of the mess! Tap it to shoot it!|Из мусора вылезла КРЫСА! Нажмите на неё, чтобы застрелить!
+{0} has been sick!|{0} стошнило!
+{0} has been sick on the dance floor!|{0} стошнило прямо на танцполе!
+Only {0}% of guests were seated for the vows.|Только {0}% гостей сидели на своих местах во время клятв.
+{0}: "{1}"|{0}: «{1}»
+Who the hell is {0}?!|Кто такой этот {0}, чёрт возьми?!
+GORKO! GORKO!|ГОРЬКО! ГОРЬКО!
+KABOOM! {0} HAS EXPLODED!|БА-БАХ! {0} ВЗОРВАЛСЯ!
+Waiting for food ({0} min)|Ждёт еду ({0} мин)
+Budget left ({0})|Остаток бюджета ({0})
+{0} and {1} stand up together, sink their pints and grin. "We'll take it in turns," says {2}. What's the big opener?|{0} и {1} встают вместе, осушают пинты и ухмыляются. «Будем по очереди», — говорит {2}. С чего начнём?
+{0} and {1} stand up together without any notes, sink their pints and grin. "We'll take it in turns," says {2}. What's the big opener?|{0} и {1} встают вместе без всяких записей, осушают пинты и ухмыляются. «Будем по очереди», — говорит {2}. С чего начнём?
+{0} stands up, sinks his pint and grins. What's the big opener?|{0} встаёт, осушает пинту и ухмыляется. С чего начнём?
+{0} stands up without any notes, sinks his pint and grins. What's the big opener?|{0} встаёт без всяких записей, осушает пинту и ухмыляется. С чего начнём?
+has lost his voice from the stag chants and can only squeak|потерял голос после кричалок на мальчишнике и может только пищать
+have both lost their voices from the stag chants and can only squeak|оба потеряли голос после кричалок на мальчишнике и могут только пищать
+plugs|подключает
+plug|подключают
+skips|пропускает
+skip|пропускают
+sits|сажает
+sit|сажают
+{0} plug a laptop into the projector. The title slide reads "{1}: THE LOST YEARS ({2} slides)". There's clip art. There are transitions.|{0} подключают ноутбук к проектору. На титульном слайде: «{1}: ПОТЕРЯННЫЕ ГОДЫ ({2} слайдов)». Есть клипарт. Есть переходы.
+{0} plugs a laptop into the projector. The title slide reads "{1}: THE LOST YEARS ({2} slides)". There's clip art. There are transitions.|{0} подключает ноутбук к проектору. На титульном слайде: «{1}: ПОТЕРЯННЫЕ ГОДЫ ({2} слайдов)». Есть клипарт. Есть переходы.
+{0} stand up and announce that, sadly, some people couldn't make it today, "but they've sent telegrams". {1} pulls out a suspiciously thick envelope. Which one does he read first?|{0} встают и объявляют, что, к сожалению, некоторые не смогли прийти, «но прислали телеграммы». {1} достаёт подозрительно толстый конверт. Какую прочитать первой?
+{0} stands and announces that, sadly, some people couldn't make it today, "but they've sent telegrams". He pulls out a suspiciously thick envelope. Which one does he read first?|{0} встаёт и объявляет, что, к сожалению, некоторые не смогли прийти, «но прислали телеграммы». Он достаёт подозрительно толстый конверт. Какую прочитать первой?
+{0} skip the speech and sit {1} and {2} back to back on two chairs, each holding one of their own shoes and one of the other's. "Raise the shoe of whoever..."|{0} пропускают речь и сажают {1} и {2} спиной к спине на два стула, у каждого — своя туфля и туфля другого. «Поднимите туфлю того, кто...»
+{0} skips the speech and sits {1} and {2} back to back on two chairs, each holding one of their own shoes and one of the other's. "Raise the shoe of whoever..."|{0} пропускает речь и сажает {1} и {2} спиной к спине на два стула, у каждого — своя туфля и туфля другого. «Поднимите туфлю того, кто...»
+{0} have both lost their voices from the stag chants and can only squeak. {1}, the chief bridesmaid, has calmly taken over. She has notes. They are colour-coded.|{0} оба потеряли голос после кричалок на мальчишнике и могут только пищать. {1}, главная подружка невесты, спокойно берёт слово. У неё записи. С цветовой маркировкой.
+{0} has lost his voice from the stag chants and can only squeak. {1}, the chief bridesmaid, has calmly taken over. She has notes. They are colour-coded.|{0} потерял голос после кричалок на мальчишнике и может только пищать. {1}, главная подружка невесты, спокойно берёт слово. У неё записи. С цветовой маркировкой.
+{0} slipped in the spilt drink!|{0} поскользнулся на пролитом напитке!
+{0} slipped in the sick!|{0} поскользнулся на рвоте!
+{0} slipped in the puddle!|{0} поскользнулся в луже!
+{0} slipped in the chocolate!|{0} поскользнулся на шоколаде!
+{0} slipped in the mud!|{0} поскользнулся в грязи!
+{0} slipped in the cake!|{0} поскользнулся на торте!
+{0} crowd-surfs|{0} прыгает в толпу
+Chaos|Хаос

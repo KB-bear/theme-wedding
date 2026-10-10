@@ -1,0 +1,8270 @@
+[
+ {
+  "en": "use strict",
+  "file": "js/core.js"
+ },
+ {
+  "en": "wall:{0}",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "pc:{0}:{1}:{2}:{3}",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "single:{0}",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".rrrrr.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "..rrr..",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "..www..",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "...bbb.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "..bbbbb",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "ww.....",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "..yyy..",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".yyyyy.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".kkkkk.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "k.kkk.k",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".RRRRR.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "RR...RR",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "R.RRR.R",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".rr.rr.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "...kkkk",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".kkk.kk",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "kkkk.kk",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".kk....",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "kkkk...",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "....kkk",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".ggggg.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "g.ggg.g",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "g.gggg.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".BBBBB.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "BBBBBBB",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "..ggg..",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "gggg...",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "gggggg.",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "gg...gg",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "kkkkk..",
+  "file": "js/draw.js"
+ },
+ {
+  "en": ".kkkk.k",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "WC",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "CLOSED",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "PHOTO",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "WELCOME",
+  "file": "js/draw.js"
+ },
+ {
+  "en": "pc:kitchen:{0}:{1}",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "ch:{0}:{1}",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "SE",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "SW",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "ch:",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "Bridesmaid",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "Flower Girl",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "Page Boy",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "Hen Party",
+  "file": "js/sprites.js"
+ },
+ {
+  "en": "Cousin {0}",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} from work",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} (uni)",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} next door",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} bounced one time too many...",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} has fallen asleep in a corner.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "The bouncer has poured {0} into a taxi.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} has been taken home for his dinner. Bye, {1}!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} has done a massive poo! If only someone had hired a Cleaner...",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "The goat headbutted {0}!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} is in tears. {1} is chasing the goat round the hall.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "A RAT has crawled out of the mess! {0}",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} it to shoot it!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} has been sick{1}",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} was sick first",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} couldn't find a loo in time...",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} and {1} are FIGHTING!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} lost the fight and stormed off.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} has stormed off in a huff!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} refuses to go! {1}",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} has been sent home in a taxi.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} Joy",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0} Bliss",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "★ MEMORY: {0} (+{1})",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "PLANNER: {0}",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Bar",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Pours drinks all day. Needs a Bartender standing behind it.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Canapé Table",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Nibbles for peckish guests. £2 a serving.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Portaloo",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "When you gotta go... Stops queues (and accidents).",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Choc Fountain",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Food AND fun. Gets messy.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Photo Booth",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Silly hats and props. Big fun.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Bouncy Castle",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Kids love it. Tipsy adults love it more. Risky!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Flower Pot",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Pretty. Guests nearby are a little happier.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Fairy Lights",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Magical after dark. Cheers up guests nearby at night.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Parasol",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Outdoor shade from sun & shelter from rain.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Bin",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Guests nearby drop far less litter.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Flower Arch",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Ceremony Chair",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Dining Chair",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Dining Table",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Top Table",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Wedding Cake",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "DJ Booth",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Kitchen Pass",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Toilet",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Old Oak Tree",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "A fine old oak. Great for photos.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Lamp Post",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Lights up the garden after dark.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Garden Gate",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Welcome!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Russian Samovar",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Hot sweet tea, Russian style. Free for everyone.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Waiter",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Serves dinner, hands out fizz & canapés, clears glasses.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Bartender",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Runs a Bar. You need one per Bar.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Cleaner",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Mops up spills, sick and worse.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Bouncer",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Breaks up fights. Removes trouble (and goats).",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "DJ",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Gets the dance floor going in the evening. Only one.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Dave",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Steve",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Gary",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Phil",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Kev",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Tom",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Jamie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Rob",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Craig",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Darren",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Ian",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Neil",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Barry",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Mo",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Raj",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Liam",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Sean",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Owen",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Gav",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Terry",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Nigel",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Ade",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Wes",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Callum",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Rhys",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Dom",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Sharon",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Tracey",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Karen",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Jess",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Becky",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Lauren",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Chloe",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Amy",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Priya",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Sian",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Denise",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Jackie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Bev",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Holly",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Gemma",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Nicola",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Fiona",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Lou",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Kat",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Sam",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Marion",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Elaine",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Jo",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Shaz",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Aisha",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Megan",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Olesya",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Daria",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Yulia",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Ksenia",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Polina",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Vera",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Ivan",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Boris",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Mikhail",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Artem",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Nikolai",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Pavel",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Alfie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Archie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Freddie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Timmy",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Ollie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Poppy",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Isla",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Ruby",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Daisy",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Maisie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Party Animal",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Teetotal",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Foodie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Weak Bladder",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Wallflower",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Lightweight",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Romantic",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Grumpy",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Dancing Queen",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Gossip",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Short Fuse",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Auntie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Uncle",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Budget nearly gone! The bar has switched to a cash bar.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Scorching",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Sunny",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "is doing a Cossack squat-kick!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "is shouting \"OPA!\" and stamping",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "is spinning a napkin over their head!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "is doing the worm!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "is breakdancing!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "has taken their shoes off and is spinning!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "is doing the splits!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "is moonwalking across the floor!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Gran",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Gran tore up the dance floor",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Your Bartender has no Bar to work at! Furnish a Bar.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "The bouncer is chasing the goat out!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "The Goat",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Venue Cat",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "A Rat",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Barnie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "The goat is eyeing up the wedding cake...",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "That goat is after the cake! Get a Bouncer to chase it off - quick!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "THE GOAT IS GOING FOR THE CAKE!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "The goat has eaten a flower pot. Pot and all.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Headbutted by a goat",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "DISASTER! The goat has eaten the WEDDING CAKE!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Tap",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Click",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "RATS! Shoot them before they ruin everything, and hire more Cleaners!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "A rat got away... and it told its friends.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "GOTCHA!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Rat sharpshooter",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Pied Piper of the wedding",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Pierre",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Jules",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Marco",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Ellie",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Tasha",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Hugo",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Nina",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Shane",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Zoe",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Luca",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Bex",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Dev",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Mia",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Mrs Mopp",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Brian",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Doreen",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Stan",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Pat",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Big Steve",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Tiny",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Tank",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Big Sue",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Moose",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "DJ Spinz",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "DJ Dave",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "MC Brenda",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "DJ Kev-Lar",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "on the dance floor!",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "A fight! A Bouncer would sort that out sharpish.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "The bouncer broke up the fight. Handshakes all round.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "Bouncer on the way.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "You need a Bouncer.",
+  "file": "js/sim.js"
+ },
+ {
+  "en": "{0}'s finger has gone slightly green from the ring pull. She's laughing about it. Mostly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} is regretting the vodka. They look very green...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone yanks a ribbon at once... {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The singles dive for the decoy and land in a heap. While they're down, the real one sails over their heads... {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Two bouquets in the air! Pandemonium. {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has started a CONGA LINE!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} TURNS 30",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SPEAK NOW...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"If anyone knows of any reason why these two should not be wed...\" A chair scrapes. {0} stands up at the back and takes a deep breath.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Glare at them",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They sit back down. They were only stretching their legs. Everyone breathes out.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"I object... to how gorgeous you both look!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"I object... to how GORGEOUS you both look!\" The whole garden cheers.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let them speak",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"I object to the vegan option!\" Laughter all round. Even the registrar smirks.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Oh... sorry, wrong wedding.\" They shuffle off to the venue next door.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The surprise love speech",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's a heartfelt little speech about true love. Not a dry eye in the garden.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bouncer, remove them!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bouncer! (you have none)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "You don't have a bouncer. The registrar just shushes them. Awkward.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The bouncer escorts them out. Turns out they were a lost rambler.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE RINGS!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"The rings, please.\" {0} pats every pocket. Then pats them all again. His face goes the colour of the tablecloths.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Check his other jacket",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Inside pocket. Phew. He's sweating through his shirt.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Rings recovered from a sock",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Not there. ...They were in his SOCK. Nobody asks why.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ask the page boy",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The dinosaur ring bearer",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The page boy had them all along, tied to a plastic T-rex. Adorable.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He's swapped them for a Haribo ring. The real ones turn up later in the hedge.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Use a ring pull from a can",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} slides a ring pull onto {1}'s finger. Romantic in its own way. Big cheer.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "RING RING!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Right in the middle of the vows a phone blasts out a VERY loud ringtone. It's {0}'s. It's the Crazy Frog.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pause and wait for it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It rings for a full minute. An auntie starts dancing to it in her seat.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} answers it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nan on speakerphone from Australia",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's {0}'s nan calling from Australia! She says congratulations on speakerphone. Tears all round.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's a call about an accident that wasn't your fault. {0} politely declines. Biggest laugh of the day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Throw it in the pond",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Into the ornamental pond it goes. {0} is livid. Everyone else is delighted.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "HIC!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has the hiccups. Every \"I do\" comes out as \"I d-HIC\". His ginger ears are glowing bright red.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Glass of water",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cured! He gets through the vows like a pro.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He tries drinking it upside down and pours it straight down his beige waistcoat.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Give him a fright",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The registrar fainted",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} yells BOO. The registrar faints. Hiccups cured!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nothing. Now {0} has them too. Hiccupping in harmony. Beautiful.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Carry on regardless",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"I d-HIC.\" Legally binding. The front row are in bits.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "PETAL STORM",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The flower girl has gone rogue. She is hurling petals by the fistful directly into guests' faces. Some at speed.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let her cook",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Absolute carnage. An auntie gets one right in the ear. Everyone loves it.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gently intervene",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She hands over the basket with a little curtsey. Aww.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She bites you. Not hard. Everyone agrees it was adorable.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SAY CHEESE!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The photographer wants a big group photo on the lawn. Rounding everyone up could take a while...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone, NOW!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The big group photo",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Click! Lovely. And {0} photobombed it from up a tree. Even better.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Click! Everyone squeezed in. That one's going on the mantelpiece.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Family only",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A quick, tidy family photo. Uncle Gerald blinked. Twice.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Skip it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Mother of the Bride will remember this. For years.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "DARK CLOUDS",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A big grey cloud is rolling in over the garden. It looks... wet.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone inside!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A stampede of fascinators into the hall. Dry, at least.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Umbrellas! We're British!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Singing in the rain",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone dances in the rain. Unbelievable photos.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Soggy fascinators everywhere. Someone's fake tan is running.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pray",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The cloud swerves at the last second. A miracle!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Downpour. Biblical. You should have prayed harder.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "BAAA!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A goat has wandered in from the farm next door. It is eating the flower arrangements with real commitment.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bouncer, get it!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No bouncer. The goat is now roaming free. Hire one to chase it off!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The bouncer rolls up his sleeves. This could take a minute.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's our mascot now",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The wedding goat",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Someone ties a pink ribbon on it. The goat is now a guest. It may eat things. Keep an eye on the cake...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Lure it away with canapés",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It follows a trail of mini quiches right back out of the gate.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It eats the canapés AND a tablecloth, then leaves. That'll be £50.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "DRONE ZONE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has brought a drone \"for aerial shots\". It's wobbling dangerously close to {1}'s veil.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let them fly it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The epic drone shot",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Stunning aerial shot of everyone waving. Genuinely beautiful.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It crashes into a tree. Then into a second, completely different tree.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Confiscate it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sulks by the canapés for the rest of the afternoon.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "WHO WORE IT BEST?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} and {1} have turned up in the exact same dress. The temperature on the lawn has dropped ten degrees.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hold a 'who wore it best' vote",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The crowd votes. {0} loses and goes to \"get some air\". For an hour.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Tell them it's 'twinning'",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They LOVE it. Matching selfies all afternoon.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They team up and start critiquing the Mother of the Bride's hat instead.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Spill wine on one \"by accident\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Problem solved. Morally questionable, but solved.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SEAGULL ATTACK",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A seagull the size of a small dog has swooped down and nicked a sausage roll straight out of an auntie's hand.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Throw a bread roll at it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Direct hit! The aunties give you a standing ovation.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It catches it mid-air. Now there are six of them.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Move the nibbles inside",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Sensible. Boring, but sensible.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "MELTING SWAN",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The ice sculpture swan has started melting in the sun. It now looks less like a swan and more like... something else. People are pointing.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cover it with a tablecloth",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Crisis averted. Mostly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Rename it 'Modern Art'",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The scandalous ice swan",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A local art lecturer calls it \"provocative\". It's the talk of the day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody's buying it. But they're all laughing.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Leave it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It becomes the most photographed thing at the wedding.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Mother of the Bride sees it. Her face. Oh, her face.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "WASP!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A wasp is circling the prosecco. Three grown men are flapping like windmills.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Stay calm",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It flies off. Calm prevails.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Someone",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} gets stung on the bum. Arnica all round.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Waft it with a menu",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Shooed! You are a hero.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "You waft it straight into {0}. His lip swells up just in time for the photos.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "WRONG ORDER",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} ordered the beef but got the vegan wellington. They're staring at it like it's personally insulted them.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Swap with a vegan",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Plates are swapped across the table. Mutual respect is achieved.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Tell them it's beef",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Best beef I've ever had.\" Nobody tells them.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They find out. They are telling everyone about it.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "FOOD FIGHT!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A bread roll flies from the kids' end of the table. Then another. Then an uncle throws one back. It's escalating.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Stop it now!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Order is restored. The kids glare at you.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Join in!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Great Bread Roll War",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Total war. {0} takes a roll to the head and loves every second.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let the waiters handle it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The waiters take away the bread baskets. Ammo gone, war over.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "There are no waiters. It goes on for some time.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "CLINK CLINK",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The whole room is tapping glasses with their spoons. They want a kiss!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A little peck",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Aww. Polite applause.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A full Hollywood dip",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Hollywood dip",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} dips {1} like a film star. The room goes wild.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Dip of Doom",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} dips too far. They both end up under the top table.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "COLD SOUP",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has called the waiter over. She says the gazpacho is cold. It's gazpacho.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Explain gazpacho",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She nods slowly. She does not accept it.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"In MY day soup was HOT.\" She tells the whole table.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Microwave it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She declares it the best soup she's had since 1974.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "RED ALERT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Someone has knocked a full glass of red wine straight down {0}'s beige waistcoat. It is now... a different beige.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "White wine cancels it out!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It actually works! Science!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It does not work. He now smells like a wine bar.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Wear it with pride",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"It's a design feature.\" Nobody believes him but everyone respects it.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Swap waistcoats with the best man",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} now wears the stain. As is his duty.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "GORKO! GORKO!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands, sips his vodka and pulls a face. \"GORKO!\" It's BITTER! By Russian tradition the newlyweds must kiss to sweeten it while the whole room counts. The chant is spreading: \"GOR-KO! GOR-KO!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A quick peck",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The count reaches \"ODIN, DVA...\" and stops. \"BOOOO!\" The Russian side demand a rematch later.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A long, proper kiss",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gorko! Counted to {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Uncle Dmitri",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The room counts... {0}! {1} is standing on his chair shouting the numbers.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They make it to {0}. Respectable. Uncle Dmitri nods slowly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} dips {1} for the record",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gorko record: 60!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SIXTY! A new family record. {0} is crying into her napkin.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He dips, wobbles and they both end up on the banquet carpet. The count carries on regardless.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "ZA MOLODYKH!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Uncle Dmitri has produced a crate of vodka \"from home\" and is pouring shots for every table. \"To the newlyweds! ZA MOLODYKH!\" The British side look nervous.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone does a shot!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Vodka toast for the whole room",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Na Zdorovye!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"NA ZDOROVYE!\" Forty shots go down. Uncle Gerald asks for another. There may be consequences later.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Shots for the Russians only",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Russian side knock them back without blinking. The British side applaud politely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Secretly swap it for water",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody notices. You are a genius. Uncle Dmitri says it's the smoothest vodka he's ever had.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "'s mum",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} takes one sip and slams the glass down. She KNOWS. She is furious.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SHOE RANSOM",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has stolen one of {1}'s dark pink shoes. It's an old Russian tradition! He's waving it above the crowd and demanding a ransom from {2}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pay the ransom (£100)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} hands over a crumpled £100 \"for the honeymoon fund\". The shoe is returned with a bow.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sings for it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sang Kalinka for the shoe",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He attempts \"Kalinka\" in very bad Russian. The Russian side are howling. Shoe returned!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He sings Wonderwall. Dmitri is unmoved. He has to pay anyway.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Drink champagne from the shoe!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Champagne from {0}'s shoe",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} drinks champagne straight from the dark pink shoe. The Russian side erupt. {1} approves.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The shoe leaks. Straight down the beige waistcoat. Still counts!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "KOROBEINIKI!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has marched up to the DJ and demanded a Russian folk song. The first notes of Korobeiniki ring out (yes, the Tetris music)... and it's getting faster... and FASTER...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cossack dance-off!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Cossack squat-kick dance-off",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Squat, kick, squat, kick! Babushka Galina is out-kicking men half her age.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Uncle Gerald attempts a squat-kick. His knees make a noise like a bin lorry. He's down.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone in a big circle!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A huge circle dance, faster and faster, until someone flies out of the circle into the cake table.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ask the DJ to play something else",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Babushka Galina turns slowly to look at you. You will be hearing about this for years.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "UK vs RUSSIA",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has challenged {1} to a drinking contest. A crowd has gathered. Bets are being placed in two currencies.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Back {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gerald beat Dmitri",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Against all odds, Gerald wins! Dmitri congratulates him, then goes a funny colour.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gerald lasts four rounds and turns green. Dmitri hasn't even taken his jacket off.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dmitri drank Gerald under the table",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dmitri wins easily. \"In Russia, this is breakfast.\" Gerald is looking very pale.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Shut it down",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Boos from both sides. International relations have suffered.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "POWER CUT!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "BZZT. The lights go out and the music dies. Somebody screams. Somebody else laughs nervously.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Acoustic singalong",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The candlelit singalong",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Uncle Gerald produces a guitar from nowhere. Wonderwall has never sounded better.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The guitar only has two strings. It's still oddly moving.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Phone torch rave!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The phone torch rave",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Forty phone torches waving in the dark. It's like Ibiza, if Ibiza was in a barn.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Wait for the electrician",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Twenty-five minutes of awkward small talk in the dark.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "UH OH",
+  "file": "js/events.js"
+ },
+ {
+  "en": "An ex has turned up \"just to drop off a card\". They are wearing white. The room has gone very quiet.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bouncer!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Escorted out, card and all. The music comes back up.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No bouncer. They stay for \"one drink\". It's three.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Welcome them in",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They have a lovely time, dance with the aunties and leave at ten. Very mature.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The ex drama has boiled over...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Drama. Tears in the toilets. Everyone has an opinion. This isn't over.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Throw the bouquet at them",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It hits them square in the face. Message received.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "WILL YOU...?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has dropped to one knee on the dance floor in front of {1}. At YOUR wedding.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let it happen",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A proposal at the wedding!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They say YES! The room erupts. {0} smiles through gritted teeth.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Can we... talk about this outside?\" Ouch.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "DJ, play the Benny Hill music",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Benny Hill proposal",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The moment is ruined. Everyone is crying with laughter, including them.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Start a conga to block it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Da-da-da-da-da-HEY! The proposal is swept away in a tide of conga.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "FIRE ALARM!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The DJ's smoke machine has set off the fire alarm. Everyone has to go outside. The fire brigade is on its way.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone out!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The firefighter YMCA",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The firefighters are a massive hit. One of them does the YMCA.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A chilly ten minutes on the lawn. An auntie wraps herself in a tablecloth.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hit the button and hope",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Silence. Nobody saw anything.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The sprinklers come on. Indoors. Hair and make-up: destroyed.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "DANCE-OFF!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has challenged {1} to a dance-off. A circle has formed. Somebody's filming.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Back {0}!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s legendary headspin",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} does a headspin. Nobody knew. NOBODY KNEW.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} pulls something but finishes with a dignified point to the crowd.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} wins with a worm across the whole floor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} slips and lands in the splits. {1} wins by default.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everybody in!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Total mayhem. The best kind.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "MIC DROP",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has commandeered the DJ's microphone. He's going to say \"a few words\". He is very, very drunk.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let him",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s surprisingly moving speech",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's... actually lovely? There are tears.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's a 20 minute story about his divorce. It has no ending.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cut the mic",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He carries on without it. Louder.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} joins for a duet",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Bohemian Rhapsody duet",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bohemian Rhapsody. Full operatic section. Standing ovation.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They forget every word after \"Is this the real life\". Doesn't matter.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "HEN PARTY",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A hen do from the venue next door has spotted your dance floor. Eight women in pink sashes are at the gate, chanting.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let them in!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The dance floor has never been busier. Neither has the bar.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bouncer, no!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Politely turned away. They do a lap of the car park and leave.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "With no bouncer, they just... walk in. Fair enough.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Charge them £20 each",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Business is business. They pay and storm the dance floor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "KEBAB VAN",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A kebab van has pulled up outside the gate. The smell is drifting onto the dance floor. Guests are getting twitchy.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Buy everyone chips (£200)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Chips for everyone!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hero. Absolute hero. {0} eats his in his waistcoat.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let them buy their own",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A queue forms instantly. Garlic sauce gets everywhere.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Send it away",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A collective groan goes up from the dance floor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SPRINKLERS!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The garden sprinklers have switched themselves on. Several guests on the lawn are getting drenched.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Run inside!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A squelchy retreat to the hall.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Sprinkler dance party!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The sprinkler dance party",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone outside does the sprinkler. Literally. In the sprinklers.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It turns into a mud bath. The hall is getting muddy footprints.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE CHANT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s mates have started a chant. \"He's ginger, he's lovely, he's wearing green...\" It's getting louder.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Join in",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The whole room is singing it. {0} does a lap of honour.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The groom crowd-surfed",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Carried across the room like a ginger king. Glorious.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They drop him. Into the buffet. He's fine. The buffet isn't.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s family",
+  "file": "js/events.js"
+ },
+ {
+  "en": "BREAD & SALT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} greet the newlyweds with an enormous karavai loaf on an embroidered towel, with a little dish of salt on top. Tradition says whoever takes the BIGGEST bite will be head of the household...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} goes for a massive bite",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} won the karavai",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He unhinges his jaw like a python. Head of the household! The Russian side cheer \"MOLODETS!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Her dad",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He takes a bite the size of a hubcap. {0} slaps him on the back so hard he nearly swallows it whole.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He gets a mouthful of salt and starts coughing. {0} takes a dainty bite and wins anyway.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Her mum",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} takes half the loaf. Nobody argues. {1} weeps with pride.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Share it, dipped in salt",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} nods approvingly. From her, that's a standing ovation.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A sweet, sensible start to married life. The Russian aunties approve.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE RUSHNYK RACE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} have laid an embroidered rushnyk towel across the path. Old tradition: whoever steps onto it FIRST will rule the household. {1} and {2} eye each other. Somebody whispers \"ready... steady...\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sprints for it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} won the towel race",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He goes off like a greyhound and lands on it with both feet. The Russian side are impressed. {0} is plotting revenge.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He slips on the towel and slides the full length of the path like a ginger bowling ball. {0} steps onto it serenely. Game over.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} steps on it gracefully",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One elegant dark pink shoe, placed just so. {0} didn't even see her move. The aunties nod: \"Correct result.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She steps on it while {0} is still asking what the rules are. Head of the household before he's finished his question.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Jump on together",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They land together, holding hands. {0} declares it a draw, which apparently means SHE is in charge.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They land together, holding hands. A draw! The aunties say that means a happy marriage.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s uncle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SMASH FOR LUCK!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} hands the newlyweds a glass of champagne each. \"Drink, and then SMASH! The more pieces, the more happy years!\" The venue manager has gone very, very pale.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Drink and SMASH!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} pieces of good luck",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SMASH! The aunties count the shards: {0}! That's {1} happy years. The venue manager adds it to the bill.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SMASH! Only {0} pieces. \"Is fine, is fine,\" says {1}, quietly sweeping a few extra ones off the table for luck.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Use plastic flutes, for safety",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They bounce. The British side applaud. The Russian side look at each other darkly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "an auntie",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The flutes bounce, and {0} mutters that bouncing glasses are \"very bad luck\". She will be mentioning this at every anniversary.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Lob them over their shoulders",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Two perfect arcs into the flowerbed. Satisfying smash. Cheers all round.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "an uncle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s glass flies straight into {1}'s pint. Two glasses, one smash. That has to count double.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE GIANT KARAVAI",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has baked the karavai herself. It is the size of a tractor tyre, covered in dough birds and wheat sheaves, with two little dough figures on top that look suspiciously like {1} and {2}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Both bite at the same time",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They bite at the same time and end up nose to nose in the bread. {0} takes this as a sign of a long marriage.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Share it with all the guests",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It feeds the entire garden, with some left over for the goat next door. {0} is quietly delighted everyone is eating.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} bites the dough {1}'s head off",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} ate the dough groom",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Chomp. Headless dough groom. The Russian side roar with approval. The British side are slightly concerned for the real one.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's rock solid. {0} nearly loses a tooth. {1} says it \"needed another hour\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The cake is cut! Guests can now grab a slice.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "CUTTING THE CAKE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Three tiers of lemon sponge with dark pink sugar roses. Knife in hand, {0} and {1} pose for the photographer...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A classic, careful slice",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Perfect. Click. Applause. Cake for everyone!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A neat, steady cut. The photographer gets the shot. {0}'s mum gets eleven more on her phone.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Smash it in each other's faces",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cake to the face",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SPLAT. Both of them. The crowd goes absolutely feral.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} did NOT agree to this. Her make-up artist is weeping.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let {0} cut it with Grandad's sword",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let the eldest guest cut it with a sword",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The sword cake-cutting",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The old dear",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One clean swipe. {0} is a legend. Nobody knew she could do that.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Half the cake ends up on the floor. Five-second rule!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE COSSACK SABRE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} pushes through the crowd holding a gleaming Cossack sabre. \"A KNIFE? For a wedding cake? Nyet. We use THIS.\" Nobody knows where he has been keeping it all day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The couple cut it with the sabre",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The sabre-cut cake",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One swish. Three perfect tiers, sliced clean. {0} wipes a tear away. \"Like my wedding. But nobody got hurt.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It goes through the cake, the stand, and slightly into the table. Thirty slices survive. {0} applauds anyway.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let {0} do it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He spins, shouts something in Russian and slices the top tier into exactly sixteen pieces. Then bows. The kids want lessons.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He takes it very seriously: a salute, a stance, a deep breath, one perfect cut. The British side give him a standing ovation.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Use the normal knife, thanks",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} lowers the sabre sadly and sulks into his vodka. The cake is cut safely. Boringly, but safely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The heat has",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A wobbly table leg has",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE LEANING CAKE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} got to the cake. All three tiers are leaning like a very sweet Tower of Pisa, and the top tier is very slowly sliding towards the floor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cut it FAST!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Lightning reflexes! They cut and catch the top tier in one move. The photographer got it mid-air.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The top tier makes a break for it and lands face-down on the carpet. The kids are on it like seagulls.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Prop it up with bread rolls",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Engineering! Four bread rolls and a napkin hold it level. Nobody looks too closely at the photos.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pose holding it up, like Pisa",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Leaning Cake of Pisa",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Every guest queues up to do the \"holding it up\" photo. It's the most popular cake of all time.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the registrar",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE CAKE TOPPER",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The baker has made a custom cake topper of the couple. Unfortunately the little groom has jet-black hair and a moustache, and the little bride looks uncannily like {0}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Laugh it off and cut",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Who is that man and why is he marrying {0}?\" The photos are going to be a talking point for decades.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Give it ginger icing hair",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The ginger-iced cake topper",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A dab of orange icing and it's {0} to the life. The moustache stays. Everyone agrees it suits him.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Too much orange. The little groom now looks like he's on fire. {0} says it's \"pretty accurate after the stag do\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Demand a refund (+£50)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The baker refunds £50 and takes the topper away. The cake now looks oddly bald.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "a Russian uncle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "an English uncle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE CAKE AUCTION",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} announces an old family custom: the first slice of cake goes to the highest bidder, and the money goes to the newlyweds. {1} already has his wallet out.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Start the bidding!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The £{0} slice of cake",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A bidding war between {0} and {1} gets completely out of hand. It goes for £{2}! For one slice. With a sugar rose.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} wins the first slice for £{1}, then eats it in one bite while maintaining eye contact with {2}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "First slices to the parents",
+  "file": "js/events.js"
+ },
+ {
+  "en": "His mum",
+  "file": "js/events.js"
+ },
+ {
+  "en": "her mum",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} and {1} hand the first slices to both sets of parents. {2} and {3} both cry. Competitively.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Feed each other instead",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A sweet, careful forkful each. Aww. The auction is quietly forgotten.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} goes for the \"playful nose dab\". It becomes a full face. {1} retaliates. Nobody bids after that.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "NO CAKE?!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's time to cut the cake... except the goat ate it. {0} is staring at an empty cake stand covered in crumbs and hoof prints.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Emergency supermarket cake (£150)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A Colin the Caterpillar arrives in a taxi. {0} and {1} cut it like it's a five-tier masterpiece.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ask the chef for a giant pavlova (£80)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A giant pavlova appears. Not a wedding cake, but nobody's complaining.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Laugh it off",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The cake that the goat ate",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} gives a speech about \"the goat who loved us too much\". Huge laughs.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} is not laughing. Not yet. Maybe in about ten years.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The cake is gone. Eaten. By a goat. {0} is close to tears... but {1} is calmly opening a cool box. \"I knew,\" she says. \"I always know.\" Inside: a twelve-layer medovik honey cake.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cut the medovik!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s emergency medovik",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Twelve layers of honey and cream. The British side have never tasted anything like it. {0} accepts the applause with a tiny nod.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Medovik AND a supermarket cake (£120)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Two cakes! The medovik vanishes in ten minutes. The supermarket one is still there at midnight. {0} looks smug.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Politely decline it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "You turn down a babushka's cake. On her granddaughter's wedding day. {0} closes the cool box very, very slowly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE CAKE FUND",
+  "file": "js/events.js"
+ },
+ {
+  "en": "There is no cake: the goat has had it. {0} looks devastated. {1}'s mates are already passing a pint glass round \"for the cake fund\". It's filling up with coins, a fiver and a button.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Use the whip-round for a cake",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The guests raise £{0}! A bakery cake arrives within the hour and there's change for the bar. {1} is touched.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The glass raises £{0}. You cover the rest. A bakery cake arrives, and the button is returned to its owner.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cheese tower instead (£90)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A three-tier tower of cheddar, brie and stilton. Honestly? Half the guests prefer it. {0} cuts it with a cheese wire.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ceremonially cut the crumbs",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cutting the crumbs",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They solemnly \"cut\" a single crumb with the big knife. The photographer plays along. It's the funniest picture of the day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The joke doesn't land. {0} wanted cake, not crumbs.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Perfect (Ed Sheeran, obviously)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Every ginger man's anthem. Gentle swaying, foreheads together. Lovely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} mouths every word to {1}. She pretends to be embarrassed. She isn't.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "(I've Had) The Time of My Life",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE LIFT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody puts {0} in a corner. PERFECT LIFT. People are standing on chairs.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The lift that became a fireman's carry",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The lift turns into more of a fireman's carry. {0} is laughing too hard to be cross. Just.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Kalinka (it gets faster)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Kalinka first dance",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Slow... slow... then KALINKA-KALINKA at double speed. The Russian side flood the floor. {0} attempts a squat-kick and lands it!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It gets faster and faster until {0} spins {1} straight into the DJ booth. Both fine. DJ less so.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Can't Help Falling in Love",
+  "file": "js/events.js"
+ },
+ {
+  "en": "his mum",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Slow, simple, perfect. {0} and {1} are holding hands and sobbing.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dancing Queen (everybody up!)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Within eight seconds the whole room is on the floor. It's less a first dance, more a first stampede.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bohemian Rhapsody (all six minutes)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Bohemian Rhapsody first dance",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ballad bit: romantic. Opera bit: the whole room does the voices. Headbang bit: {0} nearly loses his quiff. Iconic.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They run out of moves around \"Galileo\". The last three minutes are mostly shuffling.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Mr Brightside",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"COMING OUT OF MY CAGE...\" Forty men in suits appear from nowhere, arms round each other, screaming every word.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Macarena (ironically)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Macarena first dance",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the oldest auntie",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Perfectly deadpan, perfectly in sync. The room is in hysterics. Even {0} does the hip bit.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It wasn't quite ironic enough. {0} is appalled. \"In Russia we would never.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE FIRST DANCE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "There's no DJ, so someone's playing it off their phone...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} and {1} take the floor. The lights dim. {2}What's the plan?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Slow romantic ballad",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Swaying gently. {0}'s dark pink shoes peek out with every turn. Not a dry eye in the house.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Surprise choreographed routine",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The surprise dance routine",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Halfway through, the music scratches into a full routine. The room LOSES IT.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The split trousers",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} attempts the splits. His green trousers do not survive.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Dirty Dancing lift",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cake-tastrophe",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The lift becomes a fall. Somehow, into what's left of the cake.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "With no DJ,",
+  "file": "js/events.js"
+ },
+ {
+  "en": "has her phone out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The DJ looks at them expectantly",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} and {1} take the floor and the lights dim. Small problem: they never actually agreed on a song. {2}. Three songs are in the running...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Keep dancing in the dark",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dancing in the dark",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They don't stop. One by one, forty phone torches come on around the floor like stars. It's ridiculously romantic.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Get the guests to sing it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The whole room sang the first dance",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The whole room picks up the song where the speakers left off. Eighty people, slightly out of tune, singing them round the floor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody knows the second verse. It becomes humming. Then it becomes Wonderwall. They keep dancing anyway.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Wait for the power to come back",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They stand in the dark holding hands for ten minutes. Romantic for one minute. Awkward for nine.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} gets his accordion out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s accordion first dance",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody knew he had an accordion. He's apparently been carrying it all day \"just in case\". He plays them a Russian waltz in the dark. Magic.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE FIRST DANCE... BZZT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The first notes of their song float out. {0} takes {1}'s hand. Twenty seconds in... BZZT. The power cuts out. Total darkness. Total silence.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let her cut in",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stole the first dance",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She leads. Firmly. {0} is spun like a top. Halfway through she clicks her fingers at the DJ and it turns into Korobeiniki. {1} survives. Just.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Politely say \"after this one\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She nods and steps back to the edge of the floor, where she watches them, unblinking, for the rest of the song. Then she claims {0} for the next three.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"After this one?\" She repeats it slowly, as if learning a new and disappointing English phrase. She sits down and does not clap.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Swap: {0} dances with {1}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Partner swap! {0} dances with her dad while {1} is whirled round by {2}. {3} is pretending he has something in his eye.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "MAY I CUT IN?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Halfway through the slow dance, {0} taps {1} firmly on the shoulder. \"My turn.\" She is not asking.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "KIDS ON THE FLOOR!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Thirty seconds into the slow dance, {0} and {1} other kid{2} storm the dance floor and start doing knee-slides in circles around the couple.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let them join in",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The first dance kid invasion",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's chaos. Sweet, sticky chaos. {0} ends up dancing with a five-year-old on each foot.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the littlest one",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} dances with {1}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the littlest kid",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} scoops up {1} and twirls her round. Every phone in the room is filming. That's the photo of the day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Send them to the bouncy castle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One mention of the bouncy castle and they vanish like a flock of starlings. The couple get their moment.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "There is no bouncy castle. The kids sulk under the cake table and one of them bites a groomsman.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the Crazy Frog",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Agadoo",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cotton Eye Joe",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the Birdie Song",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gangnam Style",
+  "file": "js/events.js"
+ },
+ {
+  "en": "a heavy metal cover of Ave Maria",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the Match of the Day theme",
+  "file": "js/events.js"
+ },
+ {
+  "en": "WRONG SONG!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The lights dim, {0} and {1} gaze into each other's eyes... and the DJ plays {2}. It is the wrong song. It is VERY much the wrong song.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Commit to it!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "First dance to {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They look at each other, shrug, and go ALL IN. Full commitment. The room is screaming. It's the best first dance anyone has ever seen.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They try. They really try. {0}'s face says she'll be having words with the DJ later.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Frantically wave at the DJ",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He swaps it after one verse and the real song kicks in. Lovely. Nobody will ever forget that first verse, though.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He thinks you're dancing, gives you a thumbs up and turns it UP.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Sing the right song over the top",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sings their real song into {1}'s ear over the top of {2}. She's crying with laughter. Weirdly, it's perfect.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE GINGERBREAD MEN",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ten seconds into the slow dance the music cuts and {0}'s mates burst onto the floor in matching ginger wigs and green waistcoats. They've been rehearsing in secret. They call themselves \"The Gingerbread Men\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let the troupe take over",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Gingerbread Men",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's TIGHT. Spins, slides, a human pyramid. The finale is them all pointing at {0}. The room erupts.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Three of them go left. Four go right. One goes straight into the DJ booth. Still a standing ovation.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} joins the formation",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The groom joined his own flash mob",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Plot twist: {0} was in on it! He rips off his jacket and slots into the middle. {1} is screaming.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} doesn't know the routine; he was meant to be surprised. He does \"the sprinkler\" for three minutes while his mates dance round him.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ask them to wait one song",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They wait, sulking adorably in their wigs, while the couple have their moment. Then they go absolutely bonkers to the next song.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The ceilidh band are on their tea break.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The DJ has picked this exact moment to pop out to his van.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody booked a DJ.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Phone in a saucepan for volume",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Tinny, but surprisingly romantic. Someone holds the saucepan up like a lighter at a gig.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Halfway through it plays an advert for car insurance. They keep dancing through it, grimly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dance in total silence",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No music at all. Just the two of them, foreheads touching, swaying. Weirdly, it's the most romantic thing anyone has seen all year.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sings it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sang the first dance",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands up and sings it, unaccompanied, in a voice like warm honey. Nobody knew. The whole room joins the last chorus.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The guests hum it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Eighty people humming the same tune, mostly. It's daft and lovely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} and {1} take the floor... and there's no music. {2} Somebody is fumbling with a phone.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "BOUQUET TOSS",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} lines up the single guests behind her, turns her back and winds up...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gentle lob",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Full overhead launch",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE GARTER TOSS",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the bride's mum",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Before the bouquet, tradition demands the garter. {0} retrieves it with as much dignity as he can manage while {1} watches like a hawk. The single lads line up, looking nervous.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ping it like a catapult",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gentle underarm throw",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Skip it, too embarrassing",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} tucks it in his pocket. {1} nods with grim approval. The lads look relieved.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone pull!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Rig it for {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} pulls the charm ribbon \"by pure chance\". She immediately stares at her boyfriend. He goes pale.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone saw {0} hand {1} the right ribbon. There is a formal complaint from {2}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hand the ribbons to the kids",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Every child in the building pulls a ribbon in a different direction. The bouquet explodes. Everyone gets a flower. Somehow it works.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE RIBBON PULL",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has tied ribbons around the bouquet, one for each single guest. Only one of them is tied to the little silver charm. Everyone grabs a ribbon end and holds their breath...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "cabbage leaves",
+  "file": "js/events.js"
+ },
+ {
+  "en": "bread rolls",
+  "file": "js/events.js"
+ },
+ {
+  "en": "spring onions",
+  "file": "js/events.js"
+ },
+ {
+  "en": "pickled gherkins on sticks",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE DECOY BOUQUET",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} winks at the crowd and holds up TWO bouquets: the real one, and a decoy made entirely of {1}. The singles are eyeing both suspiciously.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Throw the decoy first",
+  "file": "js/events.js"
+ },
+ {
+  "en": "An uncle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches the decoy and eats it. All of it. {1} panics and keeps the real one.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Throw both at once",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the oldest guest",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Give the real one to {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} walks over and simply hands it to her. A sweet moment. The {1} bouquet goes to the goat.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it and immediately stares at her boyfriend. He goes pale.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gran caught the bouquet",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} dives full length and catches it. \"Watch out, bingo hall.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Babushka caught the bouquet",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the nearest widower",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} snatches it out of the air one-handed. She is 84. She winks at {1}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A seven-year-old",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it and announces they are marrying the DJ.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The bouncer caught the bouquet",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The bouncer catches it. He sheds a single, perfect tear.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It lands on the DJ decks. The record scratches. He takes a bow.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The goat ate the bouquet",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The goat catches it. In its mouth. Then eats it.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Straight into the chocolate fountain. A chocolate bouquet. Delicious.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It lodges in the light fitting. It's still up there.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It lands in {0}'s pint with a splash. He fishes it out, drinks the pint, and asks who the lucky lady is.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it without even putting his vodka down, then proposes to the bar staff. They say \"maybe\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} and {1} both grab it. A tug of war becomes a scuffle. Petals everywhere.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} rugby-tackles three bridesmaids to get it, then holds it aloft like the FA Cup.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It hits the ceiling, bounces off a beam and lands right back in {0}'s arms. \"Guess I'm getting married again!\" {1} is NOT amused. Then she is.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A celebrity caught our bouquet",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it and poses for photos with it. The paparazzi (if any) go wild.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A hen from next door elbows through and catches it. Her friends scream. She's getting married next Saturday, so it's a bit late.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it and shrieks with joy.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the bridesmaids",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it, looks over at {1}, and winks. She rolls her eyes so hard she nearly falls over.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s garter headband",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It lands on {0}'s head. He wears it as a headband for the rest of the night and refuses to discuss it.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it and slides it onto his arm like a medal. \"I will wear with honour.\" He salutes.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it, rips his shirt off for no reason and does a lap of the dance floor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "His wife",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it purely by reflex. {1} confiscates it within four seconds.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Babushka caught the garter",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} plucks it out of the air and tucks it into her handbag without a word. Nobody dares ask for it back.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It pings straight up and hooks on the light fitting, next to the bouquet from last week's wedding.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It hits {0} square on the hat. She removes it with two fingers and the look of a woman planning a complaint.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The goat jumps and catches it. It is now wearing it as a collar and looks extremely pleased with itself.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Some lad",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} catches it and goes bright red. His mates won't let it go.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "FATHER OF THE BRIDE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} taps his glass, stands up, and unfolds {1} pages of notes. Single-spaced. Both sides.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Go on then",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Short, sweet and heartfelt. \"Look after her, {0}.\" Lovely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Forty minutes. He covers every year of {0}'s life. In order.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Page {0} is a list of every car he has ever owned. Someone on table five is asleep.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dad cried. Everyone cried.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He gets three lines in and breaks down. Then everyone breaks down.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Suggest he keeps it short",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Straight to the point and genuinely lovely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He folds the notes away, looks at {0} and says \"I am so proud.\" That's it. That's the speech. Perfect.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He reads all {0} pages anyway. Then the appendix.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Quietly pinch page six",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The missing page six",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Page six turns out to be all about {0}'s teenage goth phase. She mouths \"thank you\" across the room.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He notices instantly. \"Who has taken page six?!\" He reconstructs it from memory, at length, while glaring at you.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has wheeled a projector up to the top table. \"I will not speak long,\" he says. \"I have prepared {1} photographs.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Roll the slideshow",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The bath-time baby photos",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Baby {0} in the bath. Baby {1} in a bucket. Baby {2} dressed as a cabbage. She wants the floor to swallow her. Everyone else is in heaven.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "By slide 60 it has somehow become his fishing holiday in Sochi. Every fish. Every angle. The British side have glazed over.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The then-and-now slideshow",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It ends on a photo of five-year-old {0} \"marrying\" a teddy bear in a ginger wig, next to a photo from today. The room absolutely melts.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Vet the slides first",
+  "file": "js/events.js"
+ },
+ {
+  "en": "You trim it to twelve tasteful photos. {0} calls it \"the trailer\" and promises the full version at Christmas.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "You quietly delete a slide of {0}'s ex. Nobody will ever know how close that was.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Technical difficulties\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The projector mysteriously \"breaks\". {0} shrugs and simply describes each photo out loud instead. It's somehow funnier.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He finds the unplugged cable in about four seconds and stares straight at you. The slideshow resumes. Colder.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "OTETS NEVESTY",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands, raises his glass and delivers the ENTIRE speech in Russian. It's passionate. There are hand gestures. The Russian side are dabbing their eyes; the British side are nodding along, just in case. Now he wants a toast.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone: \"ZA MOLODYKH!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The whole room toasted in Russian",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Eighty people shout \"ZA MOLODYKH!\" in eighty accents. {0} is delighted.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The British side bellow something like \"ZAMMO LOAD-ICK\". Close enough. {0} hugs the nearest Englishman.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "one uncle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Half the room says \"ZA MOLODYKH!\", the other half says \"Cheers!\", and {0} shouts \"BINGO!\". The spirit was there.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"He says... he was nervous about an English son-in-law, but {0} has a good heart and strong hands for the dacha.\" {1} goes as red as his hair.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He spoke for six minutes. {0} translates it as \"He says welcome.\" Everyone suspects some editing.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Smile and nod knowingly",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody notices a thing. You pick up the word \"vodka\" four times.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He pauses for a laugh and you are the only one who laughs. Wrong moment. It was the sad bit about his old dog.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands, pats his pockets, then pats them again. The notes are gone. \"No problem,\" he announces. \"I will speak from the heart.\" The Russian side brace themselves.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let him wing it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dad spoke from the heart",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No notes, no jokes, just a dad talking about his little girl. {0} is sobbing. So is the DJ.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It becomes a 25-minute story about a tractor he owned in 1987. It has a twist. The twist is also about the tractor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He forgets {0}'s name halfway and calls him \"the ginger one\". It sticks for the rest of the night.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Slip him a napkin with bullet points",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He reads your napkin out word for word, including \"DON'T MENTION THE EX\". Big laugh. Even {0}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} lends him some notes",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dad read the best man's speech",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Wrong notes: they're the BEST MAN'S speech. {0} reads the stag-do jokes in a deadpan Russian accent and gets every laugh. {1} is now speechless. Literally.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They're {0}'s notes. {1} reads the Prague story aloud, slowly, not understanding a word of it. {2} understands every word.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Ochi Chyornye\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Kalinka\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "a Russian love song about a birch tree",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"My Way\", in Russian",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A SONG FOR MY DAUGHTER",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} taps his glass... and instead of speaking, closes his eyes and launches into {1}. Full baritone. No warning.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let him sing",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dad sang to the bride",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's magnificent. A deep, rolling voice nobody knew he had. {0} is in bits.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He holds the last note so long a waiter has to sit down. Standing ovation.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He's going for every verse. There are eleven verses. They are all about the same birch tree.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Get the room to join in",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The great top-table singalong",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Russian side know every word. The British side clap along gamely and shout \"HEY!\" at random. It works.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} joins in with the wrong song entirely. It becomes a mash-up nobody asked for.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hand him a glass of water",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He takes the hint, sips, and gives a two-line speech instead. Polite applause. A missed opportunity, some say.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands up and clears his throat, but {1} calmly takes the microphone out of his hand. \"Sit down, darling. You will cry. I will do this.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} is nowhere to be seen, so {1} stands, takes the microphone and smooths her dress. \"My husband is... indisposed. I will do this.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let her speak",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s speech",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Elegant, funny and devastatingly well-timed. She ends with \"{0}, you are now my son. Don't make me regret it.\" Huge cheer.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She lists {0}'s previous boyfriends, \"for context\", and rates each one out of ten. {1} gets a seven. \"For now.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She announces she has booked a holiday cottage next to the newlyweds' honeymoon. \"So we can help.\" {0} has gone very still.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gently ask for the mic back",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She hands it over with a gracious smile, and a look that says this conversation is not over.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She keeps the mic, and now she's annoyed. The speech is mostly about wedding planners who \"do not know their place\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Make it a double act",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The parents' double act",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They bicker like a sitcom couple, finishing and correcting each other's sentences. The room is crying laughing. It should be on telly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They argue for ten minutes about which year {0} learned to swim. It's never resolved.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "MOTHER OF THE BRIDE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "BABUSHKA HAS THE FLOOR",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands, says \"My mother would like to say something,\" and sits straight back down.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}{1} rises slowly, adjusts her headscarf, and fixes {2} with a long, appraising stare. The room goes silent.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s blessing",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She presents {0} with her late husband's fur hat and declares him \"acceptable\". From her, that's a knighthood.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gerald",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She lists everything {0} must now learn: pickling, chopping wood, and how to drink vodka \"like a man, not like a {1}\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She asks, in front of everyone, when the great-grandchildren are coming. She wants a date. {0} wants to leave.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pour her a vodka first",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She downs it, slams the glass down and gives the shortest, funniest speech of the day: \"Good boy. Feed him more.\" Huge cheer.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ask for \"the short version\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Fine. Short version: be good to her, or I will know.\" Sits down. Chills.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She turns slowly to look at you. She does not speak. She does not need to. The room drops five degrees.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "FATHER OF THE BRIDE?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's time for the father of the bride's speech... but {0} has gone AWOL. {1} finds that he emailed the speech to her \"just in case\" and stands up with a phone.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Read his speech out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's lovely. Short, a bit formal, and signed off \"Love, Papa (sent from my phone)\". There are tears.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Autocorrect has been at it. \"{0} is a fine young man\" now reads \"{1} is a fine young MANGO\". The nickname is permanent.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Video-call him in",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The speech by video call",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He answers from the car park, delivers a beautiful speech into his phone, then walks back in to a standing ovation.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He answers from the gents. Everyone hears the flush. He carries on anyway.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Skip to the next speech",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Probably wise, but {0} keeps glancing at the door all through the next speech.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE GROOM'S SPEECH",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands, adjusts his beige waistcoat and clears his throat. Which speech did he prepare?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Heartfelt & sincere",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He thanks everyone, then turns to {0}. The room melts.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Stand-up comedy set",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The groom killed it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He absolutely kills it. Someone suggests he goes on tour.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Tumbleweed. A single cough. A fork hits a plate.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Sing a song to the bride",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The groom's serenade",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He sings. It's beautiful. {0} is in floods of tears.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He forgets the second verse and hums the rest. Somehow, still lovely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands up and announces he has learned a speech in Russian for his new family. He has been practising on an app for six weeks. The Russian side lean forward. {1} looks nervous.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Go for it, all in Russian",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The groom spoke Russian!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The accent is dreadful, the grammar wobbles, the heart is enormous. {0} stands up and hugs him mid-sentence.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He means to say \"I love your daughter\". He actually says \"I love your tractor\". The Russian side cry with laughter. {0} seems fine with both.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "his mother-in-law",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He confidently thanks {0} for \"the beautiful potato\". She has no idea what he means. Neither does he.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Just \"Spasibo!\" and sit down",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One word, perfectly pronounced, and a little bow. The Russian aunties applaud. Quit while you're ahead.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} prompts him line by line",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She whispers each line, he repeats it, she corrects him, he repeats it again. It's like watching a very sweet driving lesson.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands up and immediately knocks his cue cards off the table. They scatter under the top table. He gathers them up. They are no longer in any kind of order.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Read them in whatever order",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He thanks the caterers for marrying him and tells {0} the vegan option was lovely. It's the best accidental speech ever given.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He reads the same card three times. It's the one about the weather.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ditch the cards, speak from the heart",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No cards, all heart",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He puts the cards down, looks at {0}, and just talks. Simple, honest, perfect.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He says \"I love you,\" then forgets absolutely everything else. Honestly? That'll do.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sorts them out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Back in order in ten seconds. Solid speech. {0} takes a bow he hasn't earned.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The best man has slipped in a card of his own. {0} reads out \"I would also like to apologise for Prague\" before he can stop himself.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands for the traditional thank-yous. He has a list. He has not checked the list.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Flowers for both mums (£60)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He produces two bouquets from under the table. {0} and {1} both cry. Competitively. {2} wins.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Thank everyone in one breath",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"The-caterers-the-bridesmaids-the-registrar-the-DJ-our-parents-and-the-goat-next-door-THANK-YOU!\" He goes slightly purple. Round of applause.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He thanks everyone. Except his own mum. {0} is FINE. She says she is fine. Repeatedly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Just thank {0} for saying yes",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Mostly, I just want to thank {0} for saying yes.\" He sits down. The room goes \"awww\" in perfect unison.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE GROOM'S SURPRISE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} says he has a surprise for {1} and points at a laptop. He secretly recorded video messages from her old friends back in St Petersburg.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Play the video",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Messages from St Petersburg",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Her school friends, her old teacher, even her childhood neighbour, all waving and shouting her name. {0} is in floods of happy tears.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It buffers. For four minutes. Then plays upside down. {0} loves it anyway and watches it on her phone under the table.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One friend's message is just her cat. Then a long close-up of the cat. The Russian side applaud the cat.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Read the messages out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "His pronunciation of the names is a crime against the Russian language, but {0} is beaming.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Save it for the honeymoon",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He hands her the laptop with a wink. Private and sweet. The guests are a bit disappointed.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} takes his hand",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She stands, takes his hand and whispers something. He laughs, relaxes, and gives a lovely little speech. Aww.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Shout \"GO ON, {0}!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The whole room cheered him on",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The whole room joins in: \"GO ON, {0}!\" It snaps him out of it and he smashes the speech.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He panics, says \"Thanks for coming, drive safe,\" and sits down. Speech over.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} hands him a vodka",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dutch courage, Russian style",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One shot. His eyes water. Then he gives the most confident speech of his life. {0} nods: \"Now he is family.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One shot becomes three. He's now doing impressions of his in-laws. To their faces.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A sip, a breath, and a short, decent speech. Not legendary, but nobody fainted.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stands up, looks out at all the faces, and freezes. Completely. He has gone the colour of his hair. Ten seconds pass. Fifteen.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"I've known the groom since school, back when his hair was even MORE ginger.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Tell the \"what happened in Prague\" stag do story",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Read out the groom's old dating profile",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"He's looking a bit green today. Oh, no, that's just the suit.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Do an impression of the Mother of the Bride",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A slideshow of the groom's school photos",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Thank the bridesmaids, sincerely and briefly",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A poem he wrote on the train this morning",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Read a \"telegram from the King\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Reveal the groom cried at Toy Story 3. Twice.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Re-enact the couple's first date with a mop",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"The groom has learned three Russian words for today. Two of them are vodka.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hand out a quiz on the groom's ex-girlfriends",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Read the groom's texts from the night they met",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Present a \"survival kit\" for married life",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A rap about the couple's love story",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"The bride looks stunning. The groom looks... present.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Attempt a Russian accent. In front of the Russians.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Reveal what the stag fund was REALLY spent on",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Compare the groom to a ginger Labrador",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Reveal the groom once got lost in IKEA for four hours",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Describe the first (failed) proposal attempt",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A heartfelt toast to the bride",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bring out the inflatable sheep from the stag",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Toast absent friends and the parents",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Marriage is like a ginger in the sun: it takes work.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Read out the groom's school report: \"Easily distracted by snacks\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Safe",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cheeky",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Risky",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Career-ending",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The room ERUPTS. The top table is crying with laughter.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Huge laugh. Even the registrar would have laughed.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Standing ovation. He drops the mic. There is no mic.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The top table are wheezing. The Russian side ask for it to be translated, then laugh twice as hard.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A proper belly laugh from every table. Somebody bangs the table so hard the cutlery jumps.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Silence. Someone's fork hits a plate. The Mother of the Bride's eyes narrow.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A groan. Then a slow, painful silence. He sits down.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} is glaring. {1} has his head in his hands.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "An elderly auntie",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A cough. A chair creaks. {0} asks loudly \"Is he finished?\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He laughs at his own joke. Alone. For quite a long time.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The best man's legendary speech",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE BEST MEN'S SPEECH",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE BEST MAN'S SPEECH",
+  "file": "js/events.js"
+ },
+ {
+  "en": "stand up together",
+  "file": "js/events.js"
+ },
+ {
+  "en": "without any notes",
+  "file": "js/events.js"
+ },
+ {
+  "en": "sinks his pint",
+  "file": "js/events.js"
+ },
+ {
+  "en": "sink their pints",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"We'll take it in turns,\" says {0}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} {1}{2}{3}, {4} and {5}.{6} What's the big opener?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "TWO BEST MEN",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} and {1} stand up together. They've clearly rehearsed. They've also clearly been at the bar. \"{2} couldn't choose between us,\" says {3}. \"So you're getting double.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The rehearsed double act  [Risky]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The best men double act",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They finish each other's sentences. They do the voices. They even do a little dance at the end. Standing ovation from the stag table.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} skips a page. {1} carries on from the old page. For four minutes they are telling two completely different stories at the same time.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A rap battle about {0}  [Cheeky]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It gets worse. It gets better.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The beat is",
+  "file": "js/events.js"
+ },
+ {
+  "en": "banging a spoon on the table.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"His name is {0} and his hair is on fire, he married {1} cos she's way out of his tier.\" {2}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let them fight over the mic  [Chaos]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A tug-of-war over the microphone ends with both of them in the cake trolley. The room is in bits. The speech was never delivered. Nobody minds.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The bride's mum",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It gets a bit real. Something about who held {0}'s hair on the stag do. {1} separates them.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Take his pint away first  [Safe]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He sulks through a perfectly adequate speech, glancing longingly at the pint the whole time.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has to help him up.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He has no notes. He has no plan.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has been at the bar since the ceremony.{1} He stands up, misses, stands up again, and taps his glass with a fork until it cracks. \"{2}...\" he begins. \"{3}! I LOVE this man.\"{4}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE BEST MEN'S POWERPOINT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE BEST MAN'S POWERPOINT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} {1} a laptop into the projector. The title slide reads \"{2}: THE LOST YEARS ({3} slides)\". There's clip art. There are transitions.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "All {0} slides  [Risky]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The best man's PowerPoint",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pie charts of {0}'s haircuts through the ages. A graph of his \"rizz\" over time. It's a masterpiece.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Slide {0} of {1}. Every slide has a star-wipe transition. People are checking their watches.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Halfway through, a message from the stag group chat pops up on the big screen. For everyone. {0} reads it twice.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Skip to the highlights  [Cheeky]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A photo of {0} asleep in a kebab shop. A photo of {1} dressed as a carrot. Short and deadly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Five slides, five belly laughs. In and out like a pro.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The secret \"bonus\" slide  [Career-ending]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The best man's secret video",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's a video of {0} practising the first dance alone in his kitchen, in his socks, using a mop as {1}. The room is destroyed.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "An elderly relative",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's the stag do. Unedited. The projector is very bright. {0} has seen enough.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE BEST WOMAN",
+  "file": "js/events.js"
+ },
+ {
+  "en": "has lost his voice",
+  "file": "js/events.js"
+ },
+ {
+  "en": "have both lost their voices",
+  "file": "js/events.js"
+ },
+ {
+  "en": "from the stag chants and can only squeak",
+  "file": "js/events.js"
+ },
+ {
+  "en": "is nowhere to be found",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} {1}. {2}, the chief bridesmaid, has calmly taken over. She has notes. They are colour-coded.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Stories about {0} at uni  [Risky]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} stole the show",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The karaoke incident. The night bus incident. The \"I'll never date a ginger\" incident. {0} is hiding behind her bouquet, laughing.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One story goes a bit too far. {0} is pink. {1} is pinker.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A speech in English AND Russian  [Cheeky]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Every joke twice, once per side of the room. The Russian side get a different punchline, and it's clearly ruder. Both halves are in tears.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Roast the groom instead  [Risky]",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The groom got roasted",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"{0} is a lovely man. He's ginger, he's kind, and he once lost a fight to a revolving door.\" {1} takes it like a champion.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She goes in hard. Maybe a bit too hard. {0} is laughing in the way people laugh when they're hurt.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From the King: \"Congratulations. Please return the bunting.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From the stag-do hotel in Prague, regarding the damages",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From {0}'s ex in Moscow",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From {0}'s five-a-side team: \"Can he still play Thursday?\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From {0}'s mum's WhatsApp group (unedited)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From the goat next door",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From {0}'s auntie's cat in St Petersburg",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From {0}'s old gymnastics coach: \"She could have gone to the Olympics\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From {0}'s ex: \"Good luck. You'll need it.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From the Eurovision jury: \"{0} & {1}, douze points\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From the bank, about the wedding overdraft",
+  "file": "js/events.js"
+ },
+ {
+  "en": "From {0}'s barber: \"See you in six weeks, Ginge\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE TELEGRAMS",
+  "file": "js/events.js"
+ },
+ {
+  "en": "stands and announces",
+  "file": "js/events.js"
+ },
+ {
+  "en": "stand up and announce",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} {1} that, sadly, some people couldn't make it today, \"but they've sent telegrams\". {2} pulls out a suspiciously thick envelope. Which one does he read first?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It goes down like a lead balloon. {0} quickly \"loses\" the rest of the envelope.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"...is the better driver?\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Both raise {0}'s shoe. {1} doesn't even hesitate. Wise man.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They raise DIFFERENT shoes. A tense silence. Someone whispers \"the M25 incident\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"...takes longer to get ready?\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Both raise {0}'s shoe. The quiff doesn't do itself.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"...said I love you first?\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They each raise the OTHER's shoe. Everyone goes \"awwww\". {0} pretends to be sick.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They both raise their OWN shoe. The room demands a recount.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"...will really be in charge?\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Before they can move, the entire Russian side shouts \"{0}!\" {1} slowly raises her shoe. Correct answer.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"...is the better dancer?\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Both raise {0}'s shoe, and {1} does a little demonstration of why. Big laugh.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} raises his own shoe with great confidence. {1} looks at him with real pity.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE SHOE GAME",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} {1} the speech and {2} {3} and {4} back to back on two chairs, each holding one of their own shoes and one of the other's. \"Raise the shoe of whoever...\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SPARKLER SEND-OFF",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The guests line the path with sparklers. {0} and {1} are ready to make their grand exit.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Sparklers (free)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A tunnel of sparkles. Perfect.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Eighty sparklers, one long golden tunnel. The photographer cries a little.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Fireworks too! (£300)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Fireworks finale",
+  "file": "js/events.js"
+ },
+ {
+  "en": "BOOM. The sky lights up pink and gold. What a way to end the day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has volunteered to operate them. He has read none of the instructions.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody has read the instructions.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "CONFETTI CANNONS",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The guests line the path. Two confetti cannons have been set up for the grand exit. {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Fire the cannons! (£120)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The confetti cannon exit",
+  "file": "js/events.js"
+ },
+ {
+  "en": "FWOOMPH! A pink and gold blizzard. The couple vanish into it like rock stars.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "One fires perfectly. The other fires backwards into {0}. He's fine. He's pink now.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Handfuls of petals (free)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Old-fashioned handfuls of rose petals. Simple and lovely. An auntie collects them all in her handbag.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Cannons AND fireworks (£420)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Confetti on the ground, fireworks in the sky. Pure overkill. Absolutely glorious.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Vintage Rolls-Royce (£250)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The vintage car getaway",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Gleaming cream Rolls, tin cans clattering behind. Pure class.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It won't start. The chauffeur and three uncles push it to the end of the lane. Still classy. Mostly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The farmer's",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} tractor (free)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Off into the night on a tractor",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} rides on the back in her white dress, waving like the Queen. {1} drives at 4mph. Iconic.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It sprays mud over the whole guard of honour on the way out. {0}'s dress is now two-tone.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Horse and cart (£150)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The horse and cart",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Clip-clop down the lane under the stars. Like something out of a costume drama.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The horse leaves a parting gift right on the path. Several parting gifts. Guests are tiptoeing.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A borrowed",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} Lada (free)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Lada getaway",
+  "file": "js/events.js"
+ },
+ {
+  "en": "crosses himself",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Russian side gasp",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It starts first time! {0}. Off they go in a cloud of blue smoke, horn playing Kalinka.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It won't start. Thirty guests push the Lada down the lane chanting \"DA-VAI! DA-VAI!\" Somehow, even better.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE GETAWAY",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The guests line the path to wave them off. It's decision time: how are {0} and {1} leaving?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} arranged it as a \"small surprise\". The invoice, however, is addressed to you.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Nobody admits to booking it. The invoice is addressed to you.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "IS THAT A HELICOPTER?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Thud-thud-thud. A helicopter is landing on the lawn, flattening the flowerbeds and every fascinator in the garden. {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pay up and fly away (£600)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Helicopter exit!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Up, up and away over the garden, waving out of the window. Nobody will ever top that. Your bank manager is crying, but for different reasons.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Haggle with {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Haggle with the pilot",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} agrees to pay \"most of it\" after a hug and a vodka. Up and away!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The pilot knocks it down to £250 \"because it's a wedding\". Up and away!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "You somehow haggle {0} UP. It's now the full £600, plus \"a tip for the pilot\". Still, it's a helicopter.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The pilot is not a haggler. He takes off empty. The couple walk out through the downdraft with their hair everywhere.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Send it away, walk out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The helicopter leaves. {0} and {1} walk out hand in hand under the stars instead. Honestly? Lovely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE TUNNEL OF ARMS",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The guests have formed a long tunnel of raised arms down the path, and the Russian side have declared a toll: the couple must kiss under every single pair of arms.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Kiss their way through",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The kissing tunnel",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Forty-one kisses later they emerge at the gate, dizzy and grinning. The guests count every one.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Make a run for it!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They sprint through hand in hand, {0}'s dress held up, {1}'s quiff bouncing. The guests cheer them all the way out.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} trips into the tunnel and collapses half of it like dominoes. Everyone's fine. Mostly on the grass.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pay the toll in vodka",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A shot at each end of the tunnel, \"for the road\". The Russian side accept. The tunnel gets wobblier.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A SOGGY SEND-OFF",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's absolutely chucking it down. The sparklers are fizzling out as fast as they're lit. {0} and {1} are huddled in the doorway.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Umbrella guard of honour",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Thirty umbrellas form a tunnel. Dry as a bone. Very British. Very lovely.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Run through it, laughing",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Kissing in the rain",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They stop halfway, soaked, for one long kiss in the rain. The photographer gets it. That's the album cover.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s dress weighs about four stone by the gate. Her mascara has made a run for it too.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Fireworks anyway (£300)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Fireworks in the rain",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Fireworks bursting through the rain clouds. Damp, defiant and beautiful.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "sausage dog",
+  "file": "js/events.js"
+ },
+ {
+  "en": "enormous Great Dane",
+  "file": "js/events.js"
+ },
+ {
+  "en": "very muddy Labrador",
+  "file": "js/events.js"
+ },
+ {
+  "en": "tiny fluffy Pomeranian",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Biscuit",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Sputnik",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Mr Wiggles",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pickle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "WOOF!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "its red-faced owner",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Halfway through the readings a {0} called {1} comes bombing down the aisle, ears flapping, chased by {2}. It skids to a halt at {3}'s feet and sits, like it was invited.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Make it an honorary guest",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} the wedding dog",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} sits patiently through the vows and howls at \"you may kiss the bride\". Best behaved guest of the day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Grab it!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} dives and scoops it up. The dog licks his face. Applause.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It does a victory lap of every row first, shaking mud over the front pews. {0}'s hat will never be the same.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let it be ring bearer",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The dog brought the rings",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} ties the rings to its collar and it trots them up to the altar. The whole garden melts.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It runs off with the ring cushion. Recovered from under a hedge five minutes later, slightly chewed.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "UNCLE GERALD",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"MUMMY SAYS {0} WAS DRUNK BEFORE BREAKFAST!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"WHY IS {0}'S FACE SO RED?\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"IS THIS THE BIT WHERE THEY DO KISSING? YUCK!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"I NEED A WEE. A BIG ONE.\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"GRANDAD SAID HE'D GIVE IT TWO YEARS!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"I DID A PARP!\"",
+  "file": "js/events.js"
+ },
+ {
+  "en": "OUT OF THE MOUTHS OF BABES",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Right in the quiet bit before the vows, {0} climbs onto a chair and announces, at full volume: {1}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The registrar has to stop for a full minute. {0} is wheezing.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The whole garden howls. Somebody's mum is mortified. Everyone else is delighted.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bribe them with a Haribo",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Silent as a mouse for the rest of the ceremony. The Haribo diplomacy works.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They take the Haribo, chew thoughtfully, and announce \"THAT WAS A GOOD ONE!\" Fair enough.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ask them to say something nice",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The page boy's speech",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"{0} is the prettiest lady I ever saw. And {1} is OK too.\" Not a dry eye in the garden.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"{0} has a big head.\" A long pause. \"And big ears.\" They sit back down, satisfied.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "TIMBER!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "into the arms of {0}",
+  "file": "js/events.js"
+ },
+ {
+  "en": "into a row of fascinators",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's warm, the readings are long, and {0} has locked their knees. They sway... they wobble... and go down like a felled tree{1}.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Fan them with an order of service",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Back on their feet in a minute, a bit pink and very embarrassed. Polite applause.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Smelling salts from {0}'s handbag",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Sit them down with some water",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A sit-down, a glass of water and a biscuit from someone's handbag. Right as rain.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Babushka's handbag of wonders",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Her handbag contains smelling salts, a jar of gherkins, a small hammer and a lot of roubles. {0} is revived instantly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The smelling salts are so strong the whole front row starts sneezing. {0} wakes up to a chorus of \"bless you\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Carry on, they're fine",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They come round just in time for \"you may kiss the bride\" and cheer from the floor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The registrar refuses to continue until they're seen to. Ten awkward minutes of everyone standing about.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE VOWS",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} unfolds the vows he left with {1} for safekeeping and reads the first line out loud: \"I, {2}, promise to love, cherish, and let {3} borrow the car whenever he wants...\" Those are NOT his vows.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Read them anyway",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The best man's fake vows",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"...and to name our firstborn {0}.\" The garden is in hysterics. {1} is laughing so hard she has to sit on the altar step.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The prank vows include a line about Prague. {0} is not laughing. {1} is suddenly very interested in his shoes.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ad-lib some real vows",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Vows from the heart",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He scrunches up the paper, looks at {0}, and speaks from the heart. Simple and perfect. Not a dry eye.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He gets as far as \"You are... very... lovely,\" and the garden melts anyway.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} goes first instead",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s vows are beautiful, and include a binding promise that {1} will never wear that green suit again. He agrees.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "LOST IN TRANSLATION",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The registrar pauses so {0} can translate the vows for the Russian side. He's translating very LOUDLY, and they seem to be getting a much longer version. With hand gestures.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let him carry on",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s translation",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Every time {0} says a line, the Russian side gasp, then cheer, then laugh. Nobody English will ever know what was promised.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} hears her uncle's version and turns around: \"He did NOT say that!\" The Russian side are delighted.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "'s cousin",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ask {0} to translate",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A calm, accurate translation. {0} mutters that it is \"missing the poetry\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Get him to translate both ways",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He now translates the Russian side's heckles into English too. Mostly they're shouting \"KISS HER ALREADY!\" Fair point.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THUNDERSTORM! Everyone into the hall!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's started raining!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bride-to-be Stacey",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hen Tash",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hen Leanne",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hen Kayleigh",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hen Danielle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hen Jade",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hen Chantelle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hen Steph",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A {0}-person conga line",
+  "file": "js/events.js"
+ },
+ {
+  "en": "RELEASE THE DOVES",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The photographer has a basket of white doves to release over the couple. {0} is standing directly underneath.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Release them!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The dove release",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They soar up in a perfect white cloud. Gasps. Tears. Instagram.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Beautiful... except one of them \"christens\" {0}'s bald patch.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The doves panic and fly into the farm next door. A goat wanders back in through the gap.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Use bubbles instead",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A thousand bubbles drift over the lawn. The kids go feral.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "CHAMPAGNE TOWER",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The waiters have built a six-foot champagne tower on the lawn. {0} has been handed the bottle to pour.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pour it slowly",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Glass by glass, it fills perfectly. Free fizz for everyone!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The tower leans... and leans... CRASH. Two hundred quid of glassware on the lawn.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let {0} pour it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Dmitri poured the champagne tower",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He pours with one hand, holding a vodka in the other. Flawless. The Russian side applaud.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He gets bored halfway and just drinks from the bottle.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "MISSING CHILD!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has vanished. Their mum is starting to panic. Everyone is calling their name across the garden.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Search the bouncy castle",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Found them, asleep in a corner of the bouncy castle. Aww.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "There is no bouncy castle. They were behind a hedge eating flowers.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Check under the cake table",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Under the cake table, with a fistful of icing. The cake has a small handprint now.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Not there. They turn up an hour later, with the goat, very happy.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Get everyone looking",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A full search party. Found in the toilets \"having a wee for ages\". Big cheer.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "GUST OF WIND",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A sudden gust whips across the lawn. Fascinators are taking flight. {0}'s veil is doing its best kite impression.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Chase the hats!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Twenty guests sprinting across the lawn after flying hats. Best entertainment of the day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone inside for a bit",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Hair saved. Mostly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Use the veil for a dramatic photo",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The windswept veil photo",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The photographer gets THE shot. It'll be framed in every house in the family.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The veil wraps round {0}'s head. He walks into a hedge.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "NOW YOU SEE IT...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The Great Mysterio has borrowed {0}'s wedding ring for his big finale. He waves his hand... and it's gone.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Applaud!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The magic ring trick",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It reappears inside a bread roll in {0}'s handbag. How?! HOW?!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It does not reappear. He looks genuinely worried. It turns up in the hedge an hour later.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Demand it back NOW",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He produces it from behind your ear, looking a bit hurt.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "FIRE!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A centrepiece candle has set the flowers on table three alight. It's only small. For now.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Throw water on it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Out in one splash. Also soaked: three aunties.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Smother it with a napkin",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Swift, calm, heroic. A round of applause for the napkin.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The napkin catches fire too. Then the second napkin.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Toast marshmallows on it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Marshmallows over a burning centrepiece",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} produces marshmallows from his jacket. Nobody asks why.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "NUT ALERT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has just realised the sauce might have nuts in. They're allergic. They're looking at you.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ask the kitchen",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No nuts. Panic over. They eat two portions out of relief.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "There were nuts. Mild reaction. A cousin who's a nurse handles it like a pro.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Swap their plate to be safe",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A safe plate arrives in record time. Gold star for the kitchen.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "SEATING PLAN WAR",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has discovered she's sat next to {1}. They haven't spoken since \"the incident\" at a christening in 2011.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Swap their seats quietly",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Crisis averted. Nobody will ever know about the incident. (Everyone knows about the incident.)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Make them sit together",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The great reconciliation",
+  "file": "js/events.js"
+ },
+ {
+  "en": "By dessert they're crying, hugging and sharing a bottle of wine. Healing!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Forty minutes of very loud silence. Then a bread roll is thrown.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "BABUSHKA STANDS UP",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} rises, raises a shot glass and begins a toast in Russian. It's been going for five minutes. Nobody on the British side has a clue what's happening.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Babushka's toast",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"She says... she has waited 84 years to see this, and she approves of {0}.\" Everyone weeps.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"She says the groom is too skinny and needs feeding.\" The Russian side nod firmly.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Just clap at the end",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Enthusiastic applause. She looks pleased. Nobody will ever know what she said.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone drink when she drinks",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Four shots later, the British side are ready to learn Russian.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The DJ drops the YMCA. A primal force takes over the room. Even {0} is twitching.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Everyone on the floor!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Forty people spelling out letters with varying accuracy. Uncle Gerald does a \"W\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Couple-only verse",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} and {1} do the whole thing in sync. They have clearly practised.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "HOW LOW CAN YOU GO?",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Someone has found a broom and started a limbo contest. {0} has rolled up her sleeves.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} won the limbo",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Under the bar at knee height. The crowd chants her name.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "She gets halfway, freezes, and has to be lifted out by two cousins.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Lower the bar for the kids",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The kids dominate. Total limbo legends.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "KARAOKE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has found the karaoke machine and is scrolling ominously towards \"My Heart Will Go On\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let them belt it out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s Titanic moment",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They hit THE note. Grown men weep. Someone holds {0} at the front of the \"ship\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's not good. It's really not good. But it's very, very loud.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Steer them to a duet",
+  "file": "js/events.js"
+ },
+ {
+  "en": "\"Islands in the Stream\" with {0}. Unexpectedly tender.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pull the plug",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They sing it anyway, a cappella, on a chair.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE STAG LADS",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s stag do mates have arrived wearing the same inflatable costumes from Prague. They're carrying something large under a sheet.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Reveal it!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The stag do surprise",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's a cardboard cut-out of {0} from the stag. In a mankini. {1} laughs so hard she cries.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's a photo board from Prague. {0} has seen it. She has questions.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Make them dance first",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Six inflatable dinosaurs doing the Macarena. Peak wedding.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "THE RING!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} was showing off his ring and it's slipped off and rolled somewhere across the dance floor.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Stop the music and search",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Found within two minutes. The DJ restarts with \"Single Ladies\". Cheeky.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Ten minutes, no ring. {0} finds it in his own pocket.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the kids",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Send {0} to find it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The great ring hunt",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} finds it in seconds using her phone torch, and livestreams the whole rescue. 40k likes.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The kids find it in seconds. They demand a finder's fee in Haribo.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "BRIDE-OFF!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The bride from the OTHER wedding has marched over and declared their party \"way better\". She's challenging {0} to a dance-off.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} accepts!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Won the Bride-Off",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} wins by a mile, dark pink shoes flashing. The other bride concedes and buys her a drink.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's close. Too close. The judges (the DJ) call it a draw.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Kill them with kindness",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} invites them all in for cake. Two weddings become one massive party.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bouncer, show them out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Escorted back to their own wedding. Order restored.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No bouncer. They stay and judge your canapés.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "FLASH MOB!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "the DJ drops the beat",
+  "file": "js/events.js"
+ },
+ {
+  "en": "there's... no music. Someone's phone speaker crackles",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's 20:00. {0} gives the signal. The bridesmaids freeze, then {1}...",
+  "file": "js/events.js"
+ },
+ {
+  "en": "GO GO GO!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The surprise flash mob",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Twenty people burst into a perfectly choreographed routine. {0} is screaming. {1} is crying. LEGENDARY.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It starts strong, then half of them forget the moves. Still brilliant.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Pull the groom in too",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} doesn't know any of the moves. He commits anyway. The crowd loves him.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "It's also {0}'s 30th birthday today. He's propping up the bar, pretending he doesn't mind that nobody has said anything.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Whole room sings Happy Birthday",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0}'s 30th birthday song",
+  "file": "js/events.js"
+ },
+ {
+  "en": "In English AND Russian. He pretends to be embarrassed, then stands on a chair and conducts.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Birthday shots for the stag lads",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Thirty shots, lined up on the bar. Nobody is entirely sure who drank the last ten.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Give him cake with a candle in it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "There's no cake left. He gets a candle in a sausage roll. He's thrilled.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He blows it out and gives a surprisingly emotional speech about turning thirty. {0} hugs him.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Don't make a fuss",
+  "file": "js/events.js"
+ },
+ {
+  "en": "He sulks. Loudly. {0} spends the rest of the night apologising.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "GOING LIVE",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has set up a ring light on the lawn. \"Hiii guys! I'm LIVE from my cousin's wedding!\" She wants {1} and {2} for a quick Q&A with her 200,000 followers.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Do the Q&A",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The wedding went viral",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} is a natural. {1} says \"hashtag blessed\" unironically. 300 new followers.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Someone asks {0} how much the wedding cost. Live. He tells them.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Agree a sponsored prosecco deal (+£300)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Every glass now has to be held label-out for the camera. The prosecco is fine. The vibe is \"advert\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Phones away, please",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} posts a sad selfie captioned \"some people just don't get content\". Everyone else enjoys the day.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "RING LIGHT BLACKOUT",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} has plugged her ring light, two phones, a laptop and a hair straightener into one socket. There's a bang. The hall goes dark.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Call an emergency electrician (£150)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Lights back on in ten minutes. The electrician stays for a slice of cake.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Candlelit, it is",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The candlelit wedding breakfast",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Candles on every table. It looks stunning. {0} says it's \"giving cottagecore\".",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Someone's sleeve catches a candle. It's fine. It's mostly fine.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Make her fix it",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} fixes it with a hair grip and a lot of confidence. Nobody asks how.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "GOING VIRAL",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} screams. The stream just hit A MILLION viewers. People all over the world are watching {1}'s dancing. She wants to give them something special.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Start a wedding dance challenge",
+  "file": "js/events.js"
+ },
+ {
+  "en": "The viral dance challenge",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Eighty guests doing the same dance. It's trending in four countries by midnight.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Shout out a sponsor (+£400)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} reads out a discount code for teeth-whitening strips in the middle of his own wedding.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "End the stream. Be in the moment.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "{0} turns the camera off, puts her phone in her bag and dances with everyone. Best decision of the night.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "PAPARAZZI!",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Photographers have spotted TV Chef Rocco Bellini and are climbing over the hedge with long lenses. One is already on the bouncy castle.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bouncer, clear them out",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Bounced out of the garden. Rocco is so grateful he gives a speech about the canapés.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No bouncer. They trample the flowerbeds and get a shot of Uncle Gerald being sick.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Sell them an exclusive (+£500)",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Your wedding will be in a magazine next week. {0} is NOT pleased about her photo.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Let 'em in",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Our wedding made the papers",
+  "file": "js/events.js"
+ },
+ {
+  "en": "They have a lovely time. One of them catches the bouquet later.",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Little {0}",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} got SO excited they literally EXPLODED!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "KABOOM! {0}",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} HAS EXPLODED!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} exploded with excitement",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} has strolled back in, slightly singed, and carried on partying.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} the golden retriever has arrived with the guests. Good boy!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Here comes the bride! {0} walks down the aisle.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Only {0}",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0}% of guests were seated for the vows.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Off they go! Congratulations, {0} & {1}!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} is looking a bit green...",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} slipped in the {1}",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Setting Up",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Guests Arriving",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Take Your Seats",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The Ceremony",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Drinks Reception",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Wedding Breakfast",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Speeches",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Cake & Evening Do",
+  "file": "js/game.js"
+ },
+ {
+  "en": "First Dance",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Party Time!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Sparkler Send-off",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The End",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Uncle Gerald started on the prosecco at breakfast.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Heatwave! Guests outdoors get thirsty fast.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The kitchen is short-staffed. Dinner plates take longer.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The Best Man has lost his speech notes. Risky jokes are riskier.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Cousin Jess has bought a new ring light. It is very, very bright.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "There's a hen do at the venue next door...",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The venue cat is wandering about. Guests love it.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The Mother of the Bride is inspecting everything. Mess upsets the couple.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "A rich great-aunt sent a cheque! +£500 budget.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The farm next door has a very curious goat.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The DJ owes the groom a favour. Half price DJ!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Half the guests haven't been out since lockdown. Lightweights!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Registrar Stuck in Traffic",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The ceremony starts 30 minutes late. Guests will get restless (and thirsty) waiting.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The registrar has rung: stuck behind a tractor. 30 minutes late!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Dodgy Prawns",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The prawn starter smelled... off. Expect several dodgy tummies this evening. Have loos and cleaners ready.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Rumour has it the prawns were \"a bit warm\". Uh oh.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Celebrity Guest",
+  "file": "js/game.js"
+ },
+ {
+  "en": "A famous TV chef is coming to the evening do! Guests will be thrilled. The paparazzi might follow...",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Live Ceilidh Band",
+  "file": "js/game.js"
+ },
+ {
+  "en": "A live ceilidh band plays the evening instead of a DJ, for free! But they take a break every hour.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Thunderstorm Forecast",
+  "file": "js/game.js"
+ },
+ {
+  "en": "A big storm is due this evening. The garden will be soaked for an hour and lightning may knock the power out.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Showers",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Kids Everywhere",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Six extra kids have been brought along. Sugar rushes guaranteed. A Bouncy Castle would be a lifesaver.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Dmitri's Treat",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Uncle Dmitri is paying for a FREE BAR until 20:00! Guests will drink a lot more...",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Dmitri's free bar is over. Back to normal prices!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Double-Booked!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The venue double-booked. Guests from another wedding keep wandering in and helping themselves to your bar. Bouncers will show them out.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Live-Streamed Wedding",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Cousin Jess is livestreaming the whole day to 200,000 followers. Give the internet a show... but keep it classy.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Secret Flash Mob",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The bridesmaids have planned a surprise flash mob for 20:00. Make sure there is music!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Best Man's 30th",
+  "file": "js/game.js"
+ },
+ {
+  "en": "It's also the best man's 30th birthday! Do something for him... or he'll sulk.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Goat Escape",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The farm next door left the gate open. Expect goats. Plural. Guard that cake!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Record Heatwave",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Hottest day of the year! Outdoor guests get very thirsty. Parasols are a must.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Close-up Magician",
+  "file": "js/game.js"
+ },
+ {
+  "en": "A cousin hired a close-up magician for the drinks reception. Guests near him are amazed. Mostly.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Tight Budget",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The deposit bounced! You only have £4,000 today, but every £1 left over counts DOUBLE at the end.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The Wedding Critic",
+  "file": "js/game.js"
+ },
+ {
+  "en": "A critic from Wedding Weekly is attending. A spotless venue (hardly any mess) at 17:00 earns a glowing review.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Celebrity Chef",
+  "file": "js/game.js"
+ },
+ {
+  "en": "TV Chef Rocco Bellini",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Guest",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Little",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Rival Guest Darren",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Rival Guest Kerry",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Rival Guest Tony",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Rival Guest Leanne",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Rival Guest Mick",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Rival Guest Chantal",
+  "file": "js/game.js"
+ },
+ {
+  "en": "From the OTHER wedding",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Guests from the OTHER wedding are wandering in again...",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Gatecrashers from the other wedding! A Bouncer will show them out.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The Great Mysterio",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The Great Mysterio the magician has arrived. Prepare to be amazed (mildly).",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Glowing review in Wedding Weekly",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The critic is IMPRESSED. \"Spotless!\" Five stars in Wedding Weekly.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The critic jots down \"Pleasant, if a little sticky.\" Three stars.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The critic stepped in something. \"A shambles.\" One star. Ouch.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The Registrar",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Cloudy",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The gates are open! Guests are arriving.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The evening guests are arriving!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Last orders at the bar!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Best Man",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Anya",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Masha",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Katya",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Dasha",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Lucy",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Hannah",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Emma",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Sophie",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Alina",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Father of the Bride",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Sergei",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Vladimir",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Alexei",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Yuri",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Mother of the Bride",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Svetlana",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Natasha",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Irina",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Tatiana",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Lyudmila",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Groom's Mum",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Maureen",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Brenda",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Wendy",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Gill",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Uncle Gerald",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Cousin Jess",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Cousin Kyle",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Evening Guest",
+  "file": "js/game.js"
+ },
+ {
+  "en": "I'm back! What did I miss?",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Right, where was I?",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Sorry about that. Got a bit excited.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Is the bar still open?",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Please take your seats for the ceremony!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Drinks on the lawn! Keep everyone fed, watered and entertained.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Dinner is served! Guests are heading to their tables.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Nobody is serving dinner! Hire some Waiters, quick!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Pin drop. Time for the speeches...",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Time to cut the cake! The evening do begins.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The Ceilidh Band (DJ)",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The ceilidh band are setting up. Strip the Willow!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The evening needs music! Hire a DJ before the first dance at 19:00.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Everyone gather round for the first dance!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Let's PARTY! Keep the bar open and the floor full.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Grab a sparkler and line the path for the send-off!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "I do!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "\"You may now kiss the bride!\" JUST MARRIED!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Just married!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The rain has stopped. Phew!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The power is back on!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "A goat has wandered in from next door!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "ANOTHER goat has wandered in!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Lightning strike! The power has gone!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The band are on their break. 12 minutes of silence...",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Guests will want a drink! Furnish a Bar and hire a Bartender.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Your Bar is closed! Hire a Bartender to run it.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Long loo queues! Buy a Portaloo or two.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The bar is swamped. Another Bar & Bartender would help.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Hungry guests! A Canapé Table or Choc Fountain will help.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Guests are bored! Try a Photo Booth or Bouncy Castle.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "It's getting grim in here. Hire a Cleaner.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Dinner is slow. More Waiters would speed things up.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "The evening needs music! Hire a DJ.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "There is a goat loose. A Bouncer could chase it off.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Some guests are very drunk. Select one to cut them off or send them home.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "spilt drink",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Someone slipped in sick",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Disaster at the Altar",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Bit of a Shambles",
+  "file": "js/game.js"
+ },
+ {
+  "en": "A Lovely Do",
+  "file": "js/game.js"
+ },
+ {
+  "en": "An Absolute Belter",
+  "file": "js/game.js"
+ },
+ {
+  "en": "WEDDING OF THE CENTURY!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Drop {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{0} here · right-click to cancel",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{0} · right-click to stop",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "You can't afford a {0}!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Sold {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "You can't afford a {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{0} has been sacked. They take it well.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{0} is on it!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Heading to the {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Chatting with {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Waiting for food ({0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{0} min)",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{0} has been cut off. Soft drinks only!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{0} can drink again.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "--hudh",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "RAT! Click to shoot it",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "You can't afford a",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Can't place it there",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "You already have a DJ!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Can't stand there",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "You need a Cleaner to clean that up!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "tap a floor tile",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "click a floor tile",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Place",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Cancel",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Tap the green spot again to place",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Red = blocked, tap elsewhere",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Tap where it should go",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Click to place (repeat for more)",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Change",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Done",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "FURNISH",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "pick an item, then {0} the map",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Tip: select a placed item to sell it.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Hover an item for details. Right-click to stop placing. Select a placed item to sell it.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "HIRE STAFF",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "then {0} where they start",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "HIRED",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Waiters serve dinner & canapés · Bartenders run bars · Cleaners mop (and keep rats away) · Bouncers stop fights & goats · The DJ makes the party.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "canvas[data-prev]",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "canvas[data-staff]",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "button[data-build],button[data-hire]",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ".desc",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Mingling",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Walking",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Queueing",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Sitting down",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Dancing!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Chatting",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Asleep (zzz)",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "FIGHTING!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Leaving",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Watching",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "In the conga line!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "On the floor",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "At their post",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Working",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Walking the aisle",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "At the altar",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "At the cake",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "On the dance floor",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Ready to leave",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Not arrived",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Being sick!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "At the bar",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "In the loo",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "In the portaloo",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "In the photo booth",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Bouncing!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Eating canapés",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "At the choc fountain",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Eating cake",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Having tea",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Busy",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Serving dinner",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Cleaning up",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Breaking up a fight",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Eating",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "HEADING FOR THE CAKE!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "The Groom",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "The Bride",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Honoured guest",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Intruder",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Ginger. Green suit. Beige waistcoat.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Dark brown hair. White dress. Dark pink shoes.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Allow drinks",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Cut off drinks",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Send home",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Move",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Sack",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Sell (+{0})",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Happy",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Thirst",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Hunger",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Bladder",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Bored",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Tipsy",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Bliss",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Cost today: {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Serving at the bar",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Heading to a bar",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "No bar to work at!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Going for the cake!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Get a Bouncer on it!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Munching. Watch the cake...",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "OPEN",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Free bar",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Cash bar",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "· needs a Bartender",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "EATEN BY A GOAT",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "slices left",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Not cut yet",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "PUMPING",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Waiting for the evening",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "No DJ hired",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Used {0} times · {1}/{2} in use",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "[data-speed]",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "FREE BAR! Guests are delighted. It costs you £6 a drink.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Cash bar. Guests pay, you earn £4 a drink, but they grumble.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BAR: DMITRI",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BAR: FREE",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BAR: CASH",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "MUSIC",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "MUSIC OFF",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "SFX",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "SFX OFF",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Heatwave",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "RAINING",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "POWER CUT",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "RATS:",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "PAUSED",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "DAY {0} · {1}{2}{3}{4}{5}{6}{7}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ".item[data-build]",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ".say",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "INCOMING FAX",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ".choices",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "JOY",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BLISS",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "CROWD MOOD",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{1} · {2} min",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Carry on",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "TRIUMPH!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Buzzing!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "NICE ONE!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Good Vibes",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "PHEW...",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "OH DEAR...",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Awkward...",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "DISASTER!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Day {3}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ".hsbox",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Loading global scores…",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ".dim",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Nick",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Olga",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Day {2}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "No weddings yet. Make history!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "RELIVE THE BIG DAY (Day",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BEGIN THE BIG DAY",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "(EVERYONE)",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "THEME",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "WEDDING",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "One day. The same day. Over and over. Make it perfect.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Groom",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Bride",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Your name",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "HOW TO PLAY",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Run the wedding day from 09:30 to midnight.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Furnish",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "bars, portaloos, fun stuff.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Hire",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "staff and drop them in.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Keep guests fed, watered, relieved and entertained.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Random chaos will happen. Every day has a different",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Not enough cleaners?",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Rats!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{4} them to shoot them.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Olga's Russian family have",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ". Respect them.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BEST WEDDINGS{5}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "You wake up. Birds are singing. It's your wedding day. Again.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Déjà vu? The same wedding day starts all over again... but something feels different.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "The alarm goes off. Same day. Same goat next door. Same Uncle Gerald. Different chaos.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Somehow, impossibly, it is the wedding day once more.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Groundhog Day, but with more prosecco.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Sunny and warm",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Overcast",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Showers expected",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "HEATWAVE",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "It's the morning of {0} & {1}'s wedding. Everything must go perfectly. (It won't.)",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "DAY {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "THE BIG DAY",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "TODAY'S TWIST",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Weather:",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Gates open at",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ". Ceremony at",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ". Use the next half hour to prepare!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "You start with",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ". Leftover money adds to your score.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Guests will want a",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "(with a",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ") and dinner needs",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Waiters",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "LET'S GET MARRIED!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "PLANNER: Tap FURNISH to buy a Bar, then HIRE a Bartender to run it.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Touch:",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "drag to scroll, pinch to zoom, tap people & things for info. To place furniture, tap a spot, then tap it again.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Mouse:",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "drag to scroll, wheel to zoom, click people & things for info.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Keys:",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Space pause · 1/2/3 speed · B furnish · H hire · Esc cancel · WASD/arrows scroll · Delete sells selected item.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "PLANNER'S HANDBOOK",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "HOW IT WORKS",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Thought bubbles",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "show what guests need: a glass = thirsty, a drumstick = hungry, yellow drop = needs the loo.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Bars",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "only open with a Bartender behind them. Free bar = happier guests, but costs you.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Dinner",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "is served by Waiters from the kitchen pass. No waiters, no food.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Messes",
+  "file": "js/ui.js"
+ },
+ {
+  "en": ": {2} one to send a Cleaner. Let them pile up and",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "appear: {3} to shoot them!",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Goats",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "will eventually eat the wedding cake. Bouncers chase them off.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Drunk guests",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "get fun... then messy. Cut them off or send them home from their info card.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Score",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "= Joy + Bliss × 8 + leftover money ÷ 5 (both reduced if guests storm off).",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BACK TO THE WEDDING",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "{0} & {1}  ·  Day {2}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Best bit: {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "A quiet one.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Nothing memorable happened. Somehow.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "% stayed",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "DAY {0} COMPLETE",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Save the photo",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Joy",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Couple's Bliss ({4} × 8{5})",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Budget left ({7}{8})",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "FINAL SCORE",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "MEMORIES",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "THE DAY IN NUMBERS",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Today's twist",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Average happiness",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Drinks poured",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Meals served",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Photo booth snaps",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Times someone was sick",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Fights",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Rats shot",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Loo accidents",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Slips & falls",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Stormed off",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Sent home in a taxi",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Messes cleaned",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BEST WEDDINGS{25}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "RELIVE THE DAY (Day {27})",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Title screen",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "fax end",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "A4 . C5 . F5 . E5 D5 | C5 . A4 . F4 . - - | G4 A4 Bb4 D5 . . C5 Bb4 | A4 . G4 . E4 . - -\r\n                E5 . C5 . A4 . C5 E5 | F#5 . E5 D5 C5 . A4 - | Bb4 . D5 . G5 . F5 E5 | F5 . . . - - C5 -",
+  "file": "js/audio.js"
+ },
+ {
+  "en": "F2 . A2 . C3 . D3 . | D2 . F2 . A2 . C3 . | G2 . Bb2 . D3 . F3 . | C2 . E2 . G2 . Bb2 .\r\n                A2 . C3 . E3 . G3 . | D2 . F#2 . A2 . C3 . | G2 . Bb2 . D3 . E3 . | C3 . Bb2 . G2 . E2 .",
+  "file": "js/audio.js"
+ },
+ {
+  "en": "A3 C4 E4 | F3 A3 C4 | F3 Bb3 D4 | E3 G3 Bb3 | G3 C4 E4 | F#3 A3 C4 | F3 Bb3 D4 | E3 G3 Bb3",
+  "file": "js/audio.js"
+ },
+ {
+  "en": "A4 . D5 . F5 . E5 D5 | D5 . F5 . A5 . G5 F5 | F5 . C5 . A4 . C5 F5 | E5 . . . G5 . E5 C5\r\n                D5 F5 A5 F5 D5 F5 A5 F5 | D5 F5 Bb5 F5 D5 F5 Bb5 F5 | C5 F5 A5 F5 C5 F5 A5 F5 | C5 E5 G5 E5 C6 . - -",
+  "file": "js/audio.js"
+ },
+ {
+  "en": "D2 . D3 D2 . D2 D3 . | Bb1 . Bb2 Bb1 . Bb1 Bb2 . | F2 . F3 F2 . F2 F3 . | C2 . C3 C2 . C2 C3 .\r\n                D2 . D3 D2 . D2 D3 . | Bb1 . Bb2 Bb1 . Bb1 Bb2 . | F2 . F3 F2 . F2 F3 . | C2 . C3 C2 . C2 C3 .",
+  "file": "js/audio.js"
+ },
+ {
+  "en": "D4 F4 A4 | D4 F4 Bb4 | C4 F4 A4 | C4 E4 G4",
+  "file": "js/audio.js"
+ },
+ {
+  "en": "{0}/rest/v1/leaderboard?select=player,score,day,title&order=score.desc&limit={1}",
+  "file": "js/leaderboard.js"
+ },
+ {
+  "en": "{0}/rest/v1/scores",
+  "file": "js/leaderboard.js"
+ },
+ {
+  "en": "Theme Wedding",
+  "file": "index.html"
+ },
+ {
+  "en": "BUDGET",
+  "file": "index.html"
+ },
+ {
+  "en": "II",
+  "file": "index.html"
+ },
+ {
+  "en": "HIRE",
+  "file": "index.html"
+ },
+ {
+  "en": "GUESTS",
+  "file": "index.html"
+ },
+ {
+  "en": "· MOOD",
+  "file": "index.html"
+ },
+ {
+  "en": "Pause (Space)",
+  "file": "index.html"
+ },
+ {
+  "en": "Normal (1)",
+  "file": "index.html"
+ },
+ {
+  "en": "Fast (2)",
+  "file": "index.html"
+ },
+ {
+  "en": "Fastest (3)",
+  "file": "index.html"
+ },
+ {
+  "en": "Furnish (B)",
+  "file": "index.html"
+ },
+ {
+  "en": "Hire staff (H)",
+  "file": "index.html"
+ },
+ {
+  "en": "Toggle free bar / cash bar",
+  "file": "index.html"
+ },
+ {
+  "en": "Music on/off",
+  "file": "index.html"
+ },
+ {
+  "en": "Sound effects on/off",
+  "file": "index.html"
+ },
+ {
+  "en": "Help",
+  "file": "index.html"
+ }
+]

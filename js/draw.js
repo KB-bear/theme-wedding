@@ -406,7 +406,7 @@ function wallSprite(kind) {
         prism(c, 0.88, 0.36, 1, 0.64, 24, { top: '#c8d2d8', left: '#f2f6f8', right: '#f2f6f8' });
         prism(c, 0, 0.36, 1, 0.64, 3, { top: '#c8d2d8', left: '#5a8fc0', right: '#5a8fc0', lift: 21 });
         const p = iso(0.5, 0.64); rr(c, p.x - 3.5, p.y - 23.4, 7, 2.6, 0.6); fillInk(c, '#2a5ab0', 0.3);
-        c.fillStyle = '#fff'; c.font = '2px sans-serif'; c.textAlign = 'center'; c.fillText('WC', p.x, p.y - 21.4);
+        c.fillStyle = '#fff'; c.font = '2px sans-serif'; c.textAlign = 'center'; c.fillText(tr('WC'), p.x, p.y - 21.4);
         break;
       }
       case 'hedgeGateL': case 'hedgeGateR': {
@@ -463,7 +463,7 @@ function drawPiece(c, o, tx, ty, dx, dy, t) {
       if (dx === 1) { rr(c, cx - 2, cy - 20, 4, 5, 0.6); fillInk(c, '#c8c8d0', 0.35); circ(c, cx, cy - 20.5, 0.9); fillInk(c, '#d8a840', 0.3); }
       if (dx === 0 && !o.fake && !o.ghost && !barOpen(o)) {
         rr(c, cx - 7, cy - 29, 14, 5.5, 1); fillInk(c, '#c0283c', 0.45);
-        c.fillStyle = '#fff'; c.font = 'bold 3.2px sans-serif'; c.textAlign = 'center'; c.fillText('CLOSED', cx, cy - 25.1);
+        c.fillStyle = '#fff'; c.font = 'bold 3.2px sans-serif'; c.textAlign = 'center'; c.fillText(tr('CLOSED'), cx, cy - 25.1);
       }
       break;
     }
@@ -511,7 +511,7 @@ function drawPiece(c, o, tx, ty, dx, dy, t) {
       P(c, [cx - 12, cy - 23, cx - 2, cy - 18, cx - 2, cy - 1.5, cx - 12, cy - 6.5]); fillInk(c, '#7a1426', 0.4);
       c.strokeStyle = '#a8203a'; c.lineWidth = 0.6; for (let i = 0; i < 5; i++) { const u = cx - 11 + i * 2; c.beginPath(); c.moveTo(u, cy - 22 + i); c.quadraticCurveTo(u + 0.8, cy - 13 + i, u, cy - 6 + i); c.stroke(); }
       P(c, [cx + 2, cy - 27, cx + 12, cy - 32, cx + 12, cy - 28, cx + 2, cy - 23]); fillInk(c, '#ffd84a', 0.4);
-      c.save(); c.transform(1, -0.5, 0, 1, cx + 2, cy - 23.6); c.fillStyle = '#a81c2e'; c.font = 'bold 3px sans-serif'; c.textAlign = 'left'; c.fillText('PHOTO', 0.6, -0.2); c.restore();
+      c.save(); c.transform(1, -0.5, 0, 1, cx + 2, cy - 23.6); c.fillStyle = '#a81c2e'; c.font = 'bold 3px sans-serif'; c.textAlign = 'left'; c.fillText(tr('PHOTO'), 0.6, -0.2); c.restore();
       break;
     }
     case 'castle': {
@@ -684,7 +684,7 @@ function drawArch(c, o) {
   if (gate) {
     const m = iso(o.x + o.w / 2, o.y + 0.5);
     rr(c, m.x - 12, m.y - hgt - 16, 24, 6.5, 1.2); fillInk(c, '#fdf6e3', 0.5);
-    c.fillStyle = '#c2185b'; c.font = 'bold 4px sans-serif'; c.textAlign = 'center'; c.fillText('WELCOME', m.x, m.y - hgt - 11.3);
+    c.fillStyle = '#c2185b'; c.font = 'bold 4px sans-serif'; c.textAlign = 'center'; const wt = tr('WELCOME'), ww = c.measureText(wt).width; if (ww > 21) c.font = 'bold ' + (4 * 21 / ww).toFixed(2) + 'px sans-serif'; c.fillText(wt, m.x, m.y - hgt - 11.3);
   }
 }
 function pieceKey(o) {
@@ -1143,7 +1143,7 @@ function drawMess(c, m) {
 }
 
 function drawShout(c, x, y, text, t) {
-  c.save();
+  c.save(); text = tr(text);
   c.font = 'bold 6px "Press Start 2P", "Courier New", monospace';
   const w = c.measureText(text).width + 8, h = 11, pulse = 1 + Math.abs(Math.sin(t * 5)) * 0.06;
   c.translate(x, y - h); c.scale(pulse, pulse); c.rotate(Math.sin(t * 3) * 0.03);
@@ -1175,7 +1175,7 @@ function drawParticles(c) {
       case 'poof': circ(c, x, y, 2 + (1 - a) * 5); c.fillStyle = 'rgba(240,240,240,.85)'; c.fill(); break;
       case 'lightning': c.globalAlpha = a * 0.6; c.fillStyle = '#ffffff'; c.fillRect(0, 0, WORLD_W, WORLD_H); break;
       case 'text':
-        c.font = 'bold 7px sans-serif'; c.textAlign = 'center'; c.lineWidth = 2; c.strokeStyle = '#000'; c.strokeText(q.text, x, y); c.fillStyle = q.col; c.fillText(q.text, x, y); break;
+        c.font = 'bold 7px sans-serif'; c.textAlign = 'center'; c.lineWidth = 2; c.strokeStyle = '#000'; c.strokeText(tr(q.text), x, y); c.fillStyle = q.col; c.fillText(tr(q.text), x, y); break;
     }
   }
   c.globalAlpha = 1;

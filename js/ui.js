@@ -625,6 +625,7 @@ function showTitle() {
   const tbl = hs.length ? '<table class="hs">' + hs.slice(0, 5).map((s, i) => `<tr><td>${i + 1}.</td><td>${esc(s.player || s.couple)}</td><td>Day ${s.day}</td><td class="r">${s.score.toLocaleString('en-GB')}</td></tr>`).join('') + '</table>' : '<p class="dim">No weddings yet. Make history!</p>';
   const box = openModal(`
     <div class="logo">THEME<br><span>WEDDING</span></div>
+    <div class="lang"><button data-lang="en" class="${LANG === 'en' ? 'on' : ''}">English</button><button data-lang="ru" class="${LANG === 'ru' ? 'on' : ''}">Русский</button></div>
     <p class="tag">One day. The same day. Over and over. Make it perfect.</p>
     <canvas id="tcouple" width="432" height="336" style="width:216px;height:168px"></canvas>
     <div class="names"><label>Groom<input id="nG" value="${esc(gn)}" readonly tabindex="-1"></label><span class="amp">&amp;</span><label>Bride<input id="nB" value="${esc(bn)}" readonly tabindex="-1"></label></div>
@@ -641,6 +642,7 @@ function showTitle() {
   `, 'title');
   fillGlobalBoard(box, null);
   drawCouple(box.querySelector('#tcouple'));
+  box.querySelectorAll('[data-lang]').forEach(b => { b.onclick = () => { if (b.dataset.lang !== LANG) setLang(b.dataset.lang); }; });
   box.querySelector('#bStart').onclick = () => {
     auInit(); SFX.bells();
     const pi = box.querySelector('#nP'), player = pi.value.trim().slice(0, 14);
@@ -749,10 +751,10 @@ function drawWeddingPhoto(canvas) {
   // caption, handwritten-ish
   const best = G.memories.filter(m => m.text !== 'Just married!').sort((a, b) => b.pts - a.pts)[0];
   c.fillStyle = '#2a2230'; c.textAlign = 'center';
-  c.font = '40px "VT323", "Courier New", monospace';
-  c.fillText(`${G.gName} & ${G.bName}  ·  Day ${G.day}`, W / 2, PH + 40);
-  c.font = '30px "VT323", "Courier New", monospace'; c.fillStyle = '#6a5a70';
-  c.fillText(best ? `Best bit: ${best.text}` : 'A quiet one.', W / 2, PH + 78);
+  c.font = '40px ' + UI_FONT;
+  c.fillText(`${G.gName} & ${G.bName}  ·  ${tr('Day')} ${G.day}`, W / 2, PH + 40);
+  c.font = '30px ' + UI_FONT; c.fillStyle = '#6a5a70';
+  c.fillText(best ? tr('Best bit:') + ' ' + tr(best.text) : tr('A quiet one.'), W / 2, PH + 78);
 }
 function photoDownloadLink(canvas) {
   try { return canvas.toDataURL('image/png'); } catch (e) { return null; } // blocked when the game is opened straight from a file
