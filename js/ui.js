@@ -685,7 +685,7 @@ function showTitle() {
 const DAY_LINES = [
   "You wake up. Birds are singing. It's your wedding day. Again.",
   'Déjà vu? The same wedding day starts all over again... but something feels different.',
-  'The alarm goes off. Same day. Same goat next door. Same Uncle Gerald. Different chaos.',
+  'The alarm goes off. Same day. Same goat next door. Same drunk best man. Different chaos.',
   'Somehow, impossibly, it is the wedding day once more.',
   'Groundhog Day, but with more prosecco.',
 ];

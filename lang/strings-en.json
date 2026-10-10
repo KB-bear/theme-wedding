@@ -184,10 +184,6 @@
   "file": "js/sprites.js"
  },
  {
-  "en": "Page Boy",
-  "file": "js/sprites.js"
- },
- {
   "en": "Hen Party",
   "file": "js/sprites.js"
  },
@@ -1196,7 +1192,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Ask the page boy",
+  "en": "Ask the flower girl",
   "file": "js/events.js"
  },
  {
@@ -1204,11 +1200,11 @@
   "file": "js/events.js"
  },
  {
-  "en": "The page boy had them all along, tied to a plastic T-rex. Adorable.",
+  "en": "The flower girl had them all along, tied to a plastic T-rex. Adorable.",
   "file": "js/events.js"
  },
  {
-  "en": "He's swapped them for a Haribo ring. The real ones turn up later in the hedge.",
+  "en": "She's swapped them for a Haribo ring. The real ones turn up later in the hedge.",
   "file": "js/events.js"
  },
  {
@@ -1360,7 +1356,11 @@
   "file": "js/events.js"
  },
  {
-  "en": "A quick, tidy family photo. Uncle Gerald blinked. Twice.",
+  "en": "Someone",
+  "file": "js/events.js"
+ },
+ {
+  "en": "A quick, tidy family photo. {0} blinked. Twice.",
   "file": "js/events.js"
  },
  {
@@ -1613,10 +1613,6 @@
  },
  {
   "en": "It flies off. Calm prevails.",
-  "file": "js/events.js"
- },
- {
-  "en": "Someone",
   "file": "js/events.js"
  },
  {
@@ -1876,7 +1872,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "\"NA ZDOROVYE!\" Forty shots go down. Uncle Gerald asks for another. There may be consequences later.",
+  "en": "\"NA ZDOROVYE!\" Forty shots go down. {0} asks for another. There may be consequences later.",
   "file": "js/events.js"
  },
  {
@@ -1972,7 +1968,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Uncle Gerald attempts a squat-kick. His knees make a noise like a bin lorry. He's down.",
+  "en": "{0} attempts a squat-kick. His knees make a noise like a bin lorry. He's down.",
   "file": "js/events.js"
  },
  {
@@ -2004,23 +2000,19 @@
   "file": "js/events.js"
  },
  {
-  "en": "Gerald beat Dmitri",
+  "en": "Against all odds, {0} wins! {1} congratulates him, then goes a funny colour.",
   "file": "js/events.js"
  },
  {
-  "en": "Against all odds, Gerald wins! Dmitri congratulates him, then goes a funny colour.",
+  "en": "{0} lasts four rounds and turns green. {1} hasn't even taken his jacket off.",
   "file": "js/events.js"
  },
  {
-  "en": "Gerald lasts four rounds and turns green. Dmitri hasn't even taken his jacket off.",
+  "en": "{0} drank {1} under the table",
   "file": "js/events.js"
  },
  {
-  "en": "Dmitri drank Gerald under the table",
-  "file": "js/events.js"
- },
- {
-  "en": "Dmitri wins easily. \"In Russia, this is breakfast.\" Gerald is looking very pale.",
+  "en": "{0} wins easily. \"In Russia, this is breakfast.\" {1} is looking very pale.",
   "file": "js/events.js"
  },
  {
@@ -2048,7 +2040,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Uncle Gerald produces a guitar from nowhere. Wonderwall has never sounded better.",
+  "en": "{0} produces a guitar from nowhere. Wonderwall has never sounded better.",
   "file": "js/events.js"
  },
  {
@@ -4148,7 +4140,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Gerald",
+  "en": "Brit",
   "file": "js/events.js"
  },
  {
@@ -5424,7 +5416,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "UNCLE GERALD",
+  "en": "THE BEST MAN",
   "file": "js/events.js"
  },
  {
@@ -5484,7 +5476,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "The page boy's speech",
+  "en": "The flower girl's speech",
   "file": "js/events.js"
  },
  {
@@ -5712,7 +5704,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Beautiful... except one of them \"christens\" {0}'s bald patch.",
+  "en": "Beautiful... except one of them \"christens\" {0}'s hair.",
   "file": "js/events.js"
  },
  {
@@ -6020,7 +6012,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Forty people spelling out letters with varying accuracy. Uncle Gerald does a \"W\".",
+  "en": "Forty people spelling out letters with varying accuracy. {0} does a \"W\".",
   "file": "js/events.js"
  },
  {
@@ -6432,7 +6424,11 @@
   "file": "js/events.js"
  },
  {
-  "en": "No bouncer. They trample the flowerbeds and get a shot of Uncle Gerald being sick.",
+  "en": "a guest",
+  "file": "js/events.js"
+ },
+ {
+  "en": "No bouncer. They trample the flowerbeds and get a shot of {0} being sick.",
   "file": "js/events.js"
  },
  {
@@ -6454,6 +6450,10 @@
  {
   "en": "They have a lovely time. One of them catches the bouquet later.",
   "file": "js/events.js"
+ },
+ {
+  "en": "{0} started on the prosecco at breakfast.",
+  "file": "js/game.js"
  },
  {
   "en": "Little {0}",
@@ -6556,7 +6556,7 @@
   "file": "js/game.js"
  },
  {
-  "en": "Uncle Gerald started on the prosecco at breakfast.",
+  "en": "The best man",
   "file": "js/game.js"
  },
  {
@@ -6948,10 +6948,6 @@
   "file": "js/game.js"
  },
  {
-  "en": "Uncle Gerald",
-  "file": "js/game.js"
- },
- {
   "en": "Cousin Jess",
   "file": "js/game.js"
  },
@@ -7189,6 +7185,14 @@
  },
  {
   "en": "{0} can drink again.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "40px {0}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "30px {0}",
   "file": "js/ui.js"
  },
  {
@@ -7748,19 +7752,43 @@
   "file": "js/ui.js"
  },
  {
+  "en": "Up for grabs",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Day {5}",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "The best weddings from everyone who has played.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Your best weddings on this device.",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "HALL OF FAME",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Loading…",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "BACK",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "No scores yet.",
+  "file": "js/ui.js"
+ },
+ {
   "en": "Nick",
   "file": "js/ui.js"
  },
  {
   "en": "Olga",
-  "file": "js/ui.js"
- },
- {
-  "en": "Day {2}",
-  "file": "js/ui.js"
- },
- {
-  "en": "No weddings yet. Make history!",
   "file": "js/ui.js"
  },
  {
@@ -7772,7 +7800,7 @@
   "file": "js/ui.js"
  },
  {
-  "en": "(EVERYONE)",
+  "en": "Best weddings from everyone",
   "file": "js/ui.js"
  },
  {
@@ -7781,6 +7809,10 @@
  },
  {
   "en": "WEDDING",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "English",
   "file": "js/ui.js"
  },
  {
@@ -7797,6 +7829,10 @@
  },
  {
   "en": "Your name",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "FULL LEADERBOARD",
   "file": "js/ui.js"
  },
  {
@@ -7840,7 +7876,7 @@
   "file": "js/ui.js"
  },
  {
-  "en": "{4} them to shoot them.",
+  "en": "{7} them to shoot them.",
   "file": "js/ui.js"
  },
  {
@@ -7852,7 +7888,7 @@
   "file": "js/ui.js"
  },
  {
-  "en": "BEST WEDDINGS{5}",
+  "en": "[data-lang]",
   "file": "js/ui.js"
  },
  {
@@ -7864,7 +7900,7 @@
   "file": "js/ui.js"
  },
  {
-  "en": "The alarm goes off. Same day. Same goat next door. Same Uncle Gerald. Different chaos.",
+  "en": "The alarm goes off. Same day. Same goat next door. Same drunk best man. Different chaos.",
   "file": "js/ui.js"
  },
  {
@@ -8052,11 +8088,11 @@
   "file": "js/ui.js"
  },
  {
-  "en": "{0} & {1}  ·  Day {2}",
+  "en": "Day",
   "file": "js/ui.js"
  },
  {
-  "en": "Best bit: {0}",
+  "en": "Best bit:",
   "file": "js/ui.js"
  },
  {
@@ -8069,6 +8105,10 @@
  },
  {
   "en": "% stayed",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "(EVERYONE)",
   "file": "js/ui.js"
  },
  {

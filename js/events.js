@@ -34,9 +34,9 @@ const EVENTS = [
       { label: 'Check his other jacket', fn() {
         if (chance(0.5)) { joy(20); return `Inside pocket. Phew. He's sweating through his shirt.`; }
         joy(35); memory('Rings recovered from a sock', 40); return `Not there. ...They were in his SOCK. Nobody asks why.`; } },
-      { label: 'Ask the page boy', fn() {
-        if (chance(0.6)) { joy(45); memory('The dinosaur ring bearer', 40); return `The page boy had them all along, tied to a plastic T-rex. Adorable.`; }
-        joy(25); bliss(-4); return `He's swapped them for a Haribo ring. The real ones turn up later in the hedge.`; } },
+      { label: 'Ask the flower girl', fn() {
+        if (chance(0.6)) { joy(45); memory('The dinosaur ring bearer', 40); return `The flower girl had them all along, tied to a plastic T-rex. Adorable.`; }
+        joy(25); bliss(-4); return `She's swapped them for a Haribo ring. The real ones turn up later in the hedge.`; } },
       { label: 'Use a ring pull from a can', fn() { joy(35); bliss(-2); later(ri(150, 250), () => { msg(bN() + "'s finger has gone slightly green from the ring pull. She's laughing about it. Mostly.", ''); joy(10, true); }); return `${gN()} slides a ring pull onto ${bN()}'s finger. Romantic in its own way. Big cheer.`; } },
     ] };
   } },
@@ -77,7 +77,7 @@ const EVENTS = [
         joy(45); memory('The big group photo', 40);
         if (chance(0.35)) { joy(20); return `Click! Lovely. And ${anyGuest()?.name || 'someone'} photobombed it from up a tree. Even better.`; }
         return `Click! Everyone squeezed in. That one's going on the mantelpiece.`; } },
-      { label: 'Family only', fn() { joy(20); bliss(3); return `A quick, tidy family photo. Uncle Gerald blinked. Twice.`; } },
+      { label: 'Family only', fn() { joy(20); bliss(3); return `A quick, tidy family photo. ${nameOr(G.gerald, 'Someone')} blinked. Twice.`; } },
       { label: 'Skip it', fn() { bliss(-5); return `The Mother of the Bride will remember this. For years.`; } },
     ] };
   } },
@@ -222,7 +222,7 @@ const EVENTS = [
         for (const p of guests()) if (alcoholOK(p)) { p.drunk += 18; p.happy += 5; }
         joy(50); memory('Vodka toast for the whole room', 40); addBuff('vodka', 'Na Zdorovye!', 60, 0.15);
         later(ri(70, 110), () => { const v = G.people.filter(p => p.present && p.kind === 'guest' && !p.russian && p.drunk > 25 && !p.look.kid).sort((a, b) => b.drunk - a.drunk)[0]; if (v) { queasy(v, 3); msg(v.name + ' is regretting the vodka. They look very green...', 'bad'); } });
-        return `"NA ZDOROVYE!" Forty shots go down. Uncle Gerald asks for another. There may be consequences later.`; } },
+        return `"NA ZDOROVYE!" Forty shots go down. ${nameOr(G.gerald, 'Someone')} asks for another. There may be consequences later.`; } },
       { label: 'Shots for the Russians only', fn() { for (const p of guests()) if (p.russian && alcoholOK(p)) p.drunk += 25; joy(25); return `The Russian side knock them back without blinking. The British side applaud politely.`; } },
       { label: 'Secretly swap it for water', fn() {
         if (chance(0.5)) { joy(20); return `Nobody notices. You are a genius. Uncle Dmitri says it's the smoothest vodka he's ever had.`; }
@@ -250,7 +250,7 @@ const EVENTS = [
         for (const p of guests()) if (['idle', 'chat', 'walk', 'watch'].includes(p.state) && chance(0.7)) { interrupt(p); goDance(p); }
         funAll(-35);
         if (chance(0.6)) { joy(70); memory('The Cossack squat-kick dance-off', 70); return `Squat, kick, squat, kick! Babushka Galina is out-kicking men half her age.`; }
-        joy(40); if (G.gerald && G.gerald.present) fall(G.gerald); return `Uncle Gerald attempts a squat-kick. His knees make a noise like a bin lorry. He's down.`; } },
+        joy(40); if (G.gerald && G.gerald.present) fall(G.gerald); return `${nameOr(G.gerald, 'Someone')} attempts a squat-kick. His knees make a noise like a bin lorry. He's down.`; } },
       { label: 'Everyone in a big circle!', fn() {
         G.musicOverride = { track: 'korob', until: G.time + 8, start: G.time };
         joy(45); bliss(4); funAll(-25); return `A huge circle dance, faster and faster, until someone flies out of the circle into the cake table.`; } },
@@ -262,9 +262,9 @@ const EVENTS = [
     return { title: 'UK vs RUSSIA', text: `${g.name} has challenged ${d.name} to a drinking contest. A crowd has gathered. Bets are being placed in two currencies.`, choices: [
       { label: `Back ${g.name}`, fn() {
         g.drunk = Math.min(100, g.drunk + 35); d.drunk = Math.min(100, d.drunk + 25);
-        if (chance(0.3)) { joy(70); memory('Gerald beat Dmitri', 60); queasy(d, 2); return `Against all odds, Gerald wins! Dmitri congratulates him, then goes a funny colour.`; }
-        joy(45); queasy(g, 2); return `Gerald lasts four rounds and turns green. Dmitri hasn't even taken his jacket off.`; } },
-      { label: `Back ${d.name}`, fn() { g.drunk = Math.min(100, g.drunk + 35); d.drunk = Math.min(100, d.drunk + 20); joy(40); queasy(g, 3); memory('Dmitri drank Gerald under the table', 40); return `Dmitri wins easily. "In Russia, this is breakfast." Gerald is looking very pale.`; } },
+        if (chance(0.3)) { joy(70); memory(`${g.name} beat ${d.name}`, 60); queasy(d, 2); return `Against all odds, ${g.name} wins! ${d.name} congratulates him, then goes a funny colour.`; }
+        joy(45); queasy(g, 2); return `${g.name} lasts four rounds and turns green. ${d.name} hasn't even taken his jacket off.`; } },
+      { label: `Back ${d.name}`, fn() { g.drunk = Math.min(100, g.drunk + 35); d.drunk = Math.min(100, d.drunk + 20); joy(40); queasy(g, 3); memory(`${d.name} drank ${g.name} under the table`, 40); return `${d.name} wins easily. "In Russia, this is breakfast." ${g.name} is looking very pale.`; } },
       { label: 'Shut it down', fn() { joy(5); g.happy -= 15; d.happy -= 15; return `Boos from both sides. International relations have suffered.`; } },
     ] };
   } },
@@ -273,7 +273,7 @@ const EVENTS = [
     return { title: 'POWER CUT!', text: `BZZT. The lights go out and the music dies. Somebody screams. Somebody else laughs nervously.`, choices: [
       { label: 'Acoustic singalong', fn() {
         G.powerOut = 15;
-        if (chance(0.6)) { joy(50); funAll(-30); memory('The candlelit singalong', 50); return `Uncle Gerald produces a guitar from nowhere. Wonderwall has never sounded better.`; }
+        if (chance(0.6)) { joy(50); funAll(-30); memory('The candlelit singalong', 50); return `${nameOr(G.gerald, 'Someone')} produces a guitar from nowhere. Wonderwall has never sounded better.`; }
         joy(20); return `The guitar only has two strings. It's still oddly moving.`; } },
       { label: 'Phone torch rave!', fn() { G.powerOut = 15; joy(40); funAll(-25); memory('The phone torch rave', 40); return `Forty phone torches waving in the dark. It's like Ibiza, if Ibiza was in a barn.`; } },
       { label: 'Wait for the electrician', fn() { G.powerOut = 25; joy(-10); funAll(25); return `Twenty-five minutes of awkward small talk in the dark.`; } },
@@ -847,7 +847,7 @@ function evFOB() {
         { label: 'Let her speak', fn() {
           const r = Math.random();
           if (r < 0.45) { joy(70); bliss(8); memory(`${b.name}'s blessing`, 50); return `She presents ${gN()} with her late husband's fur hat and declares him "acceptable". From her, that's a knighthood.`; }
-          if (r < 0.75) { joy(45); return `She lists everything ${gN()} must now learn: pickling, chopping wood, and how to drink vodka "like a man, not like a ${nameOr(G.gerald, "Gerald").split(" ").pop()}".`; }
+          if (r < 0.75) { joy(45); return `She lists everything ${gN()} must now learn: pickling, chopping wood, and how to drink vodka "like a man, not like a ${nameOr(G.gerald, "Brit").split(" ").pop()}".`; }
           joy(25); bliss(-3); return `She asks, in front of everyone, when the great-grandchildren are coming. She wants a date. ${bN()} wants to leave.`; } },
         { label: 'Pour her a vodka first', fn() { b.drunk += 12; b.happy += 15; joy(50); return `She downs it, slams the glass down and gives the shortest, funniest speech of the day: "Good boy. Feed him more." Huge cheer.`; } },
         { label: 'Ask for "the short version"', fn() {
@@ -1162,16 +1162,16 @@ EVENTS.push(
     ] };
   } },
   { id: 'pageboy', pool: 'ceremony', build() {
-    const pb = byRole('Page Boy') || byRole('Flower Girl') || randGuest(p => p.look.kid);
+    const pb = byRole('Flower Girl') || randGuest(p => p.look.kid);
     if (!pb) return null;
-    const line = pick([`"MUMMY SAYS ${nameOr(G.gerald, 'UNCLE GERALD').toUpperCase()} WAS DRUNK BEFORE BREAKFAST!"`, `"WHY IS ${gN().toUpperCase()}'S FACE SO RED?"`, `"IS THIS THE BIT WHERE THEY DO KISSING? YUCK!"`, `"I NEED A WEE. A BIG ONE."`, `"GRANDAD SAID HE'D GIVE IT TWO YEARS!"`, `"I DID A PARP!"`]);
+    const line = pick([`"MUMMY SAYS ${nameOr(G.gerald, 'THE BEST MAN').toUpperCase()} WAS DRUNK BEFORE BREAKFAST!"`, `"WHY IS ${gN().toUpperCase()}'S FACE SO RED?"`, `"IS THIS THE BIT WHERE THEY DO KISSING? YUCK!"`, `"I NEED A WEE. A BIG ONE."`, `"GRANDAD SAID HE'D GIVE IT TWO YEARS!"`, `"I DID A PARP!"`]);
     return { title: 'OUT OF THE MOUTHS OF BABES', text: `Right in the quiet bit before the vows, ${pb.name} climbs onto a chair and announces, at full volume: ${line}`, choices: [
       { label: 'Laugh it off', fn() { joy(35); return pick([`The registrar has to stop for a full minute. ${gN()} is wheezing.`, `The whole garden howls. Somebody's mum is mortified. Everyone else is delighted.`]); } },
       { label: 'Bribe them with a Haribo', fn() {
         if (chance(0.7)) { joy(20); return `Silent as a mouse for the rest of the ceremony. The Haribo diplomacy works.`; }
         joy(30); return `They take the Haribo, chew thoughtfully, and announce "THAT WAS A GOOD ONE!" Fair enough.`; } },
       { label: 'Ask them to say something nice', fn() {
-        if (chance(0.5)) { joy(55); bliss(5); memory("The page boy's speech", 30); return `"${bN()} is the prettiest lady I ever saw. And ${gN()} is OK too." Not a dry eye in the garden.`; }
+        if (chance(0.5)) { joy(55); bliss(5); memory("The flower girl's speech", 30); return `"${bN()} is the prettiest lady I ever saw. And ${gN()} is OK too." Not a dry eye in the garden.`; }
         joy(25); bliss(-2); return `"${gN()} has a big head." A long pause. "And big ears." They sit back down, satisfied.`; } },
     ] };
   } },
@@ -1251,7 +1251,7 @@ EVENTS.push(
       { label: 'Release them!', fn() {
         const r = Math.random();
         if (r < 0.45) { joy(55); memory('The dove release', 40); confettiAt(G.groom.x, G.groom.y, 30); return `They soar up in a perfect white cloud. Gasps. Tears. Instagram.`; }
-        if (r < 0.8) { joy(40); if (G.gerald.present) G.gerald.happy -= 25; return `Beautiful... except one of them "christens" ${G.gerald.name}'s bald patch.`; }
+        if (r < 0.8) { joy(40); if (G.gerald.present) G.gerald.happy -= 25; return `Beautiful... except one of them "christens" ${G.gerald.name}'s hair.`; }
         joy(30); spawnAnimal('goat', false); return `The doves panic and fly into the farm next door. A goat wanders back in through the gap.`; } },
       { label: 'Use bubbles instead', fn() { joy(25); bliss(3); return `A thousand bubbles drift over the lawn. The kids go feral.`; } },
     ] };
@@ -1320,7 +1320,7 @@ EVENTS.push(
   // ----- party -----
   { id: 'ymca', pool: 'party', cond: () => G.djOn, build() {
     return { title: 'Y.M.C.A!', text: `The DJ drops the YMCA. A primal force takes over the room. Even ${G.mob.name} is twitching.`, choices: [
-      { label: 'Everyone on the floor!', fn() { for (const p of guests()) if (['idle', 'chat', 'walk'].includes(p.state) && chance(0.7)) { interrupt(p); goDance(p); } funAll(-40); joy(45); return `Forty people spelling out letters with varying accuracy. Uncle Gerald does a "W".`; } },
+      { label: 'Everyone on the floor!', fn() { for (const p of guests()) if (['idle', 'chat', 'walk'].includes(p.state) && chance(0.7)) { interrupt(p); goDance(p); } funAll(-40); joy(45); return `Forty people spelling out letters with varying accuracy. ${nameOr(G.gerald, 'Someone')} does a "W".`; } },
       { label: 'Couple-only verse', fn() { joy(30); bliss(5); heartsAt(19.5, 16.5, 10); return `${gN()} and ${bN()} do the whole thing in sync. They have clearly practised.`; } },
     ] };
   } },
@@ -1407,7 +1407,7 @@ function evJessViral() {
 }
 function evPaparazzi() {
   return { title: 'PAPARAZZI!', text: `Photographers have spotted TV Chef Rocco Bellini and are climbing over the hedge with long lenses. One is already on the bouncy castle.`, choices: [
-    { label: hasBouncer() ? 'Bouncer, clear them out' : 'Bouncer! (you have none)', fn() { if (hasBouncer()) { joy(30); return `Bounced out of the garden. Rocco is so grateful he gives a speech about the canapés.`; } joy(-20); messNear('mud', 6, 16, 3, 3); return `No bouncer. They trample the flowerbeds and get a shot of Uncle Gerald being sick.`; } },
+    { label: hasBouncer() ? 'Bouncer, clear them out' : 'Bouncer! (you have none)', fn() { if (hasBouncer()) { joy(30); return `Bounced out of the garden. Rocco is so grateful he gives a speech about the canapés.`; } joy(-20); messNear('mud', 6, 16, 3, 3); return `No bouncer. They trample the flowerbeds and get a shot of ${nameOr(G.gerald, 'a guest')} being sick.`; } },
     { label: 'Sell them an exclusive (+£500)', fn() { cash(500); bliss(-6); joy(20); return `Your wedding will be in a magazine next week. ${bN()} is NOT pleased about her photo.`; } },
     { label: "Let 'em in", fn() { joy(40); memory('Our wedding made the papers', 40); return `They have a lovely time. One of them catches the bouquet later.`; } },
   ] };

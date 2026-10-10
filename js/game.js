@@ -17,7 +17,7 @@ const PHASES = [
   { id: 'end', t: 1440, name: 'The End' },
 ];
 const OMENS = [
-  { id: 'gerald', t: 'Uncle Gerald started on the prosecco at breakfast.', apply() { G.gerald.drunk = 55; } },
+  { id: 'gerald', get t() { return (G && G.gerald ? G.gerald.name : 'The best man') + ' started on the prosecco at breakfast.'; }, apply() { G.gerald.drunk = 55; } },
   { id: 'heat', t: 'Heatwave! Guests outdoors get thirsty fast.', apply() { G.weather = 'Scorching'; } },
   { id: 'kitchen', t: 'The kitchen is short-staffed. Dinner plates take longer.' },
   { id: 'notes', t: 'The Best Man has lost his speech notes. Risky jokes are riskier.' },
@@ -258,7 +258,6 @@ function makeRoster() {
   if (C.babushka) { const g = parseGuest(C.babushka); if (g) add('Guest', g.name, g.sex, g.age, { russian: g.russian }); }
   G.dmitri = ch(C.vodkaUncle, 'Uncle Dmitri', 'm', 'old', true, { trait: 'party' });
   Object.assign(G.dmitri.look, { beard: true, hair: '#4a3a2a', top: '#2a2a2a', bottom: '#2a2a2a', rubashka: true, big: true });
-  G.gerald = ch(C.drunkUncle, 'Uncle Gerald', 'm', 'old', false, { trait: 'party' }); G.gerald.drinkMult = 2; G.gerald.look.top = G.gerald.look.bottom = '#7a5a2a';
   G.dmitri.drinkMult = 1.3;
   G.gran = null; // no Gran character any more (an old guest-names.js entry just becomes a regular guest)
   if (C.gran) { const g = parseGuest(C.gran); if (g) add('Guest', g.name, g.sex, g.age, { russian: g.russian }); }
@@ -266,8 +265,11 @@ function makeRoster() {
   G.kyle = ch(C.fightyCousin, 'Cousin Kyle', 'm', 'adult', false, { trait: 'fighter' });
   const fgs = sp(C.flowerGirl, 'Little ' + pick(KIDS_F), 'f', 'kid');
   const fg = add('Flower Girl', fgs.name, 'f', 'kid'); fg.look.top = '#fff0f6'; fg.look.hat = '#ff8fb8';
-  const pbs = sp(C.pageBoy, 'Little ' + pick(KIDS_M), 'm', 'kid');
-  const pb = add('Page Boy', pbs.name, 'm', 'kid'); pb.look.top = pb.look.bottom = '#2f7d3a';
+  // the drunk one isn't a separate uncle any more: characters.drunkUncle names someone already invited
+  // (e.g. 'Rob', one of the best men); otherwise it's the second best man
+  const dn = (parseGuest(C.drunkUncle) || {}).name;
+  G.gerald = list.find(p => dn && p.name === dn) || G.bestMan2;
+  G.gerald.drinkMult = 2; G.gerald.trait = 'party';
 
   // day guests: a random selection from the guest list each day, topped up with made-up guests
   const splitG = (arr) => (Array.isArray(arr) ? arr : []).flatMap(x => typeof x === 'string' ? x.split(/(?<=\))\s*,\s*/) : []);

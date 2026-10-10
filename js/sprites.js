@@ -322,7 +322,7 @@ function preloadChars() {
   for (const id in ci.chars) for (const a of ['walk', 'idle', 'cast', 'hurt', 'sit']) { const src = ci.chars[id][a]; if (src) loadImg('ch:' + id + ':' + a, src); }
 }
 function charSheet(id, anim) { const ci = CI(); const e = ci.chars[id]; if (!e || !e[anim]) return null; const im = loadImg('ch:' + id + ':' + anim, e[anim]); return imgOk(im) ? im : null; }
-const NAMED_SHEETS = [['bestMan', 'bestman'], ['moh', 'moh'], ['fob', 'fob'], ['mob', 'mob'], ['gmum', 'gmum'], ['gdad', 'gdad'], ['gerald', 'gerald'],
+const NAMED_SHEETS = [['bestMan', 'bestman'], ['moh', 'moh'], ['fob', 'fob'], ['mob', 'mob'], ['gmum', 'gmum'], ['gdad', 'gdad'],
   ['gran', 'gran'], ['babushka', 'babushka'], ['dmitri', 'dmitri'], ['jess', 'jess'], ['kyle', 'kyle'], ['registrar', 'registrar'], ['magician', 'magician'], ['celeb', 'celebchef']];
 const LIGHT_OLD = new Set(['g_m_01', 'g_m_03', 'g_m_07', 'g_m_11', 'g_m_14', 'g_f_01', 'g_f_05', 'g_f_09', 'g_f_11', 'g_f_15', 'g_om_01', 'g_om_03', 'g_of_01', 'g_of_03', 'g_of_05']);
 function isLightGuest(id) { return LIGHT_OLD.has(id) || /_w\d/.test(id); }
@@ -337,7 +337,6 @@ function charIdFor(p) {
   if (!id && G) for (const [k, sid] of NAMED_SHEETS) if (G[k] === p && has(sid)) { id = sid; break; }
   if (!id && p.role === 'registrar') id = has('registrar') ? 'registrar' : 'grandpa';
   if (!id && p.role === 'Flower Girl' && has('flowergirl')) id = 'flowergirl';
-  if (!id && p.role === 'Page Boy' && has('pageboy')) id = 'pageboy';
   if (!id && p.role === 'Hen Party') id = has('hen1') ? (p.id % 2 ? 'hen1' : 'hen2') : null;
   if (!id && p.rival) { const r = ['rival1', 'rival2', 'rival3'].filter(has); if (r.length) id = r[p.id % r.length]; }
   if (!id && p.look) {
