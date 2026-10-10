@@ -1824,7 +1824,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Uncle Dmitri",
+  "en": "Her dad",
   "file": "js/events.js"
  },
  {
@@ -1832,7 +1832,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "They make it to {0}. Respectable. Uncle Dmitri nods slowly.",
+  "en": "They make it to {0}. Respectable. {1} nods slowly.",
   "file": "js/events.js"
  },
  {
@@ -1856,7 +1856,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Uncle Dmitri has produced a crate of vodka \"from home\" and is pouring shots for every table. \"To the newlyweds! ZA MOLODYKH!\" The British side look nervous.",
+  "en": "{0} has produced a crate of vodka \"from home\" and is pouring shots for every table. \"To the newlyweds! ZA MOLODYKH!\" The British side look nervous.",
   "file": "js/events.js"
  },
  {
@@ -1888,7 +1888,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Nobody notices. You are a genius. Uncle Dmitri says it's the smoothest vodka he's ever had.",
+  "en": "Nobody notices. You are a genius. {0} says it's the smoothest vodka he's ever had.",
   "file": "js/events.js"
  },
  {
@@ -1928,7 +1928,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "He sings Wonderwall. Dmitri is unmoved. He has to pay anyway.",
+  "en": "He sings Wonderwall. {0} is unmoved. He has to pay anyway.",
   "file": "js/events.js"
  },
  {
@@ -1937,6 +1937,10 @@
  },
  {
   "en": "Champagne from {0}'s shoe",
+  "file": "js/events.js"
+ },
+ {
+  "en": "Uncle Dmitri",
   "file": "js/events.js"
  },
  {
@@ -2433,10 +2437,6 @@
  },
  {
   "en": "He unhinges his jaw like a python. Head of the household! The Russian side cheer \"MOLODETS!\"",
-  "file": "js/events.js"
- },
- {
-  "en": "Her dad",
   "file": "js/events.js"
  },
  {
@@ -3684,7 +3684,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "{0} catches it without even putting his vodka down, then proposes to the bar staff. They say \"maybe\".",
+  "en": "{0} catches it without even putting his vodka down, then makes the bar staff dance with him. They say \"maybe later\".",
   "file": "js/events.js"
  },
  {
@@ -5616,7 +5616,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "{0} hears her uncle's version and turns around: \"He did NOT say that!\" The Russian side are delighted.",
+  "en": "{0} hears her dad's version and turns around: \"He did NOT say that!\" The Russian side are delighted.",
   "file": "js/events.js"
  },
  {
@@ -5744,7 +5744,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "Dmitri poured the champagne tower",
+  "en": "{0} poured the champagne tower",
   "file": "js/events.js"
  },
  {
@@ -6456,6 +6456,18 @@
   "file": "js/game.js"
  },
  {
+  "en": "{0}'s Treat",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} is paying for a FREE BAR until 20:00! Guests will drink a lot more...",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0}'s free bar is over. Back to normal prices!",
+  "file": "js/game.js"
+ },
+ {
   "en": "Little {0}",
   "file": "js/game.js"
  },
@@ -6664,18 +6676,6 @@
   "file": "js/game.js"
  },
  {
-  "en": "Dmitri's Treat",
-  "file": "js/game.js"
- },
- {
-  "en": "Uncle Dmitri is paying for a FREE BAR until 20:00! Guests will drink a lot more...",
-  "file": "js/game.js"
- },
- {
-  "en": "Dmitri's free bar is over. Back to normal prices!",
-  "file": "js/game.js"
- },
- {
   "en": "Double-Booked!",
   "file": "js/game.js"
  },
@@ -6745,6 +6745,10 @@
  },
  {
   "en": "A critic from Wedding Weekly is attending. A spotless venue (hardly any mess) at 17:00 earns a glowing review.",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Dmitri",
   "file": "js/game.js"
  },
  {

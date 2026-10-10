@@ -323,7 +323,7 @@ function preloadChars() {
 }
 function charSheet(id, anim) { const ci = CI(); const e = ci.chars[id]; if (!e || !e[anim]) return null; const im = loadImg('ch:' + id + ':' + anim, e[anim]); return imgOk(im) ? im : null; }
 const NAMED_SHEETS = [['bestMan', 'bestman'], ['moh', 'moh'], ['fob', 'fob'], ['mob', 'mob'], ['gmum', 'gmum'], ['gdad', 'gdad'],
-  ['gran', 'gran'], ['babushka', 'babushka'], ['dmitri', 'dmitri'], ['jess', 'jess'], ['kyle', 'kyle'], ['registrar', 'registrar'], ['magician', 'magician'], ['celeb', 'celebchef']];
+  ['gran', 'gran'], ['babushka', 'babushka'], ['jess', 'jess'], ['kyle', 'kyle'], ['registrar', 'registrar'], ['magician', 'magician'], ['celeb', 'celebchef']];
 const LIGHT_OLD = new Set(['g_m_01', 'g_m_03', 'g_m_07', 'g_m_11', 'g_m_14', 'g_f_01', 'g_f_05', 'g_f_09', 'g_f_11', 'g_f_15', 'g_om_01', 'g_om_03', 'g_of_01', 'g_of_03', 'g_of_05']);
 function isLightGuest(id) { return LIGHT_OLD.has(id) || /_w\d/.test(id); }
 function charIdFor(p) {

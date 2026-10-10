@@ -209,15 +209,15 @@ const EVENTS = [
       { label: 'A quick peck', fn() { joy(10); heartsAt(G.groom.x, G.groom.y, 4); later(25, () => { G.usedEvents.delete('gorko'); }); return `The count reaches "ODIN, DVA..." and stops. "BOOOO!" The Russian side demand a rematch later.`; } },
       { label: 'A long, proper kiss', fn() {
         const n = ri(12, 48); heartsAt(G.groom.x, G.groom.y, 16); bliss(5);
-        if (n >= 30) { joy(n * 2); memory(`Gorko! Counted to ${n}`, 50); return `The room counts... ${n}! ${nameOr(G.dmitri, 'Uncle Dmitri')} is standing on his chair shouting the numbers.`; }
-        joy(n + 15); return `They make it to ${n}. Respectable. Uncle Dmitri nods slowly.`; } },
+        if (n >= 30) { joy(n * 2); memory(`Gorko! Counted to ${n}`, 50); return `The room counts... ${n}! ${nameOr(G.dmitri, 'Her dad')} is standing on his chair shouting the numbers.`; }
+        joy(n + 15); return `They make it to ${n}. Respectable. ${nameOr(G.dmitri, 'Her dad')} nods slowly.`; } },
       { label: `${gN()} dips ${bN()} for the record`, fn() {
         if (chance(0.6)) { joy(90); bliss(6); memory('Gorko record: 60!', 70); heartsAt(G.groom.x, G.groom.y, 20); return `SIXTY! A new family record. ${G.mob.name} is crying into her napkin.`; }
         joy(40); bliss(-3); return `He dips, wobbles and they both end up on the banquet carpet. The count carries on regardless.`; } },
     ] };
   } },
   { id: 'vodka', pool: 'dinner', cond: () => G.dmitri && G.dmitri.present, build() {
-    return { title: 'ZA MOLODYKH!', text: `Uncle Dmitri has produced a crate of vodka "from home" and is pouring shots for every table. "To the newlyweds! ZA MOLODYKH!" The British side look nervous.`, choices: [
+    return { title: 'ZA MOLODYKH!', text: `${G.dmitri.name} has produced a crate of vodka "from home" and is pouring shots for every table. "To the newlyweds! ZA MOLODYKH!" The British side look nervous.`, choices: [
       { label: 'Everyone does a shot!', fn() {
         for (const p of guests()) if (alcoholOK(p)) { p.drunk += 18; p.happy += 5; }
         joy(50); memory('Vodka toast for the whole room', 40); addBuff('vodka', 'Na Zdorovye!', 60, 0.15);
@@ -225,7 +225,7 @@ const EVENTS = [
         return `"NA ZDOROVYE!" Forty shots go down. ${nameOr(G.gerald, 'Someone')} asks for another. There may be consequences later.`; } },
       { label: 'Shots for the Russians only', fn() { for (const p of guests()) if (p.russian && alcoholOK(p)) p.drunk += 25; joy(25); return `The Russian side knock them back without blinking. The British side applaud politely.`; } },
       { label: 'Secretly swap it for water', fn() {
-        if (chance(0.5)) { joy(20); return `Nobody notices. You are a genius. Uncle Dmitri says it's the smoothest vodka he's ever had.`; }
+        if (chance(0.5)) { joy(20); return `Nobody notices. You are a genius. ${nameOr(G.dmitri, 'Her dad')} says it's the smoothest vodka he's ever had.`; }
         const g = G.mob; if (g) g.happy -= 40; bliss(-6); joy(-10); return `${nameOr(G.mob, bN() + "'s mum")} takes one sip and slams the glass down. She KNOWS. She is furious.`; } },
     ] };
   } },
@@ -236,7 +236,7 @@ const EVENTS = [
       { label: 'Pay the ransom (£100)', fn() { cash(-100); joy(20); bliss(3); return `${gN()} hands over a crumpled £100 "for the honeymoon fund". The shoe is returned with a bow.`; } },
       { label: `${gN()} sings for it`, fn() {
         if (chance(0.5)) { joy(55); memory(`${gN()} sang Kalinka for the shoe`, 40); return `He attempts "Kalinka" in very bad Russian. The Russian side are howling. Shoe returned!`; }
-        joy(25); return `He sings Wonderwall. Dmitri is unmoved. He has to pay anyway.`; } },
+        joy(25); return `He sings Wonderwall. ${d.name} is unmoved. He has to pay anyway.`; } },
       { label: 'Drink champagne from the shoe!', fn() {
         if (chance(0.6)) { joy(75); bliss(4); memory(`Champagne from ${bN()}'s shoe`, 60); return `${gN()} drinks champagne straight from the dark pink shoe. The Russian side erupt. ${nameOr(G.dmitri, 'Uncle Dmitri')} approves.`; }
         joy(50); bliss(-2); G.groomStain = true; return `The shoe leaks. Straight down the beige waistcoat. Still counts!`; } },
@@ -717,7 +717,7 @@ function catchBouquet(wild) {
     case 'fountain': joy(35); return `Straight into the chocolate fountain. A chocolate bouquet. Delicious.`;
     case 'light': joy(25); return `It lodges in the light fitting. It's still up there.`;
     case 'gerald': joy(40); G.gerald.happy += 15; return `It lands in ${G.gerald.name}'s pint with a splash. He fishes it out, drinks the pint, and asks who the lucky lady is.`;
-    case 'dmitri': joy(45); G.dmitri.happy += 15; return `${G.dmitri.name} catches it without even putting his vodka down, then proposes to the bar staff. They say "maybe".`;
+    case 'dmitri': joy(45); G.dmitri.happy += 15; return `${G.dmitri.name} catches it without even putting his vodka down, then makes the bar staff dance with him. They say "maybe later".`;
     case 'kyle': {
       const rival = anyGuest(p => p !== G.kyle && ['idle', 'dance', 'chat', 'watch'].includes(p.state));
       if (rival && chance(0.35) && ['idle', 'dance', 'chat', 'watch', 'walk'].includes(G.kyle.state)) { joy(10); startFight(G.kyle, rival); return `${G.kyle.name} and ${rival.name} both grab it. A tug of war becomes a scuffle. Petals everywhere.`; }
@@ -1207,7 +1207,7 @@ EVENTS.push(
     return { title: 'LOST IN TRANSLATION', text: `The registrar pauses so ${d.name} can translate the vows for the Russian side. He's translating very LOUDLY, and they seem to be getting a much longer version. With hand gestures.`, choices: [
       { label: 'Let him carry on', fn() {
         if (chance(0.55)) { joy(50); memory(`${d.name}'s translation`, 30); return `Every time ${gN()} says a line, the Russian side gasp, then cheer, then laugh. Nobody English will ever know what was promised.`; }
-        joy(25); bliss(-3); return `${bN()} hears her uncle's version and turns around: "He did NOT say that!" The Russian side are delighted.`; } },
+        joy(25); bliss(-3); return `${bN()} hears her dad's version and turns around: "He did NOT say that!" The Russian side are delighted.`; } },
       { label: `Ask ${nameOr(G.moh, bN() + "'s cousin")} to translate`, fn() { joy(20); bliss(3); d.happy -= 10; return `A calm, accurate translation. ${d.name} mutters that it is "missing the poetry".`; } },
       { label: 'Get him to translate both ways', fn() { joy(45); return `He now translates the Russian side's heckles into English too. Mostly they're shouting "KISS HER ALREADY!" Fair point.`; } },
     ] };
@@ -1262,7 +1262,7 @@ EVENTS.push(
         if (chance(0.7)) { joy(45); for (const p of guests()) if (alcoholOK(p)) p.needs.thirst = Math.max(0, p.needs.thirst - 30); return `Glass by glass, it fills perfectly. Free fizz for everyone!`; }
         joy(20); messNear('spill', 7, 15, 4, 2); messNear('litter', 7, 15, 3, 2); return `The tower leans... and leans... CRASH. Two hundred quid of glassware on the lawn.`; } },
       { label: `Let ${G.dmitri.name} pour it`, fn() {
-        if (chance(0.5)) { joy(60); memory('Dmitri poured the champagne tower', 40); return `He pours with one hand, holding a vodka in the other. Flawless. The Russian side applaud.`; }
+        if (chance(0.5)) { joy(60); memory(`${G.dmitri.name} poured the champagne tower`, 40); return `He pours with one hand, holding a vodka in the other. Flawless. The Russian side applaud.`; }
         joy(25); messNear('spill', 7, 15, 5, 3); return `He gets bored halfway and just drinks from the bottle.`; } },
     ] };
   } },

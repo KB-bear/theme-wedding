@@ -45,8 +45,8 @@ const TWISTS = [
     apply() { G.weather = 'Showers'; G.rainSpells = [{ t: ri(720, 880), len: 15 }, { t: ri(1080, 1200), len: 60, storm: true }]; } },
   { id: 'kids', name: 'Kids Everywhere', desc: 'Six extra kids have been brought along. Sugar rushes guaranteed. A Bouncy Castle would be a lifesaver.',
     apply() { addExtraKids(6); } },
-  { id: 'sponsor', name: "Dmitri's Treat", desc: 'Uncle Dmitri is paying for a FREE BAR until 20:00! Guests will drink a lot more...',
-    apply() { G.sponsorUntil = 1200; G.scripts.push({ t: 1200, f() { msg("Dmitri's free bar is over. Back to normal prices!", ''); } }); } },
+  { id: 'sponsor', get name() { return sponsorName() + "'s Treat"; }, get desc() { return sponsorName() + ' is paying for a FREE BAR until 20:00! Guests will drink a lot more...'; },
+    apply() { G.sponsorUntil = 1200; G.scripts.push({ t: 1200, f() { msg(sponsorName() + "'s free bar is over. Back to normal prices!", ''); } }); } },
   { id: 'rival', name: 'Double-Booked!', desc: 'The venue double-booked. Guests from another wedding keep wandering in and helping themselves to your bar. Bouncers will show them out.',
     apply() { for (const t of [ri(720, 760), ri(1060, 1100), ri(1240, 1300)]) G.scripts.push({ t, f() { spawnRivals(3); } }); } },
   { id: 'influencer', name: 'Live-Streamed Wedding', desc: 'Cousin Jess is livestreaming the whole day to 200,000 followers. Give the internet a show... but keep it classy.',
@@ -66,6 +66,7 @@ const TWISTS = [
   { id: 'inspector', name: 'The Wedding Critic', desc: 'A critic from Wedding Weekly is attending. A spotless venue (hardly any mess) at 17:00 earns a glowing review.',
     apply() { G.scripts.push({ t: 1015, f: inspection }); } },
 ];
+function sponsorName() { return G && G.dmitri ? G.dmitri.name : 'Dmitri'; }
 function pickTwist() {
   const hist = store.get('tw_twists', []);
   let pool = TWISTS.filter(t => !hist.includes(t.id));
@@ -256,9 +257,6 @@ function makeRoster() {
   const ch = (str, name, sex, age, russian, extra) => { const g = sp(str, name, sex, age, russian); return add('Guest', g.name, g.sex, age === 'gran' ? 'gran' : g.age, Object.assign({ russian: g.russian }, extra || {})); };
   G.babushka = null; // no Babushka character any more (an old guest-names.js entry just becomes a regular guest)
   if (C.babushka) { const g = parseGuest(C.babushka); if (g) add('Guest', g.name, g.sex, g.age, { russian: g.russian }); }
-  G.dmitri = ch(C.vodkaUncle, 'Uncle Dmitri', 'm', 'old', true, { trait: 'party' });
-  Object.assign(G.dmitri.look, { beard: true, hair: '#4a3a2a', top: '#2a2a2a', bottom: '#2a2a2a', rubashka: true, big: true });
-  G.dmitri.drinkMult = 1.3;
   G.gran = null; // no Gran character any more (an old guest-names.js entry just becomes a regular guest)
   if (C.gran) { const g = parseGuest(C.gran); if (g) add('Guest', g.name, g.sex, g.age, { russian: g.russian }); }
   G.jess = ch(C.influencer, 'Cousin Jess', 'f', 'adult', false, { trait: 'party' }); // the influencer, see the 'Live-Streamed' twist
@@ -270,6 +268,10 @@ function makeRoster() {
   const dn = (parseGuest(C.drunkUncle) || {}).name;
   G.gerald = list.find(p => dn && p.name === dn) || G.bestMan2;
   G.gerald.drinkMult = 2; G.gerald.trait = 'party';
+  // the vodka one is the father of the bride (characters.vodkaUncle can name someone else already invited)
+  const vn = (parseGuest(C.vodkaUncle) || {}).name;
+  G.dmitri = list.find(p => vn && p.name === vn && p !== G.gerald) || G.fob;
+  G.dmitri.drinkMult = 1.3; G.dmitri.trait = 'party';
 
   // day guests: a random selection from the guest list each day, topped up with made-up guests
   const splitG = (arr) => (Array.isArray(arr) ? arr : []).flatMap(x => typeof x === 'string' ? x.split(/(?<=\))\s*,\s*/) : []);

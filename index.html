@@ -8,7 +8,7 @@
 <title>Theme Wedding</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2026-10-10d">
+<link rel="stylesheet" href="style.css?v=2026-10-10e">
 </head>
 <body>
 <canvas id="screen"></canvas>
@@ -42,7 +42,7 @@
 
 <script>
 (function () {
-  var BUILD = '2026-10-10d'; // bump when deploying so phones fetch the new scripts instead of cached ones
+  var BUILD = '2026-10-10e'; // bump when deploying so phones fetch the new scripts instead of cached ones
   var RU = false; try { RU = localStorage.getItem('tw_lang') === 'ru'; } catch (e) {}
   var SCRIPTS = (RU ? ['lang/ru.js'] : []).concat(['js/i18n.js', 'js/leaderboard.js', 'js/core.js', 'js/draw.js', 'assets/characters/index.js', 'assets/characters/faces.js', 'js/sprites.js',
                  'js/sim.js', 'js/events.js', 'js/game.js', 'js/audio.js', 'js/ui.js']);
