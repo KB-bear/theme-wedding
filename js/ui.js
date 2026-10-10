@@ -51,6 +51,7 @@ cv.addEventListener('pointerdown', (e) => {
     pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), z: zoom, mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2, cx: cam.x, cy: cam.y };
     mouse.drag = true; return;
   }
+  if (e.pointerType === 'touch') $('tip').style.display = 'none'; // no hover labels on touch
   mouse.down = true; mouse.btn = e.button; mouse.type = e.pointerType;
   mouse.x = mouse.sx = e.clientX; mouse.y = mouse.sy = e.clientY; mouse.cx = cam.x; mouse.cy = cam.y; mouse.drag = false;
 });
@@ -136,6 +137,7 @@ function updateHover() {
   else if (G.hand) txt = 'Drop ' + G.hand.name.split(' (')[0] + ' here · right-click to cancel';
   else if (G.build) { const d = OT[G.build]; txt = d.name + ' · ' + fmtMoney(d.cost) + ' · right-click to stop'; }
   else { const p = pickPerson(w.x, w.y); if (p) txt = p.name + (p.kind === 'guest' && p.role !== 'Guest' ? ' · ' + p.role : ''); }
+  if (mouse.type === 'touch') txt = ''; // a tap has no hover, so the label would never go away
   if (txt) { tip.textContent = txt; tip.style.display = 'block'; tip.style.left = (mouse.x + 16) + 'px'; tip.style.top = (mouse.y + 14) + 'px'; }
   else tip.style.display = 'none';
 }
