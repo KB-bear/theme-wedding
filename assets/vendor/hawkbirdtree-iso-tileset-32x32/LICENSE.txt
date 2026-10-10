@@ -1,0 +1,6 @@
+"32x32 Isometric Tileset Version 0_1" by hawkbirdtree (tiles are 64x32 iso diamonds on 64x64 cells)
+Source: https://opengameart.org/content/32x32-isometric-tileset-version-01
+File:   https://opengameart.org/sites/default/files/big_isometric_tileset64x32.png (downloaded 2026-10-10)
+License: CC0 1.0 Universal (public domain dedication)
+         https://creativecommons.org/publicdomain/zero/1.0/
+Attribution is not required; crediting "hawkbirdtree (OpenGameArt)" is appreciated.

@@ -1,0 +1,17 @@
+Universal LPC Spritesheet Character Generator - selected layer images
+Source repository: https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator
+(formerly sanderfrenken/Universal-LPC-Spritesheet-Character-Generator), branch master, fetched 2026-10-10.
+
+Only the layer PNGs under spritesheets/ listed in ../../tools/lpc_items.json were downloaded
+(walk / idle / sit animations), plus CREDITS.csv, LICENSE and four palette_definitions files.
+
+LICENSING IS PER FILE. Every image here is available under one or more of:
+  CC-BY-SA 3.0  https://creativecommons.org/licenses/by-sa/3.0/
+  CC-BY 3.0/4.0, OGA-BY 3.0 (https://static.opengameart.org/OGA-BY-3.0.txt)
+  GPL 2.0 / GPL 3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
+  CC0
+CREDITS-used.csv lists, for every downloaded sheet, its authors, licences and source URLs
+(extracted from the repo's full CREDITS.csv, also included). You must credit all listed
+authors. Choosing CC-BY-SA 3.0 (offered by almost every layer) means derivative sprite
+sheets you compose from these layers must also be shared under CC-BY-SA 3.0.
+The repo's LICENSE file (GPL 3.0) covers the generator's code, not the art.

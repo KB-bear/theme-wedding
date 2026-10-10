@@ -1,0 +1,35 @@
+{
+  "_comment": "Extra recolour ramps (dark -> light, same length as the material's ULPC palettes: 6 colours). Merged over the ULPC palettes by lpc_compose.py. Add your own here.",
+  "cloth": {
+    "suit_green":  ["#0b1a10", "#12331d", "#1b4d2a", "#286a39", "#38874a", "#52a463"],
+    "beige":       ["#3a2a1c", "#6e5a40", "#a08a66", "#c4b08a", "#ddcda8", "#f0e6cc"],
+    "dark_pink":   ["#1d0d16", "#4e0f2c", "#7a1743", "#a3245c", "#c63a77", "#e06393"],
+    "ivory":       ["#2a2026", "#6e6870", "#b0a8a4", "#d8d2c4", "#efeadc", "#fffdf6"],
+    "dusty_blue":  ["#101626", "#25324d", "#3b4f73", "#56709a", "#7593bc", "#a2bcda"],
+    "lilac":       ["#1c1424", "#3c2a4e", "#5e4678", "#8064a0", "#a389c2", "#c8b2e0"],
+    "burgundy":    ["#1a0a10", "#3d0d1c", "#5c1328", "#7a1a35", "#992645", "#b8405c"],
+    "emerald":     ["#06180f", "#0b3320", "#0f5233", "#157046", "#1f915c", "#3bb578"],
+    "coral":       ["#2a1012", "#6b2a25", "#a8463a", "#d9644f", "#f08a6e", "#ffb39a"],
+    "mustard":     ["#2a1a06", "#5c3d0c", "#8f6414", "#bd8c1f", "#dcb03a", "#f0d270"],
+    "champagne":   ["#2e2420", "#6a5a48", "#a8916e", "#cdb990", "#e6d6b0", "#f7eed6"],
+    "mint":        ["#0e221c", "#245446", "#3f8a72", "#62b89a", "#8ed8bc", "#c0f0de"],
+    "peach":       ["#2c1610", "#73402e", "#b8714f", "#e09a72", "#f5bd98", "#ffdcc4"],
+    "sage":        ["#151c14", "#344234", "#566a52", "#788d72", "#9cb295", "#c4d6bc"],
+    "royal":       ["#0a0c2a", "#141c5c", "#1e2e8f", "#2c45bf", "#4766dd", "#7591f0"],
+    "hot_pink":    ["#2a0718", "#6b0f3c", "#a8185e", "#d92a80", "#f055a2", "#ff8cc6"],
+    "cream":       ["#2a241c", "#6a6050", "#a89c84", "#d4c9ae", "#ece4cc", "#fbf7ea"],
+    "silver_grey": ["#141418", "#34363c", "#5a5d64", "#80838a", "#a6a9ae", "#cfd1d4"],
+    "tweed":       ["#1e140c", "#45301c", "#6a4a2a", "#8a663c", "#a8835a", "#c4a47c"],
+    "deep_teal":   ["#061a1c", "#0c3538", "#125257", "#1a6e73", "#2a8c8f", "#4fb0ae"],
+    "plum":        ["#1a0c1e", "#3a1740", "#572563", "#753785", "#9450a6", "#b675c6"],
+    "lemon":       ["#2a2408", "#665a14", "#a39224", "#d4c23c", "#efe068", "#fff4a8"],
+    "jet":         ["#000000", "#0b0b10", "#15151c", "#202029", "#2e2e3a", "#43434f"]
+  },
+  "hair": {
+    "ginger_grey": ["#24120e", "#5a2e1c", "#8c5236", "#b0785a", "#c9a08a", "#e0cfc4"]
+  },
+  "body": {
+    "ruddy":       ["#2a1418", "#a8383a", "#d6705c", "#e88a72", "#f2b09a", "#f8d4c8"]
+  },
+  "eye": {}
+}

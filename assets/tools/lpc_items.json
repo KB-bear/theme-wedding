@@ -1,0 +1,513 @@
+{
+ "_comment": "Layer directories (relative to the ULPC repo's spritesheets/) fetched by lpc_fetch.py, for every anim in 'anims' that exists upstream. 'colors' only matters for items stored as <anim>/<color>.png; palette-based items are a single <anim>.png in their base palette. 'prefer_variant': fetch <anim>/<color>.png even when a palette-based <anim>.png exists.",
+ "anims": [
+  "walk",
+  "idle",
+  "sit",
+  "spellcast",
+  "hurt"
+ ],
+ "items": [
+  {
+   "dir": "shadow/adult"
+  },
+  {
+   "dir": "shadow/child"
+  },
+  {
+   "dir": "body/bodies/male"
+  },
+  {
+   "dir": "body/bodies/female"
+  },
+  {
+   "dir": "body/bodies/child"
+  },
+  {
+   "dir": "body/bodies/muscular"
+  },
+  {
+   "dir": "head/heads/human/male"
+  },
+  {
+   "dir": "head/heads/human/female"
+  },
+  {
+   "dir": "head/heads/human/male_elderly"
+  },
+  {
+   "dir": "head/heads/human/female_elderly"
+  },
+  {
+   "dir": "head/heads/human/child"
+  },
+  {
+   "dir": "head/wrinkles"
+  },
+  {
+   "dir": "eyes/eyebrows/thin/adult"
+  },
+  {
+   "dir": "eyes/eyebrows/thin/child"
+  },
+  {
+   "dir": "hair/plain/adult"
+  },
+  {
+   "dir": "hair/parted/adult"
+  },
+  {
+   "dir": "hair/bob/adult"
+  },
+  {
+   "dir": "hair/pixie/adult"
+  },
+  {
+   "dir": "hair/ponytail/adult/fg"
+  },
+  {
+   "dir": "hair/ponytail/adult/bg"
+  },
+  {
+   "dir": "hair/princess/adult/fg"
+  },
+  {
+   "dir": "hair/princess/adult/bg"
+  },
+  {
+   "dir": "hair/bangs_bun/adult"
+  },
+  {
+   "dir": "hair/loose/adult"
+  },
+  {
+   "dir": "hair/long_straight/adult"
+  },
+  {
+   "dir": "hair/balding/adult"
+  },
+  {
+   "dir": "hair/buzzcut/adult"
+  },
+  {
+   "dir": "hair/curly_short/adult"
+  },
+  {
+   "dir": "hair/afro/adult"
+  },
+  {
+   "dir": "hair/extensions/ties/high_bun/adult"
+  },
+  {
+   "dir": "hair/parted_side_bangs/child"
+  },
+  {
+   "dir": "hair/wavy/child"
+  },
+  {
+   "dir": "beards/mustache/basic"
+  },
+  {
+   "dir": "beards/beard/basic"
+  },
+  {
+   "dir": "torso/clothes/longsleeve/formal/male",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/clothes/longsleeve/longsleeve2/male"
+  },
+  {
+   "dir": "torso/clothes/longsleeve/longsleeve2/female"
+  },
+  {
+   "dir": "torso/clothes/shortsleeve/tshirt_vneck/male"
+  },
+  {
+   "dir": "torso/clothes/shortsleeve/tshirt_vneck/female"
+  },
+  {
+   "dir": "torso/clothes/blouse_longsleeve/female",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/clothes/shirt/child",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/clothes/vest/male",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/jacket/collared/male",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/jacket/frock/male",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/aprons/apron/male",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/aprons/apron/female",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/aprons/overalls/male",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "dress/bodice/female",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "dress/sash/female",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "dress/slit/female",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "neck/tie/bowtie/adult"
+  },
+  {
+   "dir": "neck/tie/necktie/male"
+  },
+  {
+   "dir": "facial/glasses/sunglasses/adult",
+   "colors": [
+    "sunglasses"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "hat/formal/tiara/adult",
+   "colors": [
+    "tiara_silver"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "legs/formal/male"
+  },
+  {
+   "dir": "legs/formal/thin"
+  },
+  {
+   "dir": "legs/pants/male"
+  },
+  {
+   "dir": "legs/pants/thin"
+  },
+  {
+   "dir": "legs/pants/child",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "legs/skirts/child",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "legs/skirts/belle/thin"
+  },
+  {
+   "dir": "legs/skirts/straight/thin"
+  },
+  {
+   "dir": "legs/skirts/plain/thin"
+  },
+  {
+   "dir": "feet/shoes/basic/male"
+  },
+  {
+   "dir": "feet/shoes/basic/thin"
+  },
+  {
+   "dir": "head/heads/human/male_plump"
+  },
+  {
+   "dir": "head/heads/human/male_gaunt"
+  },
+  {
+   "dir": "hair/bob_side_part/adult"
+  },
+  {
+   "dir": "hair/lob/adult"
+  },
+  {
+   "dir": "hair/half_up/adult"
+  },
+  {
+   "dir": "hair/high_ponytail/adult/fg"
+  },
+  {
+   "dir": "hair/high_ponytail/adult/bg"
+  },
+  {
+   "dir": "hair/long_tied/adult/fg"
+  },
+  {
+   "dir": "hair/long_tied/adult/bg"
+  },
+  {
+   "dir": "hair/curly_long/adult"
+  },
+  {
+   "dir": "hair/curls_large/adult/fg"
+  },
+  {
+   "dir": "hair/curls_large/adult/bg"
+  },
+  {
+   "dir": "hair/wavy/adult/fg"
+  },
+  {
+   "dir": "hair/wavy/adult/bg"
+  },
+  {
+   "dir": "hair/xlong_wavy/adult/fg"
+  },
+  {
+   "dir": "hair/xlong_wavy/adult/bg"
+  },
+  {
+   "dir": "hair/braid/adult/fg"
+  },
+  {
+   "dir": "hair/braid/adult/bg"
+  },
+  {
+   "dir": "hair/shoulderl/adult/fg"
+  },
+  {
+   "dir": "hair/shoulderl/adult/bg"
+  },
+  {
+   "dir": "hair/page/adult"
+  },
+  {
+   "dir": "hair/swoop/adult"
+  },
+  {
+   "dir": "hair/idol/adult"
+  },
+  {
+   "dir": "hair/bedhead/adult"
+  },
+  {
+   "dir": "hair/unkempt/adult"
+  },
+  {
+   "dir": "hair/messy1/adult"
+  },
+  {
+   "dir": "hair/parted2/adult"
+  },
+  {
+   "dir": "hair/spiked/adult"
+  },
+  {
+   "dir": "hair/natural/adult"
+  },
+  {
+   "dir": "hair/twists_fade/adult"
+  },
+  {
+   "dir": "hair/dreadlocks_short/adult"
+  },
+  {
+   "dir": "hair/cornrows/adult"
+  },
+  {
+   "dir": "hair/bangslong/adult"
+  },
+  {
+   "dir": "hair/curtains/adult"
+  },
+  {
+   "dir": "hair/relm_short/child"
+  },
+  {
+   "dir": "hair/jewfro/child"
+  },
+  {
+   "dir": "hair/swoop_side/child"
+  },
+  {
+   "dir": "hair/parted_side_bangs2/child"
+  },
+  {
+   "dir": "beards/beard/medium"
+  },
+  {
+   "dir": "beards/beard/trimmed"
+  },
+  {
+   "dir": "beards/beard/5oclock_shadow"
+  },
+  {
+   "dir": "beards/mustache/bigstache"
+  },
+  {
+   "dir": "beards/mustache/walrus"
+  },
+  {
+   "dir": "torso/jacket/trench/male",
+   "colors": [
+    "dark_gray"
+   ]
+  },
+  {
+   "dir": "torso/clothes/robe/female",
+   "colors": [
+    "black"
+   ]
+  },
+  {
+   "dir": "torso/clothes/blouse/female",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/clothes/corset/female",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/clothes/vest_open/male",
+   "colors": [
+    "white"
+   ]
+  },
+  {
+   "dir": "torso/clothes/longsleeve/longsleeve2_buttoned/male"
+  },
+  {
+   "dir": "torso/clothes/longsleeve/longsleeve2_cardigan/female"
+  },
+  {
+   "dir": "torso/clothes/sleeveless/sleeveless2_scoop/female"
+  },
+  {
+   "dir": "legs/skirts/slit/thin"
+  },
+  {
+   "dir": "legs/skirts/overskirt/thin"
+  },
+  {
+   "dir": "legs/formal_striped/male"
+  },
+  {
+   "dir": "neck/necklace/simple/female",
+   "colors": [
+    "gold",
+    "silver"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "hat/formal/tophat/adult",
+   "colors": [
+    "black",
+    "gray"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "hat/formal/bowler/adult",
+   "colors": [
+    "black",
+    "brown",
+    "gray",
+    "charcoal"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "hat/pirate/bonnie/adult",
+   "colors": [
+    "white"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "hat/cloth/hijab/thin"
+  },
+  {
+   "dir": "facial/glasses/glasses/adult",
+   "colors": [
+    "black",
+    "brown"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "facial/glasses/round/adult",
+   "colors": [
+    "gold"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "facial/glasses/secretary/adult",
+   "colors": [
+    "black",
+    "maroon"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "facial/glasses/halfmoon/adult",
+   "colors": [
+    "silver"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "hat/pirate/bonnie/trim/adult",
+   "colors": [
+    "white"
+   ],
+   "prefer_variant": true
+  },
+  {
+   "dir": "torso/clothes/sleeveless/sleeveless2/male"
+  },
+  {
+   "dir": "torso/clothes/sleeveless/sleeveless2/female"
+  }
+ ]
+}

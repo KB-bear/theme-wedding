@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store
+
+# Plaintext guest list + key stay local; the encrypted copy is published
+guest-names.js
+.guest-key.txt

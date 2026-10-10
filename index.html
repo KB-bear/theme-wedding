@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#2b3c6e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Theme Wedding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="screen"></canvas>
+<div id="topinfo"></div>
+<div id="feed"></div>
+<div id="toasts"></div>
+<div id="side" class="panel hidden"></div>
+<div id="info" class="panel hidden"></div>
+<div id="tip"></div>
+<div id="placebar" class="hidden"></div>
+<div id="advisor" class="hidden"><canvas width="160" height="160"></canvas><div class="say"></div></div>
+
+<div id="hud">
+  <div class="hb clock"><div id="hClock">09:30</div><div id="hPhase" class="small">Setting Up</div></div>
+  <div class="hb"><div class="lbl">BUDGET</div><div id="hMoney" class="big">£5,000</div></div>
+  <div class="hb speed">
+    <button data-speed="0" title="Pause (Space)">II</button><button data-speed="1" title="Normal (1)">&gt;</button><button data-speed="2" title="Fast (2)">&gt;&gt;</button><button data-speed="3" title="Fastest (3)">&gt;&gt;&gt;</button>
+  </div>
+  <button id="bBuild" class="hbtn" title="Furnish (B)">FURNISH</button>
+  <button id="bHire" class="hbtn" title="Hire staff (H)">HIRE</button>
+  <button id="bBar" class="hbtn" title="Toggle free bar / cash bar">BAR: CASH</button>
+  <div class="hb"><div class="lbl">GUESTS <span id="hGuests">0</span> · MOOD</div><div class="meter"><i id="hHappy"></i></div></div>
+  <div class="hb"><div class="lbl">BLISS</div><div id="hBliss" class="hearts"></div></div>
+  <div class="hb"><div class="lbl">JOY</div><div id="hJoy" class="big gold">0</div></div>
+  <button id="bMusic" class="hbtn" title="Music on/off">MUSIC</button>
+  <button id="bSfx" class="hbtn" title="Sound effects on/off">SFX</button>
+  <button id="bHelp" class="hbtn" title="Help">?</button>
+</div>
+
+<div id="modal" class="hidden"><div id="mbox"></div></div>
+
+<script>
+(function () {
+  var SCRIPTS = ['js/core.js', 'js/draw.js', 'assets/characters/index.js', 'assets/characters/faces.js', 'js/sprites.js',
+                 'js/sim.js', 'js/events.js', 'js/game.js', 'js/audio.js', 'js/ui.js'];
+  function load(src, ok, bad) {
+    var s = document.createElement('script'); s.src = src; s.async = false;
+    s.onload = ok; s.onerror = bad || ok; document.body.appendChild(s);
+  }
+  function startGame() { (function next(i) { if (i < SCRIPTS.length) load(SCRIPTS[i], function () { next(i + 1); }); })(0); }
+  function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+  // Guest list: use guest-names.js if present (local copy), else decrypt guest-names.enc.js with the key in the URL #hash.
+  function decrypt() {
+    var pass = decodeURIComponent(location.hash.slice(1));
+    if (!pass || !window.GUEST_CIPHER || !(window.crypto && crypto.subtle)) return startGame();
+    var C = window.GUEST_CIPHER, enc = new TextEncoder();
+    crypto.subtle.importKey('raw', enc.encode(pass), 'PBKDF2', false, ['deriveKey']).then(function (k) {
+      return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(C.s), iterations: 200000, hash: 'SHA-256' }, k, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+    }).then(function (k) {
+      return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(C.i) }, k, b64(C.d));
+    }).then(function (buf) { (0, eval)(new TextDecoder().decode(buf)); }).catch(function () {}).then(startGame);
+  }
+  load('guest-names.js', startGame, function () { load('guest-names.enc.js', decrypt, startGame); });
+})();
+</script>
+</body>
+</html>
