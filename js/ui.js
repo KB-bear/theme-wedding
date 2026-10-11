@@ -24,9 +24,12 @@ function resize() {
   DPR = Math.min(2, window.devicePixelRatio || 1);
   const r = cv.getBoundingClientRect();
   VW = r.width || innerWidth; VH = r.height || innerHeight;
-  cv.width = Math.round(VW * DPR); cv.height = Math.round(VH * DPR);
+  // only touch the canvas when its size really changed: setting width/height wipes it, and Android Chrome
+  // fires viewport events often enough for that to flash
+  const w = Math.round(VW * DPR), h = Math.round(VH * DPR);
+  if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; }
   hudH = $('hud').offsetHeight || 70;
-  document.documentElement.style.setProperty('--hudh', (hudH + 6) + 'px');
+  if (hudH !== resize.lastHud) { resize.lastHud = hudH; document.documentElement.style.setProperty('--hudh', (hudH + 6) + 'px'); }
   clampCam();
 }
 function viewOrigin() { return { x: VW / 2 - cam.x * zoom, y: (VH - hudH) / 2 - cam.y * zoom }; }
@@ -296,11 +299,11 @@ function renderPlaceBar() {
   if (!G || (!G.build && !G.hand)) { el.classList.add('hidden'); return; }
   el.classList.remove('hidden');
   if (G.hand) {
-    el.innerHTML = `<span class="pt">Place <b>${esc(G.hand.name.split(' (')[0])}</b> · ${IS_TOUCH ? 'tap a floor tile' : 'click a floor tile'}</span><button data-pb="cancel">Cancel</button>`;
+    setHTML('placebar', `<span class="pt">Place <b>${esc(G.hand.name.split(' (')[0])}</b> · ${IS_TOUCH ? 'tap a floor tile' : 'click a floor tile'}</span><button data-pb="cancel">Cancel</button>`);
   } else {
     const d = OT[G.build];
     const hint = IS_TOUCH ? (G.hover ? (ghostInfo() && ghostInfo().ok ? 'Tap the green spot again to place' : 'Red = blocked, tap elsewhere') : 'Tap where it should go') : 'Click to place (repeat for more)';
-    el.innerHTML = `<span class="pt"><b>${esc(d.name)}</b> ${fmtMoney(d.cost)} · ${hint}</span><button data-pb="change">Change</button><button data-pb="done">Done</button>`;
+    setHTML('placebar', `<span class="pt"><b>${esc(d.name)}</b> ${fmtMoney(d.cost)} · ${hint}</span><button data-pb="change">Change</button><button data-pb="done">Done</button>`);
   }
 }
 $('placebar').addEventListener('click', (e) => {
@@ -502,26 +505,32 @@ $('bSfx').addEventListener('click', () => { auInit(); AU.sfx = !AU.sfx; store.se
 document.addEventListener('pointerdown', () => auInit());
 document.addEventListener('keydown', () => auInit());
 $('bHelp').addEventListener('click', () => { if (G && G.running) showHelp(); });
+// write HUD text only when it changes: rewriting it 5x a second made the bar repaint constantly (and in Russian,
+// re-translate every time), which flickered on some Android phones. _v remembers the English value last written.
+function setText(id, v) { const el = $(id); v = String(v); if (el._v !== v) { el._v = v; el.textContent = v; } }
+function setHTML(id, v) { const el = $(id); if (el._v !== v) { el._v = v; el.innerHTML = v; } }
 function updateHud(force) {
   if (!G) return;
   const now = performance.now(); if (!force && now - lastHud < 200) return; lastHud = now;
-  $('hClock').textContent = fmtTime(G.time);
-  $('hPhase').textContent = G.phaseName;
-  const m = $('hMoney'); m.textContent = fmtMoney(G.money); m.classList.toggle('neg', G.money < 0);
-  $('hGuests').textContent = guests().length;
-  const hb = $('hHappy'); hb.style.width = G.avgHappy + '%'; hb.style.background = G.avgHappy > 60 ? '#5fd068' : G.avgHappy > 35 ? '#ffd25a' : '#ff5a5a';
+  setText('hClock', fmtTime(G.time));
+  setText('hPhase', G.phaseName);
+  setText('hMoney', fmtMoney(G.money)); $('hMoney').classList.toggle('neg', G.money < 0);
+  setText('hGuests', guests().length);
+  const hb = $('hHappy'), hw = Math.round(G.avgHappy) + '%', hc = G.avgHappy > 60 ? '#5fd068' : G.avgHappy > 35 ? '#ffd25a' : '#ff5a5a';
+  if (hb._w !== hw) { hb._w = hw; hb.style.width = hw; }
+  if (hb._c !== hc) { hb._c = hc; hb.style.background = hc; }
   const full = Math.round(G.bliss / 20);
-  $('hBliss').innerHTML = '<span class="on">' + '♥'.repeat(full) + '</span><span class="off">' + '♥'.repeat(5 - full) + '</span>';
-  $('hJoy').textContent = Math.round(G.joy).toLocaleString('en-GB');
+  setHTML('hBliss', '<span class="on">' + '♥'.repeat(full) + '</span><span class="off">' + '♥'.repeat(5 - full) + '</span>');
+  setText('hJoy', Math.round(G.joy).toLocaleString('en-GB'));
   document.querySelectorAll('[data-speed]').forEach(b => b.classList.toggle('on', +b.dataset.speed === G.speed));
-  $('bBar').textContent = sponsorOn() ? 'BAR: DMITRI' : G.barMode === 'free' ? 'BAR: FREE' : 'BAR: CASH';
+  setText('bBar', sponsorOn() ? 'BAR: DMITRI' : G.barMode === 'free' ? 'BAR: FREE' : 'BAR: CASH');
   $('bBar').classList.toggle('on', G.barMode === 'free' || sponsorOn());
-  $('bMusic').textContent = AU.music ? 'MUSIC' : 'MUSIC OFF'; $('bMusic').classList.toggle('on', !AU.music);
-  $('bSfx').textContent = AU.sfx ? 'SFX' : 'SFX OFF'; $('bSfx').classList.toggle('on', !AU.sfx);
+  setText('bMusic', AU.music ? 'MUSIC' : 'MUSIC OFF'); $('bMusic').classList.toggle('on', !AU.music);
+  setText('bSfx', AU.sfx ? 'SFX' : 'SFX OFF'); $('bSfx').classList.toggle('on', !AU.sfx);
   const W = { Sunny: 'Sunny', Cloudy: 'Cloudy', Showers: 'Showers', Scorching: 'Heatwave' }[G.weather];
   const buffs = G.buffs.map(b => `<span class="buff ${b.d >= 0 ? 'pos' : 'neg'}">${esc(b.name)}</span>`).join('');
   const rats = G.people.filter(a => a.role === 'rat' && a.present && !a.dead).length;
-  $('topinfo').innerHTML = `DAY ${G.day} · ${W}${G.twist ? ' · ' + esc(G.twist.name) : ''}${G.raining ? ' · <b>RAINING</b>' : ''}${G.powerOut > 0 ? ' · <b>POWER CUT</b>' : ''}${rats ? ' · <b class="paused">RATS: ' + rats + '</b>' : ''}${G.speed === 0 ? ' · <b class="paused">PAUSED</b>' : ''}${buffs ? '<div class="buffs">' + buffs + '</div>' : ''}`;
+  setHTML('topinfo', `DAY ${G.day} · ${W}${G.twist ? ' · ' + esc(G.twist.name) : ''}${G.raining ? ' · <b>RAINING</b>' : ''}${G.powerOut > 0 ? ' · <b>POWER CUT</b>' : ''}${rats ? ' · <b class="paused">RATS: ' + rats + '</b>' : ''}${G.speed === 0 ? ' · <b class="paused">PAUSED</b>' : ''}${buffs ? '<div class="buffs">' + buffs + '</div>' : ''}`);
   if (sideMode && now - lastSideRefresh > 1000) { lastSideRefresh = now; $('side').querySelectorAll('.item[data-build]').forEach(b => b.classList.toggle('poor', G.money < OT[b.dataset.build].cost)); }
   if (G.build && IS_TOUCH) renderPlaceBar();
 }
@@ -687,7 +696,7 @@ function showFullBoard() {
   LB.top(50).then(rows => draw(rows || localBoard()));
 }
 function showTitle() {
-  $('topinfo').innerHTML = ''; $('feed').innerHTML = ''; $('side').classList.add('hidden'); $('info').classList.add('hidden'); $('placebar').classList.add('hidden'); $('advisor').classList.add('hidden'); sideMode = null;
+  setHTML('topinfo', ''); $('feed').innerHTML = ''; $('side').classList.add('hidden'); $('info').classList.add('hidden'); $('placebar').classList.add('hidden'); $('advisor').classList.add('hidden'); sideMode = null;
   const GL = window.GUEST_LIST || {};
   const gn = GL.groom || 'Nick', bn = GL.bride || 'Olga'; // the couple's names are fixed
   const pn = store.get('tw_player', '');

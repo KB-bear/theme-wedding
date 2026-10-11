@@ -17,7 +17,9 @@ button:active, button.on { border-color: var(--lo) var(--hi) var(--hi) var(--lo)
 
 /* ---------- HUD ---------- */
 #hud { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 6px; align-items: stretch;
-  padding: 6px 8px; background: var(--panel); border-top: 3px solid var(--hi); box-shadow: 0 -2px 0 var(--lo); }
+  padding: 6px 8px; background: var(--panel); border-top: 3px solid var(--hi); box-shadow: 0 -2px 0 var(--lo);
+  transform: translateZ(0); backface-visibility: hidden; } /* own GPU layer: fixed bars over the busy canvas flickered on some Samsung phones */
+#topinfo, #feed { transform: translateZ(0); }
 .hb { background: var(--panel2); padding: 2px 10px; border: 3px solid; border-color: var(--lo) var(--hi) var(--hi) var(--lo); min-width: 84px;
   display: flex; flex-direction: column; justify-content: center; }
 .hb .lbl { font-size: 15px; color: #a9b7e0; letter-spacing: 1px; }
