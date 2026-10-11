@@ -7352,6 +7352,14 @@
   "file": "js/ui.js"
  },
  {
+  "en": "Amazing everyone nearby (mostly)",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Here to make it official",
+  "file": "js/ui.js"
+ },
+ {
   "en": "Mingling",
   "file": "js/ui.js"
  },
@@ -7496,6 +7504,10 @@
   "file": "js/ui.js"
  },
  {
+  "en": "Officiating",
+  "file": "js/ui.js"
+ },
+ {
   "en": "The Groom",
   "file": "js/ui.js"
  },
@@ -7509,6 +7521,10 @@
  },
  {
   "en": "Intruder",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Visitor",
   "file": "js/ui.js"
  },
  {
@@ -7724,6 +7740,14 @@
   "file": "js/ui.js"
  },
  {
+  "en": "Carry on",
+  "file": "js/ui.js"
+ },
+ {
+  "en": "Well, that happened.",
+  "file": "js/ui.js"
+ },
+ {
   "en": "JOY",
   "file": "js/ui.js"
  },
@@ -7737,10 +7761,6 @@
  },
  {
   "en": "{1} · {2} min",
-  "file": "js/ui.js"
- },
- {
-  "en": "Carry on",
   "file": "js/ui.js"
  },
  {

@@ -1978,4 +1978,9 @@ window.LANG_RU = {"WC":"WC",
 "Good call. Tap where your new Cleaner should start and they will deal with it.":"Верное решение. Нажмите, где начнёт работу новый уборщик, и он всё уберёт.",
 "Good call. Click where your new Cleaner should start and they will deal with it.":"Верное решение. Кликните, где начнёт работу новый уборщик, и он всё уберёт.",
 "Everyone steps around it for the rest of the morning. {0} is not impressed.":"Все обходят это до конца утра. {0} не в восторге.",
-"Live-Streamed Wedding":"Свадьба в прямом эфире"};
+"Live-Streamed Wedding":"Свадьба в прямом эфире",
+"Amazing everyone nearby (mostly)":"Изумляет всех вокруг (почти)",
+"Here to make it official":"Здесь, чтобы всё было официально",
+"Officiating":"Проводит церемонию",
+"Visitor":"Гость",
+"Well, that happened.":"Ну, вот так вышло."};

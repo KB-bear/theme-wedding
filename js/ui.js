@@ -355,8 +355,11 @@ $('side').addEventListener('mouseover', (e) => {
 function select(x) {
   if (!G) return;
   G.sel = x; infoFor = null;
-  if (x) renderInfo(true); else $('info').classList.add('hidden');
+  if (!x) { $('info').classList.add('hidden'); return; }
+  try { renderInfo(true); } catch (e) { console.error(e); G.sel = null; $('info').classList.add('hidden'); }
 }
+const NPC_ROLE = { magician: 'Close-up Magician', registrar: 'The Registrar' };
+const NPC_LINE = { magician: 'Amazing everyone nearby (mostly)', registrar: 'Here to make it official' };
 const STATE_TXT = { idle: 'Mingling', walk: 'Walking', queue: 'Queueing', seated: 'Sitting down', dance: 'Dancing!', chat: 'Chatting', sleep: 'Asleep (zzz)', fight: 'FIGHTING!', leave: 'Leaving', watch: 'Watching', conga: 'In the conga line!', fallen: 'On the floor', atpost: 'At their post', work: 'Working', script: 'Walking the aisle', altar: 'At the altar', cakewait: 'At the cake', fdwait: 'On the dance floor', sowait: 'Ready to leave', off: 'Not arrived', sick: 'Being sick!' };
 function stateText(p) {
   if (p.state === 'use' && p.useObj) {
@@ -368,6 +371,7 @@ function stateText(p) {
   if (p.eating > 0) return 'Eating';
   if (p.needServe) return 'Waiting for food (' + Math.floor(p.waitServe) + ' min)';
   if (p.role === 'goat' && p.cakeRun) return 'HEADING FOR THE CAKE!';
+  if (p.role === 'registrar') return p.state === 'leave' ? 'Leaving' : 'Officiating';
   return STATE_TXT[p.state] || p.state;
 }
 function bar(label, v, good) {
@@ -384,7 +388,7 @@ function renderInfo(full) {
     infoFor = x;
     let h = '';
     if (x.kind) {
-      const role = x.kind === 'couple' ? (x.role === 'groom' ? 'The Groom' : 'The Bride') : x.kind === 'staff' ? STAFF[x.role].name : x.kind === 'animal' ? (x.friendly ? 'Honoured guest' : 'Intruder') : x.role;
+      const role = x.kind === 'couple' ? (x.role === 'groom' ? 'The Groom' : 'The Bride') : x.kind === 'staff' ? STAFF[x.role].name : x.kind === 'animal' ? (x.friendly ? 'Honoured guest' : 'Intruder') : x.kind === 'npc' ? (NPC_ROLE[x.role] || 'Visitor') : x.role;
       h += `<div class="ph"><span class="nm">${esc(x.name)}</span><button class="x" data-act="close">×</button></div>`;
       h += `<div class="who">${x.kind !== 'animal' ? '<canvas id="portrait" width="120" height="120" style="width:60px;height:60px"></canvas>' : ''}<div><div class="role">${esc(role)}</div>`;
       if (x.trait) h += `<div class="trait">${esc(TRAITS[x.trait])}</div>`;
@@ -423,7 +427,9 @@ function renderInfo(full) {
     if (x.role === 'bartender') h += `<div class="line">${x.state === 'atpost' ? 'Serving at the bar' : (countObj('bar') ? 'Heading to a bar' : 'No bar to work at!')}</div>`;
   } else if (x.kind === 'animal') {
     if (x.role === 'goat') h += `<div class="line">${x.cakeRun ? '<b class="r">Going for the cake!</b> Get a Bouncer on it!' : 'Munching. Watch the cake...'}</div>`;
-  } else {
+  } else if (x.kind) { // magician, registrar and anyone else who isn't a guest, staff or animal
+    if (NPC_LINE[x.role]) h += `<div class="line">${NPC_LINE[x.role]}</div>`;
+  } else if (OT[x.type]) {
     const d = OT[x.type];
     if (x.type === 'bar') h += `<div class="line">${barOpen(x) ? '<b class="g">OPEN</b> · ' + (G.barMode === 'free' || sponsorOn() ? 'Free bar' : 'Cash bar') : '<b class="r">CLOSED</b> · needs a Bartender'}</div>`;
     if (x.type === 'cake') h += `<div class="line">${G.cakeEaten ? '<b class="r">EATEN BY A GOAT</b>' : G.cakeCut ? G.cakeSlices + ' slices left' : 'Not cut yet'}</div>`;
@@ -537,13 +543,14 @@ function nextModal() {
   SFX.fax();
   const box = openModal(`<div class="faxhead"><span>INCOMING FAX</span><span>${fmtTime(G.time)}</span></div><h2>${esc(ev.title)}</h2><p class="evt">${esc(ev.text)}</p><div class="choices"></div>`, 'fax');
   const ch = box.querySelector('.choices');
+  if (!ev.choices || !ev.choices.length) ev.choices = [{ label: 'Carry on', fn() { return ''; } }]; // never a fax with no way out
   ev.choices.forEach((c) => {
     const b = document.createElement('button'); b.textContent = c.label;
     b.onclick = () => {
       const snap = { joy: G.joy, bliss: G.bliss, money: G.money, mood: avgMood(), mem: G.memories.length };
       let res;
       G.inChoice = true;
-      try { res = c.fn(); } finally { G.inChoice = false; }
+      try { res = c.fn(); } catch (e) { console.error(e); res = 'Well, that happened.'; } finally { G.inChoice = false; } // a broken choice mustn't trap you in the fax
       const d = { joy: Math.round(G.joy - snap.joy), bliss: Math.round(G.bliss - snap.bliss), money: Math.round(G.money - snap.money), mems: G.memories.slice(snap.mem) };
       const v = applyImpact(d);
       d.mood = Math.round(avgMood() - snap.mood);
@@ -561,7 +568,7 @@ function nextModal() {
       if (v.cls === 'bad' || v.cls === 'disaster') box.classList.add('shake');
       if (v.cls === 'triumph') box.classList.add('glow');
       const ok = document.createElement('button'); ok.className = 'ok'; ok.textContent = 'Carry on';
-      ok.onclick = () => { closeModal(); if (ev.after) ev.after(); nextModal(); };
+      ok.onclick = () => { closeModal(); try { if (ev.after) ev.after(); } catch (e) { console.error(e); } nextModal(); };
       r.appendChild(ok); box.appendChild(r); ok.focus();
       r.scrollIntoView({ block: 'nearest' });
     };
@@ -827,6 +834,10 @@ function showEndScreen(s) {
 // ---------- main loop ----------
 let lastT = performance.now();
 function frame(now) {
+  requestAnimationFrame(frame); // keep the loop alive even if something below throws
+  try { frameBody(now); } catch (e) { console.error(e); }
+}
+function frameBody(now) {
   const dt = Math.min(0.1, (now - lastT) / 1000); lastT = now;
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.fillStyle = '#16301a'; ctx.fillRect(0, 0, cv.width, cv.height);
@@ -848,10 +859,9 @@ function frame(now) {
     ctx.drawImage(wc, 0, 0);
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     updateHud(false);
-    if (G.sel && now - lastInfo > 250) { lastInfo = now; renderInfo(false); }
+    if (G.sel && now - lastInfo > 250) { lastInfo = now; try { renderInfo(false); } catch (e) { console.error(e); select(null); } }
   }
   musicTick();
-  requestAnimationFrame(frame);
 }
 
 // ---------- boot ----------
