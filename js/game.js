@@ -335,6 +335,29 @@ function catchphraseFor(p) {
   return null;
 }
 function shout(p, text, mins) { p.shout = text; p.shoutUntil = G.time + (mins || 6); }
+// ---------- character dialogue: now and then someone says something in a small speech bubble ----------
+// Only one bubble at a time, a little quiet between them, and never over the top of a big shout.
+const SAY_GAP = 5; // game minutes of quiet after a bubble
+function say(p, text, opts) {
+  opts = opts || {};
+  if (!G || !p || !p.present || p.hidden || p.kind === 'animal') return false;
+  if (opts.chance !== undefined && !chance(opts.chance)) return false;
+  if (!opts.force && ((G.speech && G.time < G.speech.until) || G.time < (G.sayNext || 0))) return false;
+  if (G.people.some(q => q.shout && G.time < q.shoutUntil)) return false;
+  if (Array.isArray(text)) text = pick(text);
+  G.speech = { p, text, until: G.time + (opts.mins || 6) };
+  G.sayNext = G.speech.until + SAY_GAP;
+  return true;
+}
+// the nearest guest to a spot who could plausibly say something
+function guestNear(x, y, r, not) {
+  let best = null, bd = r || 6;
+  for (const q of guests()) {
+    if (q === not || !q.present || q.hidden || q.look.kid || ['sleep', 'sick', 'fallen', 'leave', 'fight'].includes(q.state)) continue;
+    const d = dist(q.x, q.y, x, y); if (d < bd) { bd = d; best = q; }
+  }
+  return best;
+}
 function setupSpecials() {
   const GL = window.GUEST_LIST || {};
   const en = (GL.explodingGuest || '').toLowerCase();
@@ -359,6 +382,7 @@ function explodeGuest(p) {
     p.happy = Math.max(p.happy, 90); p.needs.fun = 100;
     shout(p, pick(["I'm back! What did I miss?", 'Right, where was I?', 'Sorry about that. Got a bit excited.', 'Is the bar still open?']), 7);
     msg(p.name + ' has strolled back in, slightly singed, and carried on partying.', 'good');
+    later(8, () => { const g = guestNear(p.x, p.y, 6, p); if (g) say(g, ['Did ' + p.name + ' just... explode?', 'Is nobody going to mention that?']); });
   });
 }
 function spawnDog() {
@@ -366,6 +390,7 @@ function spawnDog() {
   const d = spawnAnimal('dog', true); d.name = GL.dog || 'Barnie'; G.dogSeen = d;
   d.x = 7.2; d.y = 23.2; d.spd = 1.7; d.poopAt = rnd(725, 790); // after the ceremony (the aisle walk may beat him to it)
   msg(d.name + ' the golden retriever has arrived with the guests. Good boy!', 'good');
+  later(3, () => { const g = guestNear(d.x, d.y, 8); if (g) say(g, ['Who brought the dog?! Hello, ' + d.name + '!', "Who's a good boy? You are!"]); });
 }
 // the dog leads the way: he waits at the end of the aisle while everyone sits down, then trots down it
 // just ahead of the bride... and half the time stops halfway for a poo
@@ -395,6 +420,7 @@ function dogAisleWalk() {
     q.poopAt = 0; q.munch = true;
     spawnMess('poop', q.x, q.y); crowdReact('angry', 0.3); bliss(-2);
     msg(q.name + ' has stopped halfway down the aisle... and done his business. Right in front of everyone.', 'bad');
+    if (isHere(G.mob)) say(G.mob, [q.name + '! Not on the carpet!', 'In front of EVERYONE?!'], { force: true });
     later(1.5, () => {
       q.munch = false; q.path = down(mid - 1, 4); q.onArrive = atAltar;
       if (!staffOf('cleaner').some(c => c.present)) dogPooPrompt(q);
@@ -461,6 +487,7 @@ function enterPhase(ph) {
       for (const p of G.people) { p.course = 0; p.needServe = false; p.plate = false; p.eating = 0; p.waitServe = 0; p.serveClaim = null; }
       for (const c of [G.groom, G.bride]) { interrupt(c); }
       msg('Dinner is served! Guests are heading to their tables.', '');
+      later(3, () => say(G.groom, ['Finally! I could eat a horse.', "I hope there's seconds."]));
       if (!staffOf('waiter').length) hint('waiters', 'Nobody is serving dinner! Hire some Waiters, quick!', 20);
       break;
     case 'speeches': msg('Pin drop. Time for the speeches...', ''); break;
@@ -573,7 +600,7 @@ function minuteTick() {
     G.sickPlan.splice(i, 1); i--;
     const c = guests().filter(p => !p.look.kid && !p.hidden && ['idle', 'dance', 'chat', 'walk', 'watch'].includes(p.state)).sort((a, b) => b.drunk - a.drunk);
     const v = c[0];
-    if (v) { queasy(v, 3); msg(v.name + ' is looking a bit green...', 'bad'); }
+    if (v) { queasy(v, 3); msg(v.name + ' is looking a bit green...', 'bad'); say(v, ["I don't feel so good...", 'Is the room spinning?', 'Never again. NEVER again.']); }
   }
 
   // ceremony safety & kiss
@@ -599,7 +626,7 @@ function minuteTick() {
   for (const s of G.rainSpells) if (!s.done && t >= s.t) { s.done = true; startRain(s.len, s.storm); }
   if (G.raining && t >= G.rainUntil) { G.raining = false; G.storm = false; msg('The rain has stopped. Phew!', 'good'); }
   if (G.powerOut > 0) { G.powerOut--; if (G.powerOut <= 0) msg('The power is back on!', 'good'); }
-  if (G.goatAt && t >= G.goatAt && !G.people.some(a => a.role === 'goat' && a.present)) { G.goatAt = 0; spawnAnimal('goat', false); msg('A goat has wandered in from next door!', 'bad'); }
+  if (G.goatAt && t >= G.goatAt && !G.people.some(a => a.role === 'goat' && a.present)) { G.goatAt = 0; const gt = spawnAnimal('goat', false); msg('A goat has wandered in from next door!', 'bad'); later(4, () => { const g = guestNear(gt.x, gt.y, 8); if (g) say(g, ['Is that... a goat?', 'Did anyone invite the goat?', 'Aww, a goat! Wait. Why is there a goat?']); }); }
   if (G.dogAt && t >= G.dogAt) { G.dogAt = 0; spawnDog(); }
   if (G.explodeAt && t >= G.explodeAt) {
     const p = G.exploder;
@@ -728,6 +755,7 @@ function onTile(p, x, y) {
     if (Math.floor(m.x) === x && Math.floor(m.y) === y && ['spill', 'vomit', 'puddle', 'choc', 'mud', 'cake'].includes(m.type) && chance(0.1 + p.drunk / 400)) {
       const cb = p.onArrive; fall(p);
       msg(p.name + ' slipped in the ' + ({ spill: 'spilt drink', vomit: 'sick', puddle: 'puddle', choc: 'chocolate', mud: 'mud', cake: 'cake' })[m.type] + '!', 'bad');
+      say(p, ['Whoa-oa-oa!', 'Who left that there?!', 'My good trousers!', "I'm OK! I'm OK!"]);
       if (m.type === 'vomit') memory('Someone slipped in sick', 20);
       void cb; return;
     }

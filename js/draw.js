@@ -1142,6 +1142,23 @@ function drawMess(c, m) {
   }
 }
 
+// a plain speech bubble: white, dark outline, little tail pointing at the speaker
+function drawSay(c, x, y, text) {
+  c.save(); text = tr(text);
+  c.font = '9px ' + UI_FONT;
+  const words = text.split(' '), lines = []; let cur = '';
+  for (const w of words) { const t2 = cur ? cur + ' ' + w : w; if (cur && c.measureText(t2).width > 70) { lines.push(cur); cur = w; } else cur = t2; }
+  if (cur) lines.push(cur);
+  const lh = 8, w = Math.max(...lines.map(l => c.measureText(l).width)) + 7, h = lines.length * lh + 4;
+  const bx = x - w / 2, by = y - h - 4;
+  P(c, [x - 2.5, by + h - 0.5, x + 2.5, by + h - 0.5, x, by + h + 4]); c.fillStyle = '#1a1a2a'; c.fill();
+  rr(c, bx - 1, by - 1, w + 2, h + 2, 3); c.fillStyle = '#1a1a2a'; c.fill();
+  rr(c, bx, by, w, h, 2.4); c.fillStyle = '#ffffff'; c.fill();
+  P(c, [x - 1.6, by + h - 0.6, x + 1.6, by + h - 0.6, x, by + h + 2.6]); c.fill();
+  c.fillStyle = '#1a1a2a'; c.textAlign = 'center'; c.textBaseline = 'middle';
+  lines.forEach((l, i) => c.fillText(l, x, by + 2 + lh / 2 + i * lh + 0.5));
+  c.restore();
+}
 function drawShout(c, x, y, text, t) {
   c.save(); text = tr(text);
   c.font = 'bold 6px "Press Start 2P", "Courier New", monospace';
@@ -1283,6 +1300,8 @@ function renderWorld(t) {
       P(c, [s.x - 3.5, y, s.x + 3.5, y, s.x, y + 4.5]); fillInk(c, '#ffe040', 0.5);
     }
   }
+  // a character's line of dialogue (one at a time, see say())
+  { const sp = G.speech; if (sp && G.time < sp.until && sp.p.present && !sp.p.hidden && sp.p._top !== undefined) { const s = iso(sp.p.x, sp.p.y); drawSay(c, s.x, sp.p._top - 3, sp.text); } }
   // shouted catchphrases: drawn last so they sit on top of everything
   for (const p of G.people) if (p.present && p.shout && G.time < p.shoutUntil && p._top !== undefined) { const s = iso(p.x, p.y); drawShout(c, s.x, p._top - 4, p.shout, t); }
   for (const f of G.fights) {

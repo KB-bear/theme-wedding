@@ -445,7 +445,7 @@ $('info').addEventListener('click', (e) => {
   const x = G.sel; SFX.click();
   switch (b.dataset.act) {
     case 'close': select(null); break;
-    case 'cutoff': x.cutOff = !x.cutOff; msg(x.cutOff ? x.name + ' has been cut off. Soft drinks only!' : x.name + ' can drink again.', ''); if (x.cutOff) x.happy -= 5; renderInfo(true); break;
+    case 'cutoff': x.cutOff = !x.cutOff; if (x.cutOff) say(x, ['Soft drinks?! At a WEDDING?!', "I'm not even drunk! ...Much."], { force: true }); msg(x.cutOff ? x.name + ' has been cut off. Soft drinks only!' : x.name + ' can drink again.', ''); if (x.cutOff) x.happy -= 5; renderInfo(true); break;
     case 'home': sendHome(x); select(null); break;
     case 'pickup': pickUp(x); break;
     case 'sack': sack(x); break;

@@ -532,7 +532,7 @@ function chaosTick(p) {
     const foe = G.people.find(q => q !== p && q.present && q.kind === 'guest' && q.drunk > 42 && !q.fight && dist(q.x, q.y, p.x, p.y) < 3 && ['idle', 'dance', 'chat', 'walk'].includes(q.state));
     if (foe) { startFight(p, foe); return; }
   }
-  if (dr > 76 && chance(0.004)) { interrupt(p); p.state = 'sleep'; p.timer = rnd(20, 40); p.onTimer = (q) => { q.state = 'idle'; q.drunk -= 20; }; msg(p.name + ' has fallen asleep in a corner.', ''); G.stats.sleepers++; return; }
+  if (dr > 76 && chance(0.004)) { interrupt(p); p.state = 'sleep'; p.timer = rnd(20, 40); p.onTimer = (q) => { q.state = 'idle'; q.drunk -= 20; }; msg(p.name + ' has fallen asleep in a corner.', ''); G.stats.sleepers++; later(2, () => say(p, ['Zzz... five more minutes...', 'Just resting my eyes...', 'Zzz... is it cake time?'])); return; }
   if (p.state === 'dance' && dr > 40 && chance(0.005)) {
     const tricks = p.russian ? ['is doing a Cossack squat-kick!', 'is shouting "OPA!" and stamping', 'is spinning a napkin over their head!'] : ['is doing the worm!', 'is breakdancing!', 'has taken their shoes off and is spinning!', 'is doing the splits!', 'is moonwalking across the floor!'];
     msg(p.name + ' ' + pick(tricks), 'good'); joy(8, true); moodNear(p, 3, 3);
@@ -748,7 +748,7 @@ function animalBrain(a) {
     if (['dinner', 'speeches', 'evening', 'firstdance', 'party', 'sendoff', 'end'].includes(G.phase)) { a.leaving = true; msg(a.name + ' has been taken home for his dinner. Bye, ' + a.name + '!', 'good'); return; }
     if (a.poopAt && G.time >= a.poopAt && !a.moving) {
       a.poopAt = 0;
-      if (!staffOf('cleaner').some(c => c.present)) { spawnMess('poop', a.x, a.y); a.munch = true; crowdReact('angry', 0.2); msg(a.name + ' has done a massive poo! If only someone had hired a Cleaner...', 'bad'); }
+      if (!staffOf('cleaner').some(c => c.present)) { spawnMess('poop', a.x, a.y); a.munch = true; crowdReact('angry', 0.2); msg(a.name + ' has done a massive poo! If only someone had hired a Cleaner...', 'bad'); const g = guestNear(a.x, a.y, 6); if (g) say(g, [a.name + '! Not there!', 'Mind your step, everyone!', 'Somebody get a bag!']); }
     }
     if (a.state === 'walk') { a.walkT++; if (a.walkT > 40) interrupt(a); return; }
     if ((a.idleT -= 1) <= 0) {
@@ -776,7 +776,7 @@ function animalBrain(a) {
     const pl = G.objects.find(o => o.type === 'plant' && dist(o.x + 0.5, o.y + 0.5, a.x, a.y) < 1.8);
     if (pl && chance(0.2)) { removeObj(pl); msg('The goat has eaten a flower pot. Pot and all.', 'bad'); a.munch = true; }
     const g = G.people.find(q => q.kind === 'guest' && q.present && !q.hidden && dist(q.x, q.y, a.x, a.y) < 1.5 && ['idle', 'chat', 'walk', 'dance'].includes(q.state));
-    if (g && chance(0.05)) { fall(g); msg('The goat headbutted ' + g.name + '!', 'bad'); memory('Headbutted by a goat', 40); }
+    if (g && chance(0.05)) { fall(g); msg('The goat headbutted ' + g.name + '!', 'bad'); memory('Headbutted by a goat', 40); later(1, () => say(g, ["OW! That goat's got a temper!", 'I just want to go home.'])); }
   } else if (a.state === 'walk') { a.walkT++; if (a.walkT > 40) interrupt(a); return; }
   if ((a.idleT -= 1) <= 0) { a.idleT = rnd(1, 5); wander(a, a.role === 'cat' ? pick(['hall', 'hall', 'lawn']) : pick(['lawn', 'garden', 'hall'])); }
 }
@@ -788,6 +788,7 @@ function eatCake(a) {
   bliss(-25); joy(-100);
   G.shake = 0.8; SFX.disaster();
   msg('DISASTER! The goat has eaten the WEDDING CAKE!', 'bad');
+  say(G.bride, ['Oh no! THE CAKE!', 'NOT THE CAKE!'], { force: true, mins: 8 });
   msg(G.bName + ' is in tears. ' + G.gName + ' is chasing the goat round the hall.', 'bad');
   moodAll(-10);
   crowdReact('angry', 0.5);
@@ -810,6 +811,7 @@ function spawnRat(x, y) {
   a.x = x; a.y = y; a.idleT = 0;
   G.stats.ratsSeen = (G.stats.ratsSeen || 0) + 1;
   msg('A RAT has crawled out of the mess! ' + (typeof IS_TOUCH !== 'undefined' && IS_TOUCH ? 'Tap' : 'Click') + ' it to shoot it!', 'bad');
+  { const g = guestNear(x, y, 7); if (g) say(g, ['ARGH! A RAT!', 'Was that a RAT?!', 'Get it away from me!'], { force: !G.ratSaid }); G.ratSaid = true; }
   if (G.stats.ratsSeen === 1) hint('rats', 'RATS! Shoot them before they ruin everything, and hire more Cleaners!', 10);
   SFX.squeak();
   moodNear(a, 4, -6);
@@ -885,7 +887,10 @@ function messNear(type, cx, cy, n, r) {
 function vomit(p) {
   spawnMess('vomit', p.x, p.y); SFX.sick(); p.drunk = Math.max(0, p.drunk - 25); p.happy -= 6; G.stats.vomits++;
   moodNear(p, 3, -3);
-  if (G.time - (G.lastVomitMsg || -99) > 8) { G.lastVomitMsg = G.time; msg(p.name + ' has been sick' + (inDance(Math.floor(p.x), Math.floor(p.y)) ? ' on the dance floor!' : '!'), 'bad'); }
+  if (G.time - (G.lastVomitMsg || -99) > 8) {
+    G.lastVomitMsg = G.time; msg(p.name + ' has been sick' + (inDance(Math.floor(p.x), Math.floor(p.y)) ? ' on the dance floor!' : '!'), 'bad');
+    const g = guestNear(p.x, p.y, 5, p); if (g) say(g, ['EW! Not on my shoes!', 'Someone get a mop!', 'Better out than in, I suppose...']);
+  }
   if (G.stats.vomits === 1) memory(p.name + ' was sick first', 15);
   if (G.groom.present && dist(G.groom.x, G.groom.y, p.x, p.y) < 3) bliss(-2, true);
 }
@@ -915,6 +920,7 @@ function startFight(a, b) {
   for (const p of [a, b]) { interrupt(p); p.state = 'fight'; p.fight = f; }
   G.fights.push(f); G.stats.fights++;
   msg(a.name + ' and ' + b.name + ' are FIGHTING!', 'bad'); SFX.bad();
+  say(a, ['Say that again!', 'You spilled my pint!', 'Outside. NOW.', "Don't you dare talk about my mum!"]);
   if (!staffOf('bouncer').length) hint('fight', 'A fight! A Bouncer would sort that out sharpish.', 30);
 }
 function fightTick(f) {
@@ -940,6 +946,7 @@ function stormOff(p) {
   joy(p.vip ? -120 : -60, true);
   bliss(p.vip ? -10 : -2, true);
   msg(p.name + ' has stormed off in a huff!', 'bad'); SFX.bad();
+  say(p, ["Right, I know when I'm not wanted!", "I'm not staying here to be ignored!", 'Worst. Wedding. Ever.']);
 }
 function leave(p, kind) {
   p.state = 'leave'; p.leaveKind = kind; p.sitting = false; p.escort = false;
@@ -950,10 +957,12 @@ function sendHome(p) {
   if (p.drunk > 70 && chance(0.6)) {
     p.escort = true; think(p, 'angry', 6);
     msg(p.name + ' refuses to go! ' + (staffOf('bouncer').length ? 'Bouncer on the way.' : 'You need a Bouncer.'), 'bad');
+    say(p, ["I'm not going ANYWHERE!", "You can't make me! I'm family!"], { force: true });
     return;
   }
   interrupt(p); leave(p, 'taxi'); G.stats.taxis++;
   msg(p.name + ' has been sent home in a taxi.', '');
+  say(p, ["But I'm having a lovely time!", 'I love you all! Every one of you!']);
 }
 
 // ---------- couple ----------

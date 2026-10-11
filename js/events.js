@@ -1219,6 +1219,7 @@ EVENTS.push(
 function startRain(mins, storm) {
   G.raining = true; G.rainUntil = G.time + mins; G.storm = !!storm;
   msg(storm ? 'THUNDERSTORM! Everyone into the hall!' : "It's started raining!", 'bad');
+  { const g = guestNear(6, 16, 30); if (g) say(g, storm ? ['Everybody INSIDE!', 'Was that thunder?!'] : ['My HAIR!', 'Typical British summer!', 'Is it raining? It is raining.']); }
   if (storm) for (const p of guests()) if (isOutdoor(Math.floor(p.x), Math.floor(p.y)) && ['idle', 'walk', 'chat', 'dance', 'watch'].includes(p.state)) { interrupt(p); wander(p, 'hall'); }
 }
 function spawnHens(n) {

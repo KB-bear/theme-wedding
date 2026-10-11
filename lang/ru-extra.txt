@@ -143,3 +143,56 @@ A cousin|Кузен
 Cousin Jake|Кузен Джейк
 Tell my wife I said Hello!|Передайте моей жене привет!
 TELL MY WIFE I SAID HELLO!|ПЕРЕДАЙТЕ МОЕЙ ЖЕНЕ ПРИВЕТ!
+# characters' speech bubbles
+I don't feel so good...|Что-то мне нехорошо...
+Is the room spinning?|Это комната кружится?
+Never again. NEVER again.|Больше никогда. НИКОГДА.
+Whoa-oa-oa!|Ой-ой-ой!
+Who left that there?!|Кто это тут оставил?!
+My good trousers!|Мои лучшие брюки!
+I'm OK! I'm OK!|Я в порядке! Я в порядке!
+Is that... a goat?|Это что... коза?
+Did anyone invite the goat?|Козу кто-нибудь приглашал?
+Aww, a goat! Wait. Why is there a goat?|Ой, козочка! Стоп. Откуда тут коза?
+Who brought the dog?! Hello, {0}!|Кто привёл собаку?! Привет, {0}!
+Who's a good boy? You are!|Кто хороший мальчик? Ты!
+{0}! Not on the carpet!|{0}! Только не на ковёр!
+In front of EVERYONE?!|При ВСЕХ?!
+Finally! I could eat a horse.|Наконец-то! Я бы съел слона.
+I hope there's seconds.|Надеюсь, будет добавка.
+Did {0} just... explode?|{0} что... взорвался?
+Is nobody going to mention that?|И никто ничего не скажет?
+Zzz... five more minutes...|Хрр... ещё пять минуточек...
+Just resting my eyes...|Я просто глаза прикрыл...
+Zzz... is it cake time?|Хрр... уже торт?
+{0}! Not there!|{0}! Только не здесь!
+Mind your step, everyone!|Смотрите под ноги!
+Somebody get a bag!|Дайте кто-нибудь пакет!
+OW! That goat's got a temper!|АЙ! Ну и характер у этой козы!
+I just want to go home.|Я просто хочу домой.
+Oh no! THE CAKE!|О нет! ТОРТ!
+NOT THE CAKE!|ТОЛЬКО НЕ ТОРТ!
+EW! Not on my shoes!|ФУ! Только не на туфли!
+Someone get a mop!|Дайте кто-нибудь швабру!
+Better out than in, I suppose...|Ну, лучше наружу, чем внутри...
+Say that again!|А ну повтори!
+You spilled my pint!|Ты пролил моё пиво!
+Outside. NOW.|Выйдем. СЕЙЧАС ЖЕ.
+Don't you dare talk about my mum!|Не смей говорить про мою маму!
+Right, I know when I'm not wanted!|Всё, я понял, что мне здесь не рады!
+I'm not staying here to be ignored!|Я не останусь там, где меня не замечают!
+Worst. Wedding. Ever.|Худшая. Свадьба. В мире.
+I'm not going ANYWHERE!|Я НИКУДА не пойду!
+You can't make me! I'm family!|Вы меня не заставите! Я родственник!
+But I'm having a lovely time!|Но мне же так весело!
+I love you all! Every one of you!|Я вас всех люблю! Каждого!
+ARGH! A RAT!|А-А-А! КРЫСА!
+Was that a RAT?!|Это была КРЫСА?!
+Get it away from me!|Уберите её от меня!
+Everybody INSIDE!|Все ВНУТРЬ!
+Was that thunder?!|Это гром был?!
+My HAIR!|Моя ПРИЧЁСКА!
+Typical British summer!|Типичное британское лето!
+Is it raining? It is raining.|Дождь? Да, дождь.
+Soft drinks?! At a WEDDING?!|Газировка?! На СВАДЬБЕ?!
+I'm not even drunk! ...Much.|Да я даже не пьяный! ...Почти.
