@@ -6296,7 +6296,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "{0} has set up a ring light on the lawn. \"Hiii guys! I'm LIVE from my cousin's wedding!\" He wants {1} and {2} for a quick Q&A with her 200,000 followers.",
+  "en": "{0} has set up a ring light on the lawn. \"Hiii guys! I'm LIVE from my cousin's wedding!\" He wants {1} and {2} for a quick Q&A with his 200,000 followers.",
   "file": "js/events.js"
  },
  {
@@ -7025,6 +7025,10 @@
  },
  {
   "en": "Please take your seats for the ceremony!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "Tell my wife I said Hello!",
   "file": "js/game.js"
  },
  {

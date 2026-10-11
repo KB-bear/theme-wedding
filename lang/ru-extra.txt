@@ -141,3 +141,5 @@ Make him fix it|Пусть сам чинит
 The influencer|Блогер
 A cousin|Кузен
 Cousin Jake|Кузен Джейк
+Tell my wife I said Hello!|Передайте моей жене привет!
+TELL MY WIFE I SAID HELLO!|ПЕРЕДАЙТЕ МОЕЙ ЖЕНЕ ПРИВЕТ!

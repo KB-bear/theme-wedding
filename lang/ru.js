@@ -1995,4 +1995,6 @@ window.LANG_RU = {"WC":"WC",
 "{0} is livestreaming the whole day to 200,000 followers. Give the internet a show... but keep it classy.":"{0} транслирует весь день 200 000 подписчиков. Устройте интернету шоу... но со вкусом.",
 "The influencer":"Блогер",
 "A cousin":"Кузен",
-"Cousin Jake":"Кузен Джейк"};
+"Cousin Jake":"Кузен Джейк",
+"Tell my wife I said Hello!":"Передайте моей жене привет!",
+"TELL MY WIFE I SAID HELLO!":"ПЕРЕДАЙТЕ МОЕЙ ЖЕНЕ ПРИВЕТ!"};
