@@ -34,6 +34,13 @@ function i18nInit() {
     I18N.pats.push({ re: new RegExp(re), order, ru, anchor, len: litLen });
   }
   I18N.pats.sort((a, b) => b.len - a.len);
+  // the planner's speech bubble shows hints without the "PLANNER: " prefix the feed uses
+  for (const [en, ru] of [...I18N.exact]) {
+    if (en.startsWith('PLANNER: ') && ru.startsWith('ОРГАНИЗАТОР: ') && !I18N.exact.has(en.slice(9))) I18N.exact.set(en.slice(9), ru.slice(13));
+  }
+  // for SHOUTED text (phase banners, catchphrase toasts): look up ignoring case
+  I18N.lower = new Map();
+  for (const [en, ru] of I18N.exact) { const k = en.toLowerCase(); if (!I18N.lower.has(k)) I18N.lower.set(k, ru); }
 }
 function trCore(s, depth) {
   if (I18N.exact.has(s)) return I18N.exact.get(s);
@@ -49,8 +56,8 @@ function trCore(s, depth) {
 function trAny(s, depth) {
   const m = /^(\s*)([\s\S]*?)(\s*)$/.exec(s); const core = m[2];
   if (!core || !/[A-Za-z]/.test(core)) return s;
-  if (depth && / and /.test(core) && core.split(' ').length <= 5 && !/[.!?]/.test(core)) return s.replace(/ and /g, ' и '); // "Dan and Rob"
   let r = trCore(core, depth || 0);
+  if (r === null && depth && / and /.test(core) && core.split(' ').length <= 5 && !/[.!?]/.test(core)) return s.replace(/ and /g, ' и '); // "Dan and Rob" (after the dictionary, so "The horse and cart" still translates)
   if (r === null) { // a choice label with its risk tag: "Tell the Prague story  [Risky]"
     const t = /^([\s\S]*?)(\s+)\[([A-Za-z\- ]+)\]$/.exec(core);
     if (t) r = trAny(t[1], (depth || 0) + 1) + t[2] + '[' + trAny(t[3], (depth || 0) + 1) + ']';
@@ -58,6 +65,15 @@ function trAny(s, depth) {
   if (r === null && core.indexOf('·') >= 0) { // "DAY 1 · Sunny · Goat Escape": translate each part
     const bits = core.split(/(\s*·\s*)/); const t = bits.map((b, i) => i % 2 ? b : trAny(b, (depth || 0) + 1));
     if (t.some((x, i) => x !== bits[i])) r = t.join('');
+  }
+  if (r === null && /[A-Z]/.test(core) && !/[a-z]/.test(core) && I18N.lower.has(core.toLowerCase())) r = I18N.lower.get(core.toLowerCase()).toUpperCase(); // "GUESTS ARRIVING"
+  if (r === null && (depth || 0) < 4) { // decorated: "★ Omen text", "— GUESTS ARRIVING —"
+    const d = /^([^A-Za-z0-9"'(«]*)([\s\S]*?[A-Za-z][\s\S]*?)([^A-Za-z0-9"')!?.»]*)$/.exec(core);
+    if (d && (d[1] || d[3])) { const t = trAny(d[2], (depth || 0) + 1); if (t !== d[2]) r = d[1] + t + d[3]; }
+  }
+  if (r === null && (depth || 0) < 4) { // a label with a number on the end: "RATS: 2", "Waiter ×2"
+    const n = /^([\s\S]*?[A-Za-z][\s\S]*?)(\s*×?\s*[£\d][\d,.%]*)$/.exec(core);
+    if (n) { const t = trAny(n[1], (depth || 0) + 1); if (t !== n[1]) r = t + n[2]; }
   }
   if (r === null && (depth || 0) < 2) { // try sentence by sentence
     const bits = core.split(/(?<=[.!?…"])\s+(?=[A-Z"'(])/);

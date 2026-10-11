@@ -18,9 +18,12 @@ const SPEEDS = [0, 1, 2, 4];
 function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]); }
 
 // ---------- camera ----------
+// Size everything from the canvas's real on-screen box, not innerWidth/innerHeight: on iPhone Safari those
+// lag behind the toolbar showing/hiding and rotation, which stretched the picture and put taps in the wrong place.
 function resize() {
   DPR = Math.min(2, window.devicePixelRatio || 1);
-  VW = innerWidth; VH = innerHeight;
+  const r = cv.getBoundingClientRect();
+  VW = r.width || innerWidth; VH = r.height || innerHeight;
   cv.width = Math.round(VW * DPR); cv.height = Math.round(VH * DPR);
   hudH = $('hud').offsetHeight || 70;
   document.documentElement.style.setProperty('--hudh', (hudH + 6) + 'px');
@@ -42,9 +45,12 @@ function defaultZoom() {
 }
 
 // ---------- input ----------
+// pointer position inside the canvas (in the same units as VW/VH)
+function cpos(e) { const r = cv.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
 cv.addEventListener('pointerdown', (e) => {
   auInit();
-  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  const c = cpos(e);
+  pointers.set(e.pointerId, c);
   try { cv.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
   if (pointers.size === 2) {
     const [a, b] = [...pointers.values()];
@@ -53,10 +59,11 @@ cv.addEventListener('pointerdown', (e) => {
   }
   if (e.pointerType === 'touch') $('tip').style.display = 'none'; // no hover labels on touch
   mouse.down = true; mouse.btn = e.button; mouse.type = e.pointerType;
-  mouse.x = mouse.sx = e.clientX; mouse.y = mouse.sy = e.clientY; mouse.cx = cam.x; mouse.cy = cam.y; mouse.drag = false;
+  mouse.x = mouse.sx = c.x; mouse.y = mouse.sy = c.y; mouse.cx = cam.x; mouse.cy = cam.y; mouse.drag = false;
 });
 cv.addEventListener('pointermove', (e) => {
-  if (pointers.has(e.pointerId)) pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  const c = cpos(e);
+  if (pointers.has(e.pointerId)) pointers.set(e.pointerId, c);
   if (pinch && pointers.size >= 2) {
     const [a, b] = [...pointers.values()];
     const d = Math.hypot(a.x - b.x, a.y - b.y), mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
@@ -64,9 +71,9 @@ cv.addEventListener('pointermove', (e) => {
     cam.x = pinch.cx - (mx - pinch.mx) / zoom; cam.y = pinch.cy - (my - pinch.my) / zoom; clampCam();
     return;
   }
-  mouse.x = e.clientX; mouse.y = e.clientY; mouse.type = e.pointerType;
+  mouse.x = c.x; mouse.y = c.y; mouse.type = e.pointerType;
   if (mouse.down) {
-    const dx = e.clientX - mouse.sx, dy = e.clientY - mouse.sy;
+    const dx = c.x - mouse.sx, dy = c.y - mouse.sy;
     if (!mouse.drag && Math.hypot(dx, dy) > (e.pointerType === 'touch' ? 12 : 7)) mouse.drag = true;
     if (mouse.drag) { cam.x = mouse.cx - dx / zoom; cam.y = mouse.cy - dy / zoom; clampCam(); }
   }
@@ -77,7 +84,7 @@ function endPointer(e) {
   if (pinch) { if (pointers.size < 2) { pinch = null; mouse.down = false; snapZoom(); } return; }
   if (!mouse.down) return;
   mouse.down = false;
-  if (!mouse.drag) { if (e.button === 2) rightClick(); else { mouse.x = e.clientX; mouse.y = e.clientY; leftClick(e.pointerType); } }
+  if (!mouse.drag) { if (e.button === 2) rightClick(); else { const c = cpos(e); mouse.x = c.x; mouse.y = c.y; leftClick(e.pointerType); } }
 }
 cv.addEventListener('pointerup', endPointer);
 cv.addEventListener('pointercancel', (e) => { pointers.delete(e.pointerId); pinch = null; mouse.down = false; });
@@ -94,8 +101,12 @@ function stepZoom(dir, mx, my) {
   zoomAt(zoomForK(KSTEPS[i]), mx, my);
 }
 function snapZoom() { const k = kOf(zoom); let best = KSTEPS[0]; for (const s of KSTEPS) if (Math.abs(s - k) < Math.abs(best - k)) best = s; zoomAt(zoomForK(best), VW / 2, (VH - hudH) / 2); }
-cv.addEventListener('wheel', (e) => { e.preventDefault(); stepZoom(e.deltaY < 0 ? 1 : -1, e.clientX, e.clientY); }, { passive: false });
+cv.addEventListener('wheel', (e) => { e.preventDefault(); const c = cpos(e); stepZoom(e.deltaY < 0 ? 1 : -1, c.x, c.y); }, { passive: false });
 addEventListener('resize', () => { resize(); renderSide(); });
+// iOS: re-measure whenever the canvas box really changes (toolbar, rotation, page zoom); resize events alone come too early
+if (window.ResizeObserver) new ResizeObserver(() => resize()).observe(cv);
+if (window.visualViewport) visualViewport.addEventListener('resize', () => resize());
+addEventListener('orientationchange', () => setTimeout(() => { resize(); renderSide(); }, 350));
 addEventListener('keydown', (e) => {
   if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
   const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;

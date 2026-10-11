@@ -323,7 +323,7 @@ function arrive(p) {
   const line = catchphraseFor(p);
   if (line) later(4, () => { // wait until they've walked in a bit
     if (!p.present || p.hidden) return;
-    shout(p, line, 9); msg(p.name + ': "' + line + '"', 'gold'); toast(p.name.toUpperCase() + ': "' + line.toUpperCase() + '"', 'gold'); SFX.boom();
+    shout(p, line, 9); msg(p.name + ': "' + line + '"', 'gold'); toast(tr(p.name + ': "' + line + '"').toUpperCase(), 'gold'); SFX.boom();
   });
 }
 
@@ -467,7 +467,7 @@ function enterPhase(ph) {
       later(10, () => { // just before the ceremony the groom has a message for everyone
         const g = G.groom, line = 'Tell my wife I said Hello!';
         if (!g.present) return;
-        shout(g, line, 9); msg(g.name + ': "' + line + '"', 'gold'); toast(g.name.toUpperCase() + ': "' + line.toUpperCase() + '"', 'gold'); SFX.boom();
+        shout(g, line, 9); msg(g.name + ': "' + line + '"', 'gold'); toast(tr(g.name + ': "' + line + '"').toUpperCase(), 'gold'); SFX.boom();
       });
       const r = G.registrar; r.present = true; r.x = 6.5; r.y = 1.6; r.state = 'script';
       G.fob.fobWalk = true;

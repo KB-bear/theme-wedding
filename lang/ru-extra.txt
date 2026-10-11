@@ -196,3 +196,35 @@ Typical British summer!|Типичное британское лето!
 Is it raining? It is raining.|Дождь? Да, дождь.
 Soft drinks?! At a WEDDING?!|Газировка?! На СВАДЬБЕ?!
 I'm not even drunk! ...Much.|Да я даже не пьяный! ...Почти.
+# words shown on their own between bold bits of the title/help text, and lower-case tap/click inside sentences
+twist|сюрприз
+traditions|традиции
+rats|крысы
+click|нажмите
+tap|нажмите
+# end screen when some guests stormed off
+× {0}% stayed|× {0}% остались
+{0} × {1}% stayed|{0} × {1}% остались
+RELIVE THE BIG DAY (Day {0})|ПРОЖИТЬ ДЕНЬ СНОВА (День {0})
+# staff names carry their job in brackets
+{0} (Waiter)|{0} (официант)
+{0} (Bartender)|{0} (бармен)
+{0} (Cleaner)|{0} (уборщик)
+{0} (Bouncer)|{0} (вышибала)
+{0} (DJ)|{0} (диджей)
+# bouncer jobs on the info card
+Chasing the goat|Гонится за козой
+Showing someone out|Выпроваживает гостя
+# Babushka's moment, without and with her son introducing her
+{0} rises slowly, adjusts her headscarf, and fixes {1} with a long, appraising stare. The room goes silent.|{0} медленно поднимается, поправляет платок и долго, оценивающе смотрит на {1}. В зале тишина.
+{0} stands, says "My mother would like to say something," and sits straight back down. {1} rises slowly, adjusts her headscarf, and fixes {2} with a long, appraising stare. The room goes silent.|{0} встаёт, говорит: «Моя мама хочет кое-что сказать», — и тут же садится обратно. {1} медленно поднимается, поправляет платок и долго, оценивающе смотрит на {2}. В зале тишина.
+# the bread & salt speech choice
+{0} translates|{0} переводит
+# "wrong song" first-dance memory, one per song (the automatic pattern picks the wrong split otherwise)
+First dance to the Crazy Frog|Первый танец под Crazy Frog
+First dance to Agadoo|Первый танец под «Agadoo»
+First dance to Cotton Eye Joe|Первый танец под «Cotton Eye Joe»
+First dance to the Birdie Song|Первый танец под «Танец маленьких утят»
+First dance to Gangnam Style|Первый танец под «Gangnam Style»
+First dance to a heavy metal cover of Ave Maria|Первый танец под хэви-метал версию «Ave Maria»
+First dance to the Match of the Day theme|Первый танец под заставку «Match of the Day»
