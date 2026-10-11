@@ -246,6 +246,9 @@ body.ru, body.ru button, body.ru input, body.ru div, body.ru span, body.ru li, b
 body.ru .hbtn { font-size: 17px; font-weight: 700; padding: 2px 8px; }
 body.ru { font-size: 18px; }
 body.ru #hud .lbl, body.ru #hPhase { font-size: 14px; }
+/* panel headers and the name on a person's info card are sized for the pixel font; PT Sans needs to be much bigger */
+body.ru .ph { font-size: 18px; font-weight: 700; }
+body.ru .ph .nm { font-size: 21px; line-height: 1.15; }
 .lang { display: flex; justify-content: center; gap: 8px; margin: 4px 0 8px; }
 .lang button { font-size: 18px; padding: 2px 12px; }
 .lang button.on { background: var(--rose); color: #fff; }
