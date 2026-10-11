@@ -6,3 +6,6 @@ Thumbs.db
 # Plaintext guest list + key stay local; the encrypted copy is published
 guest-names.js
 .guest-key.txt
+
+# Trailer renders (frames, audio, mp4)
+trailer/out/
