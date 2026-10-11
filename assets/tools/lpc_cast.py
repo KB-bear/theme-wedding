@@ -106,8 +106,9 @@ add("staff", "dj", "male", "black", "brown", [["shadow"], ["body"], ["shoes", "w
 suited("named", "bestman", "olive", "brown", "hair_swoop", "dark_brown", "navy", vest="silver_grey", tie=("necktie", "suit_green"))
 dressed("named", "moh", "light", "blue", "hair_half_up", "chestnut", [("dress_slit", "dark_pink")], shoes="dark_pink",
         extra=[("necklace_silver",)])
-dressed("named", "jess", "light", "blue", "hair_high_ponytail", "platinum", [("skirt_straight", "hot_pink"), ("top_scoop", "hot_pink")], shoes="white",
-        extra=[("sunglasses",), ("necklace_gold",)])
+# the influencer (id kept as "jess" so the game finds the sheet): a lad in a pink tee, bleached swoop and shades
+add("named", "jess", "male", "light", "blue", [["shadow"], ["body"], ["shoes", "white"], ["pants", "charcoal"], ["tshirt_vneck", "hot_pink"],
+                                               ["head_male"]] + hair_layers("hair_swoop", "platinum", beard="stubble") + [["sunglasses"]])
 suited("named", "bestman2", "light", "blue", "hair_parted", "light_brown", "navy", vest="silver_grey", tie=("necktie", "suit_green"),
        beard="stubble")
 dressed("named", "bridesmaid1", "light", "blue", "hair_half_up", "chestnut", [("dress_slit", "dark_pink")], shoes="dark_pink",

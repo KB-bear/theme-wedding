@@ -6156,7 +6156,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "{0} finds it in seconds using her phone torch, and livestreams the whole rescue. 40k likes.",
+  "en": "{0} finds it in seconds using his phone torch, and livestreams the whole rescue. 40k likes.",
   "file": "js/events.js"
  },
  {
@@ -6296,7 +6296,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "{0} has set up a ring light on the lawn. \"Hiii guys! I'm LIVE from my cousin's wedding!\" She wants {1} and {2} for a quick Q&A with her 200,000 followers.",
+  "en": "{0} has set up a ring light on the lawn. \"Hiii guys! I'm LIVE from my cousin's wedding!\" He wants {1} and {2} for a quick Q&A with her 200,000 followers.",
   "file": "js/events.js"
  },
  {
@@ -6336,7 +6336,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "{0} has plugged her ring light, two phones, a laptop and a hair straightener into one socket. There's a bang. The hall goes dark.",
+  "en": "{0} has plugged his ring light, two phones, a laptop and a hair straightener into one socket. There's a bang. The hall goes dark.",
   "file": "js/events.js"
  },
  {
@@ -6364,11 +6364,11 @@
   "file": "js/events.js"
  },
  {
-  "en": "Make her fix it",
+  "en": "Make him fix it",
   "file": "js/events.js"
  },
  {
-  "en": "{0} fixes it with a hair grip and a lot of confidence. Nobody asks how.",
+  "en": "{0} fixes it with a hair grip from a bridesmaid and a lot of confidence. Nobody asks how.",
   "file": "js/events.js"
  },
  {
@@ -6376,7 +6376,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "{0} screams. The stream just hit A MILLION viewers. People all over the world are watching {1}'s dancing. She wants to give them something special.",
+  "en": "{0} screams. The stream just hit A MILLION viewers. People all over the world are watching {1}'s dancing. He wants to give them something special.",
   "file": "js/events.js"
  },
  {
@@ -6404,7 +6404,7 @@
   "file": "js/events.js"
  },
  {
-  "en": "{0} turns the camera off, puts her phone in her bag and dances with everyone. Best decision of the night.",
+  "en": "{0} turns the camera off, puts his phone in his pocket and dances with everyone. Best decision of the night.",
   "file": "js/events.js"
  },
  {
@@ -6456,6 +6456,10 @@
   "file": "js/game.js"
  },
  {
+  "en": "{0} has bought a new ring light. It is very, very bright.",
+  "file": "js/game.js"
+ },
+ {
   "en": "{0}'s Treat",
   "file": "js/game.js"
  },
@@ -6465,6 +6469,10 @@
  },
  {
   "en": "{0}'s free bar is over. Back to normal prices!",
+  "file": "js/game.js"
+ },
+ {
+  "en": "{0} is livestreaming the whole day to 200,000 followers. Give the internet a show... but keep it classy.",
   "file": "js/game.js"
  },
  {
@@ -6592,7 +6600,7 @@
   "file": "js/game.js"
  },
  {
-  "en": "Cousin Jess has bought a new ring light. It is very, very bright.",
+  "en": "The influencer",
   "file": "js/game.js"
  },
  {
@@ -6696,7 +6704,7 @@
   "file": "js/game.js"
  },
  {
-  "en": "Cousin Jess is livestreaming the whole day to 200,000 followers. Give the internet a show... but keep it classy.",
+  "en": "A cousin",
   "file": "js/game.js"
  },
  {
@@ -6960,7 +6968,7 @@
   "file": "js/game.js"
  },
  {
-  "en": "Cousin Jess",
+  "en": "Cousin Jake",
   "file": "js/game.js"
  },
  {

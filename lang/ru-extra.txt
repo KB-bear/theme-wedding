@@ -128,3 +128,16 @@ Here to make it official|Здесь, чтобы всё было официаль
 Officiating|Проводит церемонию
 Visitor|Гость
 Well, that happened.|Ну, вот так вышло.
+# the influencer is now a lad (Remi / Cousin Jake)
+{0} finds it in seconds using his phone torch, and livestreams the whole rescue. 40k likes.|{0} находит его за секунды с фонариком телефона и ведёт прямой эфир всей операции. 40 тысяч лайков.
+{0} has set up a ring light on the lawn. "Hiii guys! I'm LIVE from my cousin's wedding!" He wants {1} and {2} for a quick Q&A with his 200,000 followers.|{0} поставил кольцевую лампу на газоне. «Всем приве-е-ет! Я в ПРЯМОМ ЭФИРЕ со свадьбы кузена!» Он хочет, чтобы {1} и {2} ответили на вопросы его 200 000 подписчиков.
+{0} has plugged his ring light, two phones, a laptop and a hair straightener into one socket. There's a bang. The hall goes dark.|{0} воткнул кольцевую лампу, два телефона, ноутбук и выпрямитель для волос в одну розетку. Хлопок. В зале темно.
+Make him fix it|Пусть сам чинит
+{0} fixes it with a hair grip from a bridesmaid and a lot of confidence. Nobody asks how.|{0} чинит всё невидимкой, одолженной у подружки невесты, и огромной уверенностью. Никто не спрашивает как.
+{0} screams. The stream just hit A MILLION viewers. People all over the world are watching {1}'s dancing. He wants to give them something special.|{0} визжит. У трансляции МИЛЛИОН зрителей. Весь мир смотрит, как танцует {1}. Он хочет устроить для них что-то особенное.
+{0} turns the camera off, puts his phone in his pocket and dances with everyone. Best decision of the night.|{0} выключает камеру, убирает телефон в карман и танцует со всеми. Лучшее решение за вечер.
+{0} has bought a new ring light. It is very, very bright.|{0} купил новую кольцевую лампу. Она очень, очень яркая.
+{0} is livestreaming the whole day to 200,000 followers. Give the internet a show... but keep it classy.|{0} транслирует весь день 200 000 подписчиков. Устройте интернету шоу... но со вкусом.
+The influencer|Блогер
+A cousin|Кузен
+Cousin Jake|Кузен Джейк

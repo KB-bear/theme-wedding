@@ -1349,7 +1349,7 @@ EVENTS.push(
   { id: 'lostring', pool: 'party', build() {
     return { title: 'THE RING!', text: `${gN()} was showing off his ring and it's slipped off and rolled somewhere across the dance floor.`, choices: [
       { label: 'Stop the music and search', fn() { if (chance(0.6)) { joy(25); return `Found within two minutes. The DJ restarts with "Single Ladies". Cheeky.`; } bliss(-8); joy(10); return `Ten minutes, no ring. ${bN()} finds it in his own pocket.`; } },
-      { label: `Send ${nameOr(G.jess, 'the kids')} to find it`, fn() { joy(40); memory('The great ring hunt', 40); return isHere(G.jess) ? `${G.jess.name} finds it in seconds using her phone torch, and livestreams the whole rescue. 40k likes.` : `The kids find it in seconds. They demand a finder's fee in Haribo.`; } },
+      { label: `Send ${nameOr(G.jess, 'the kids')} to find it`, fn() { joy(40); memory('The great ring hunt', 40); return isHere(G.jess) ? `${G.jess.name} finds it in seconds using his phone torch, and livestreams the whole rescue. 40k likes.` : `The kids find it in seconds. They demand a finder's fee in Haribo.`; } },
     ] };
   } },
   { id: 'brideoff', pool: 'party', cond: () => G.twist && G.twist.id === 'rival', weight: 3, build() {
@@ -1381,10 +1381,10 @@ function evBirthday() {
     { label: "Don't make a fuss", fn() { b.happy = 10; bliss(-8); joy(-20); return `He sulks. Loudly. ${gN()} spends the rest of the night apologising.`; } },
   ] };
 }
-// ---------- Cousin Jess, the influencer (the 'Live-Streamed Wedding' twist) ----------
+// ---------- the influencer (Remi / Cousin Jake) (the 'Live-Streamed Wedding' twist) ----------
 function evJessLive() {
   const j = G.jess; if (!isHere(j)) return null;
-  return { title: 'GOING LIVE', text: `${j.name} has set up a ring light on the lawn. "Hiii guys! I'm LIVE from my cousin's wedding!" She wants ${gN()} and ${bN()} for a quick Q&A with her 200,000 followers.`, choices: [
+  return { title: 'GOING LIVE', text: `${j.name} has set up a ring light on the lawn. "Hiii guys! I'm LIVE from my cousin's wedding!" He wants ${gN()} and ${bN()} for a quick Q&A with his 200,000 followers.`, choices: [
     { label: 'Do the Q&A', fn() { if (chance(0.6)) { joy(45); bliss(3); memory('The wedding went viral', 40); return `${bN()} is a natural. ${gN()} says "hashtag blessed" unironically. 300 new followers.`; } joy(15); bliss(-4); return `Someone asks ${gN()} how much the wedding cost. Live. He tells them.`; } },
     { label: 'Agree a sponsored prosecco deal (+£300)', fn() { cash(300); joy(15); bliss(-4); return `Every glass now has to be held label-out for the camera. The prosecco is fine. The vibe is "advert".`; } },
     { label: 'Phones away, please', fn() { j.happy -= 40; bliss(4); return `${j.name} posts a sad selfie captioned "some people just don't get content". Everyone else enjoys the day.`; } },
@@ -1392,18 +1392,18 @@ function evJessLive() {
 }
 function evJessFuse() {
   const j = G.jess; if (!isHere(j)) return null;
-  return { title: 'RING LIGHT BLACKOUT', text: `${j.name} has plugged her ring light, two phones, a laptop and a hair straightener into one socket. There's a bang. The hall goes dark.`, choices: [
+  return { title: 'RING LIGHT BLACKOUT', text: `${j.name} has plugged his ring light, two phones, a laptop and a hair straightener into one socket. There's a bang. The hall goes dark.`, choices: [
     { label: 'Call an emergency electrician (£150)', fn() { cash(-150); joy(10); return `Lights back on in ten minutes. The electrician stays for a slice of cake.`; } },
     { label: 'Candlelit, it is', fn() { if (chance(0.6)) { joy(40); bliss(6); memory('The candlelit wedding breakfast', 40); return `Candles on every table. It looks stunning. ${j.name} says it's "giving cottagecore".`; } joy(10); bliss(-3); G.shake = 0.3; return `Someone's sleeve catches a candle. It's fine. It's mostly fine.`; } },
-    { label: 'Make her fix it', fn() { j.happy -= 20; joy(25); return `${j.name} fixes it with a hair grip and a lot of confidence. Nobody asks how.`; } },
+    { label: 'Make him fix it', fn() { j.happy -= 20; joy(25); return `${j.name} fixes it with a hair grip from a bridesmaid and a lot of confidence. Nobody asks how.`; } },
   ] };
 }
 function evJessViral() {
   const j = G.jess; if (!isHere(j)) return null;
-  return { title: 'GOING VIRAL', text: `${j.name} screams. The stream just hit A MILLION viewers. People all over the world are watching ${gN()}'s dancing. She wants to give them something special.`, choices: [
+  return { title: 'GOING VIRAL', text: `${j.name} screams. The stream just hit A MILLION viewers. People all over the world are watching ${gN()}'s dancing. He wants to give them something special.`, choices: [
     { label: 'Start a wedding dance challenge', fn() { joy(60); funAll(30); for (const p of guests()) if (p.state === 'idle' && chance(0.7)) goDance(p); memory('The viral dance challenge', 50); return `Eighty guests doing the same dance. It's trending in four countries by midnight.`; } },
     { label: 'Shout out a sponsor (+£400)', fn() { cash(400); joy(10); bliss(-5); return `${gN()} reads out a discount code for teeth-whitening strips in the middle of his own wedding.`; } },
-    { label: 'End the stream. Be in the moment.', fn() { bliss(8); joy(20); j.happy -= 10; return `${j.name} turns the camera off, puts her phone in her bag and dances with everyone. Best decision of the night.`; } },
+    { label: 'End the stream. Be in the moment.', fn() { bliss(8); joy(20); j.happy -= 10; return `${j.name} turns the camera off, puts his phone in his pocket and dances with everyone. Best decision of the night.`; } },
   ] };
 }
 function evPaparazzi() {

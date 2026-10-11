@@ -893,7 +893,7 @@
   },
   {
    "name": "jess",
-   "body": "female",
+   "body": "male",
    "skin": "light",
    "eyes": "blue",
    "layers": [
@@ -908,29 +908,30 @@
      "white"
     ],
     [
-     "skirt_straight",
+     "pants",
+     "charcoal"
+    ],
+    [
+     "tshirt_vneck",
      "hot_pink"
     ],
     [
-     "top_scoop",
-     "hot_pink"
-    ],
-    [
-     "head_female"
+     "head_male"
     ],
     [
      "eyebrows",
      "platinum"
     ],
     [
-     "hair_high_ponytail",
+     "hair_swoop",
+     "platinum"
+    ],
+    [
+     "stubble",
      "platinum"
     ],
     [
      "sunglasses"
-    ],
-    [
-     "necklace_gold"
     ]
    ]
   },

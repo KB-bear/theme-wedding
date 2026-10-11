@@ -568,7 +568,7 @@ function nextModal() {
       if (v.cls === 'bad' || v.cls === 'disaster') box.classList.add('shake');
       if (v.cls === 'triumph') box.classList.add('glow');
       const ok = document.createElement('button'); ok.className = 'ok'; ok.textContent = 'Carry on';
-      ok.onclick = () => { closeModal(); try { if (ev.after) ev.after(); } catch (e) { console.error(e); } nextModal(); };
+      ok.onclick = () => { closeModal(); try { if (ev.after) ev.after(); } catch (e) { console.error(e); } pumpFax(); };
       r.appendChild(ok); box.appendChild(r); ok.focus();
       r.scrollIntoView({ block: 'nearest' });
     };
@@ -734,7 +734,7 @@ function showHelp() {
       <li><b>Drunk guests</b> get fun... then messy. Cut them off or send them home from their info card.</li>
       <li><b>Score</b> = Joy + Bliss × 8 + leftover money ÷ 5 (both reduced if guests storm off).</li>
     </ul><button class="ok big" id="bOk">BACK TO THE WEDDING</button>`, 'fax');
-  box.querySelector('#bOk').onclick = () => { closeModal(); G.speed = prev; nextModal(); };
+  box.querySelector('#bOk').onclick = () => { closeModal(); G.speed = prev; pumpFax(); };
 }
 // ---------- the wedding photo (end of day) ----------
 // Everyone still at the party lines up in front of the flower arch: guests at the back,

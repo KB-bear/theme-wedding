@@ -21,7 +21,7 @@ const OMENS = [
   { id: 'heat', t: 'Heatwave! Guests outdoors get thirsty fast.', apply() { G.weather = 'Scorching'; } },
   { id: 'kitchen', t: 'The kitchen is short-staffed. Dinner plates take longer.' },
   { id: 'notes', t: 'The Best Man has lost his speech notes. Risky jokes are riskier.' },
-  { id: 'jess', t: 'Cousin Jess has bought a new ring light. It is very, very bright.', apply() { if (G.jess) G.jess.needs.fun = 70; } },
+  { id: 'jess', get t() { return (G && G.jess ? G.jess.name : 'The influencer') + ' has bought a new ring light. It is very, very bright.'; }, apply() { if (G.jess) G.jess.needs.fun = 70; } },
   { id: 'hen', t: "There's a hen do at the venue next door..." },
   { id: 'cat', t: 'The venue cat is wandering about. Guests love it.', apply() { const c = spawnAnimal('cat', true); c.x = 20.5; c.y = 12.5; } },
   { id: 'mob', t: 'The Mother of the Bride is inspecting everything. Mess upsets the couple.' },
@@ -49,7 +49,7 @@ const TWISTS = [
     apply() { G.sponsorUntil = 1200; G.scripts.push({ t: 1200, f() { msg(sponsorName() + "'s free bar is over. Back to normal prices!", ''); } }); } },
   { id: 'rival', name: 'Double-Booked!', desc: 'The venue double-booked. Guests from another wedding keep wandering in and helping themselves to your bar. Bouncers will show them out.',
     apply() { for (const t of [ri(720, 760), ri(1060, 1100), ri(1240, 1300)]) G.scripts.push({ t, f() { spawnRivals(3); } }); } },
-  { id: 'influencer', name: 'Live-Streamed Wedding', desc: 'Cousin Jess is livestreaming the whole day to 200,000 followers. Give the internet a show... but keep it classy.',
+  { id: 'influencer', name: 'Live-Streamed Wedding', get desc() { return (G && G.jess ? G.jess.name : 'A cousin') + ' is livestreaming the whole day to 200,000 followers. Give the internet a show... but keep it classy.'; },
     apply() { G.scripts.push({ t: ri(700, 790), f() { const e = evJessLive(); if (e) queueEvent(e); } }, { t: ri(860, 940), f() { const e = evJessFuse(); if (e) queueEvent(e); } }, { t: ri(1200, 1320), f() { const e = G.phase === 'party' && evJessViral(); if (e) queueEvent(e); } }); } },
   { id: 'flashmob', name: 'Secret Flash Mob', desc: 'The bridesmaids have planned a surprise flash mob for 20:00. Make sure there is music!',
     apply() { G.scripts.push({ t: 1200, f() { if (G.phase === 'party' || G.phase === 'evening') queueEvent(evFlashmob()); } }); } },
@@ -259,7 +259,7 @@ function makeRoster() {
   if (C.babushka) { const g = parseGuest(C.babushka); if (g) add('Guest', g.name, g.sex, g.age, { russian: g.russian }); }
   G.gran = null; // no Gran character any more (an old guest-names.js entry just becomes a regular guest)
   if (C.gran) { const g = parseGuest(C.gran); if (g) add('Guest', g.name, g.sex, g.age, { russian: g.russian }); }
-  G.jess = ch(C.influencer, 'Cousin Jess', 'f', 'adult', false, { trait: 'party' }); // the influencer, see the 'Live-Streamed' twist
+  G.jess = ch(C.influencer, 'Cousin Jake', 'm', 'adult', false, { trait: 'party' }); // the influencer, see the 'Live-Streamed' twist
   G.kyle = ch(C.fightyCousin, 'Cousin Kyle', 'm', 'adult', false, { trait: 'fighter' });
   const fgs = sp(C.flowerGirl, 'Little ' + pick(KIDS_F), 'f', 'kid');
   const fg = add('Flower Girl', fgs.name, 'f', 'kid'); fg.look.top = '#fff0f6'; fg.look.hat = '#ff8fb8';
@@ -339,7 +339,7 @@ function setupSpecials() {
   const GL = window.GUEST_LIST || {};
   const en = (GL.explodingGuest || '').toLowerCase();
   G.exploder = en ? G.people.find(p => p.kind === 'guest' && (p.name.toLowerCase() === en || p.name.split(' ')[0].toLowerCase() === en)) : null;
-  G.explodeAt = G.exploder ? rnd(1185, 1350) : 0;
+  G.explodeAt = G.exploder ? rnd(1165, 1195) : 0; // early in the party
   G.dogAt = GL.dog === '' ? 0 : rnd(603, 612);
 }
 function explodeGuest(p) {
@@ -448,6 +448,7 @@ function enterPhase(ph) {
       for (const c of [G.groom, G.bride]) if (c.state !== 'script') { c.state = 'idle'; c.idleT = 0; }
       msg('Drinks on the lawn! Keep everyone fed, watered and entertained.', '');
       later(4, () => queueEvent(evKaravai()));
+      G.nextEvent = Math.max(G.nextEvent, G.time + 25); // no random fax right on top of the bread & salt
       if (G.magicianDay) spawnMagician();
       break;
     }
@@ -643,7 +644,8 @@ function minuteTick() {
   if (G.omens.has('mob') && G.messes.length > 6) G.bliss = clamp(G.bliss - 0.05, 0, 100);
 
   // random events
-  if (!G.modalOpen && t >= G.nextEvent) {
+  pumpFax();
+  if (!G.modalOpen && t >= G.nextEvent && !G.modalQueue.length && t >= (G.faxReadyAt || 0)) {
     const pool = G.phase === 'reception' ? 'reception' : G.phase === 'dinner' ? 'dinner' : (G.phase === 'evening' || G.phase === 'party') ? 'party' : null;
     if (pool) {
       const c = EVENTS.filter(e => e.pool === pool && !G.usedEvents.has(e.id) && (!e.cond || e.cond()));
@@ -793,4 +795,11 @@ function endDay() {
   store.set('tw_seen', seen);
   showEndScreen(s);
 }
-function queueEvent(ev) { G.modalQueue.push(ev); if (!G.modalOpen) nextModal(); }
+// faxes wait their turn: at least FAX_GAP game minutes between one fax and the next
+const FAX_GAP = 15;
+function queueEvent(ev) { G.modalQueue.push(ev); pumpFax(); }
+function pumpFax() {
+  if (!G || G.modalOpen || !G.modalQueue.length || G.time < (G.faxReadyAt || 0)) return;
+  G.faxReadyAt = G.time + FAX_GAP; // game time is frozen while a fax is open, so this counts from when it's closed
+  nextModal();
+}
