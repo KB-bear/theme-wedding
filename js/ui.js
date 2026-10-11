@@ -369,6 +369,30 @@ function select(x) {
   if (!x) { $('info').classList.add('hidden'); return; }
   try { renderInfo(true); } catch (e) { console.error(e); G.sel = null; $('info').classList.add('hidden'); }
 }
+// a fun line on the bride's / groom's card, different each time you click them (some react to the day so far)
+const COUPLE_BLURBS = {
+  groom: [
+    'Ginger, green suit, beige waistcoat. A very happy leprechaun.',
+    'Has practised his vows 41 times. Will still say "I do" too early.',
+    'Would like you to tell his wife he said hello.',
+    'Has asked three times when the food is coming.',
+    'Dance moves: enthusiastic. Rhythm: optional.',
+    'Grinning like he just won the lottery. He sort of did.',
+  ],
+  bride: [
+    'Dark pink shoes, white dress, zero patience for goats.',
+    'Has a spreadsheet for this wedding. It has tabs.',
+    'Her family brought a samovar. And opinions.',
+    'Smiling politely. Secretly rearranging the seating plan.',
+    'The only one here who knows all the Russian toast rules.',
+    'Looks calm. Knows exactly where every guest is at all times.',
+  ],
+};
+function coupleBlurb(p) {
+  if (p.role === 'groom' && G.groomStain && chance(0.5)) return 'Beige waistcoat, now with added red wine.';
+  if (p.role === 'bride' && G.cakeEaten && chance(0.5)) return 'Still not over the cake. Do NOT mention the goat.';
+  return pick(COUPLE_BLURBS[p.role] || ['']);
+}
 const NPC_ROLE = { magician: 'Close-up Magician', registrar: 'The Registrar' };
 const NPC_LINE = { magician: 'Amazing everyone nearby (mostly)', registrar: 'Here to make it official' };
 const STATE_TXT = { idle: 'Mingling', walk: 'Walking', queue: 'Queueing', seated: 'Sitting down', dance: 'Dancing!', chat: 'Chatting', sleep: 'Asleep (zzz)', fight: 'FIGHTING!', leave: 'Leaving', watch: 'Watching', conga: 'In the conga line!', fallen: 'On the floor', atpost: 'At their post', work: 'Working', script: 'Walking the aisle', altar: 'At the altar', cakewait: 'At the cake', fdwait: 'On the dance floor', sowait: 'Ready to leave', off: 'Not arrived', sick: 'Being sick!' };
@@ -403,8 +427,7 @@ function renderInfo(full) {
       h += `<div class="ph"><span class="nm">${esc(x.name)}</span><button class="x" data-act="close">×</button></div>`;
       h += `<div class="who">${x.kind !== 'animal' ? '<canvas id="portrait" width="120" height="120" style="width:60px;height:60px"></canvas>' : ''}<div><div class="role">${esc(role)}</div>`;
       if (x.trait) h += `<div class="trait">${esc(TRAITS[x.trait])}</div>`;
-      if (x.role === 'groom') h += '<div class="trait">Ginger. Green suit. Beige waistcoat.</div>';
-      if (x.role === 'bride') h += '<div class="trait">Dark brown hair. White dress. Dark pink shoes.</div>';
+      if (x.kind === 'couple') h += `<div class="trait">${esc(coupleBlurb(x))}</div>`;
       h += '<div id="ilive_state" class="state"></div></div></div><div id="ilive"></div><div class="acts">';
       if (x.kind === 'guest') h += `<button data-act="cutoff">${x.cutOff ? 'Allow drinks' : 'Cut off drinks'}</button><button data-act="home">Send home</button>`;
       if (x.kind === 'staff') h += '<button data-act="pickup">Move</button><button data-act="sack">Sack</button>';
