@@ -548,6 +548,8 @@ function endJob(w) {
     if (j.gs) for (const g of j.gs) if (g.serveClaim === w) g.serveClaim = null;
     if (j.m && j.m.claim === w) j.m.claim = null;
     if (j.f && j.f.claim === w) j.f.claim = null;
+    if (j.a && j.a.claim === w) j.a.claim = null;
+    if (j.e && j.e.escortClaim === w) j.e.escortClaim = null;
   }
   w.job = null; w.cleaning = false;
   if (w.role === 'waiter') w.carry = null;
@@ -693,23 +695,24 @@ function bouncerBrain(b) {
   }
   const e = G.people.find(p => p.present && (p.escort || p.rival) && !p.escortClaim && p.state !== 'leave');
   if (e) {
-    e.escortClaim = b; b.state = 'walk';
+    e.escortClaim = b; b.job = { type: 'escort', e }; b.state = 'walk';
     const ok = goTo(b, Math.floor(e.x), Math.floor(e.y), () => {
       if (e.present && e.state !== 'leave') { interrupt(e); leave(e, 'taxi'); msg('The bouncer has poured ' + e.name + ' into a taxi.', ''); }
-      b.state = 'idle'; b.idleT = 0;
+      else e.escortClaim = null;
+      b.job = null; b.state = 'idle'; b.idleT = 0;
     }, { stopShort: true });
-    if (!ok) { e.escortClaim = null; b.state = 'idle'; b.idleT = 2; }
+    if (!ok) { e.escortClaim = null; b.job = null; b.state = 'idle'; b.idleT = 2; }
     return;
   }
   const a = G.people.find(q => q.kind === 'animal' && q.present && q.role === 'goat' && (!q.friendly || q.cakeRun) && !q.leaving && !q.claim);
   if (a) {
-    a.claim = b; b.state = 'walk';
+    a.claim = b; b.job = { type: 'goat', a }; b.state = 'walk';
     const ok = goTo(b, Math.floor(a.x), Math.floor(a.y), () => {
       if (a.present && dist(a.x, a.y, b.x, b.y) < 3) { a.leaving = true; msg('The bouncer is chasing the goat out!', 'good'); joy(10, true); }
       else a.claim = null;
-      b.state = 'idle'; b.idleT = 0;
+      b.job = null; b.state = 'idle'; b.idleT = 0;
     }, { stopShort: true });
-    if (!ok) { a.claim = null; b.state = 'idle'; }
+    if (!ok) { a.claim = null; b.job = null; b.state = 'idle'; }
     return;
   }
   staffIdleWander(b);

@@ -8,7 +8,7 @@
 <title>Theme Wedding</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2026-10-11f">
+<link rel="stylesheet" href="style.css?v=2026-10-11g">
 </head>
 <body>
 <canvas id="screen"></canvas>
@@ -42,7 +42,7 @@
 
 <script>
 (function () {
-  var BUILD = '2026-10-11f'; // bump when deploying so phones fetch the new scripts instead of cached ones
+  var BUILD = '2026-10-11g'; // bump when deploying so phones fetch the new scripts instead of cached ones
   var RU = false; try { RU = localStorage.getItem('tw_lang') === 'ru'; } catch (e) {}
   var SCRIPTS = (RU ? ['lang/ru.js'] : []).concat(['js/i18n.js', 'js/leaderboard.js', 'js/core.js', 'js/draw.js', 'assets/characters/index.js', 'assets/characters/faces.js', 'js/sprites.js',
                  'js/sim.js', 'js/events.js', 'js/game.js', 'js/audio.js', 'js/ui.js']);
@@ -57,15 +57,23 @@
   function startGame() { SCRIPTS.forEach(function (src) { load(src); }); }
   function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
   // Guest list: use guest-names.js if present (local copy), else decrypt guest-names.enc.js with the key in the URL #hash.
+  // No key = made-up guest names. A key that works is remembered on this device, so the link is only needed once.
   function decrypt() {
-    var pass = decodeURIComponent(location.hash.slice(1)) || 'tulip-orchid-meadow-meadow-727'; // URL #key overrides the built-in default
+    var hashKey = decodeURIComponent(location.hash.slice(1)), saved = null;
+    try { saved = localStorage.getItem('tw_key'); } catch (e) {}
+    var pass = hashKey || saved;
     if (!pass || !window.GUEST_CIPHER || !(window.crypto && crypto.subtle)) return startGame();
     var C = window.GUEST_CIPHER, enc = new TextEncoder();
     crypto.subtle.importKey('raw', enc.encode(pass), 'PBKDF2', false, ['deriveKey']).then(function (k) {
       return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(C.s), iterations: 200000, hash: 'SHA-256' }, k, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
     }).then(function (k) {
       return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(C.i) }, k, b64(C.d));
-    }).then(function (buf) { (0, eval)(new TextDecoder().decode(buf)); }).catch(function () {}).then(startGame);
+    }).then(function (buf) {
+      (0, eval)(new TextDecoder().decode(buf));
+      try { localStorage.setItem('tw_key', pass); } catch (e) {}
+    }).catch(function () {
+      try { if (!hashKey) localStorage.removeItem('tw_key'); } catch (e) {} // saved key no longer fits (list re-encrypted)
+    }).then(startGame);
   }
   // the plain guest-names.js only exists on a local copy, so don't wait for a 404 on the website
   if (/github\.io$/.test(location.hostname)) load('guest-names.enc.js', decrypt, startGame);

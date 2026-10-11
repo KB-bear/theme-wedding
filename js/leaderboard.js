@@ -13,7 +13,7 @@ const LB = {
   submit(player, score, day, title) {
     if (!LB.on || !player) return Promise.resolve(false);
     return fetch(`${LB_URL}/rest/v1/scores`, { method: 'POST', headers: { ...LB._h(), Prefer: 'return=minimal' },
-      body: JSON.stringify({ player: String(player).slice(0, 14), score: Math.round(score), day, title: String(title || '').slice(0, 40) }) })
+      body: JSON.stringify({ player: String(player).slice(0, 14), score: Math.max(0, Math.round(score)), day, title: String(title || '').slice(0, 40) }) })
       .then(r => r.ok).catch(() => false);
   },
 };

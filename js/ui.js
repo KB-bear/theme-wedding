@@ -367,7 +367,7 @@ function stateText(p) {
   }
   if (p.state === 'walk' && p.useObj) return 'Heading to the ' + OT[p.useObj.type].name;
   if (p.state === 'chat' && p.chatWith) return 'Chatting with ' + p.chatWith.name;
-  if (p.kind === 'staff' && p.job) return { serve: 'Serving dinner', clean: 'Cleaning up', fight: 'Breaking up a fight' }[p.job.type] || 'Working';
+  if (p.kind === 'staff' && p.job) return { serve: 'Serving dinner', clean: 'Cleaning up', fight: 'Breaking up a fight', goat: 'Chasing the goat', escort: 'Showing someone out' }[p.job.type] || 'Working';
   if (p.eating > 0) return 'Eating';
   if (p.needServe) return 'Waiting for food (' + Math.floor(p.waitServe) + ' min)';
   if (p.role === 'goat' && p.cakeRun) return 'HEADING FOR THE CAKE!';
