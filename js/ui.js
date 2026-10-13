@@ -398,7 +398,7 @@ function coupleBlurb(p) {
 }
 const NPC_ROLE = { magician: 'Close-up Magician', registrar: 'The Registrar' };
 const NPC_LINE = { magician: 'Amazing everyone nearby (mostly)', registrar: 'Here to make it official' };
-const STATE_TXT = { idle: 'Mingling', walk: 'Walking', queue: 'Queueing', seated: 'Sitting down', dance: 'Dancing!', chat: 'Chatting', sleep: 'Asleep (zzz)', fight: 'FIGHTING!', leave: 'Leaving', watch: 'Watching', conga: 'In the conga line!', fallen: 'On the floor', atpost: 'At their post', work: 'Working', script: 'Walking the aisle', altar: 'At the altar', cakewait: 'At the cake', fdwait: 'On the dance floor', sowait: 'Ready to leave', off: 'Not arrived', sick: 'Being sick!' };
+const STATE_TXT = { idle: 'Mingling', walk: 'Walking', queue: 'Queueing', seated: 'Sitting down', dance: 'Dancing!', chat: 'Chatting', sleep: 'Asleep (zzz)', fight: 'FIGHTING!', leave: 'Leaving', watch: 'Watching', conga: 'In the conga line!', fallen: 'On the floor', atpost: 'At their post', work: 'Working', script: 'Walking the aisle', altar: 'At the altar', cakewait: 'At the cake', fdwait: 'On the dance floor', sowait: 'Ready to leave', off: 'Not arrived', sick: 'Being sick!', labour: 'HAVING A BABY!', midwife: 'Delivering a baby', gawk: 'Watching the birth' };
 function stateText(p) {
   if (p.state === 'use' && p.useObj) {
     return { bar: 'At the bar', toilet: 'In the loo', portaloo: 'In the portaloo', booth: 'In the photo booth', castle: 'Bouncing!', canape: 'Eating canapés', fountain: 'At the choc fountain', cake: 'Eating cake', samovar: 'Having tea' }[p.useObj.type] || 'Busy';

@@ -376,7 +376,9 @@ function lpcPose(p, t) {
   const castOk = !!charSheet(p._cid, 'cast'), hurtOk = !!charSheet(p._cid, 'hurt');
   const cheer = p.state === 'conga' || p.state === 'fight' || (p.state === 'watch' && G && (G.phase === 'firstdance' || G.phase === 'sendoff'));
   const slowDance = p.state === 'dance' && p.kind === 'couple' && G && G.phase === 'firstdance';
+  const lp = p.state === 'labour' && p.labourPose;
   if (lying && hurtOk) { anim = 'hurt'; col = 5; row = 0; }
+  else if (lp && hurtOk) { anim = 'hurt'; row = 0; col = lp === 'hunch' ? 1 : (Math.floor(t * 1.5) % 3 === 0 ? 2 : 3); } // doubled over, then knelt down rocking
   else if (sick && hurtOk) { anim = 'hurt'; col = 1; row = 0; }
   else if (p.sitting && charSheet(p._cid, 'sit')) { anim = 'sit'; col = 2; } // sat on a chair
   else if ((p.state === 'dance' && !slowDance || cheer) && castOk) {
@@ -386,7 +388,7 @@ function lpcPose(p, t) {
   else if (p.moving && !p.sitting) { anim = 'walk'; col = 1 + Math.floor(t * 11 + p.id) % 8; }
   else if (charSheet(p._cid, 'idle')) { anim = 'idle'; col = Math.floor(t * 1.6 + p.id * 0.37) % 2; }
   else { anim = 'walk'; col = 0; }
-  return { anim, col, row, dir, lying, sick };
+  return { anim, col, row, dir, lying, sick, labour: !!lp };
 }
 
 // ---------- facial expressions (painted onto the facing-camera frames; see assets/tools/lpc_faces.py) ----------
@@ -454,6 +456,7 @@ function drawLPC(c, p, t, sx, sy) {
   else if (p.hyper > 0 && p.moving) lift = Math.abs(Math.sin(t * 16)) * 1.4;
   if (p.drunk > 45 && !p.sitting && !P.sick && !P.lying) dx += Math.sin(t * 2.3 + p.id) * (p.drunk - 40) / 22;
   if (p.state === 'fight') dx += Math.sin(t * 20 + p.id) * 1.4;
+  if (P.labour) dx += Math.sin(t * 17) * (Math.floor(t * 1.5) % 3 === 0 ? 0.9 : 0.3); // shaking with each contraction
   const sitting = p.sitting && !P.lying;
   const sitSheet = sitting && P.anim === 'sit';
   const oy = sitting ? (sitSheet ? SIT_OY : 4.5) : 0;
@@ -463,6 +466,7 @@ function drawLPC(c, p, t, sx, sy) {
   const ef = exprFrame(id, im, P.anim, P.col, P.row, exprFor(p, P));
   if (ef) drawFrame(c, ef, 0, 0, x, y, 32, 32 * TS, { tint, cropBottom: sitSheet ? SIT_CROP : sitting ? (P.dir === 'up' ? 18 : 12) : 0 });
   else drawFrame(c, im, P.col, P.row, x, y, 32, 32 * TS, { tint, cropBottom: sitSheet ? SIT_CROP : sitting ? (P.dir === 'up' ? 18 : 12) : 0 });
+  if (p.pregnant || p.baby) drawBumpOrBaby(c, p, P, t, sx + dx, sy - lift + oy, sitting);
   // sat with their back to us: the chair back goes in front of them
   if (sitSheet && P.dir === 'up' && typeof occ !== 'undefined') {
     const tx = Math.floor(p.x), ty = Math.floor(p.y), o = occ[ty] && occ[ty][tx];
@@ -488,6 +492,62 @@ function drawLPC(c, p, t, sx, sy) {
   p._mouth = { x: sx + dx + (P.dir === 'left' ? -2 : P.dir === 'right' ? 2 : 0), y: sy - lift + oy - 21 * TS };
   if (p.state === 'fallen') for (let i = 0; i < 3; i++) { const a = t * 5 + i * 2.1; star(c, sx + Math.cos(a) * 5, sy - 12 + Math.sin(a) * 1.5, 1.1, '#ffe040'); }
   return true;
+}
+// the pregnant bridesmaid's bump, and later the baby she's carrying around
+const BUMP = ['#4e0f2c', '#a3245c', '#c63a77', '#e0639a']; // outline, shade, dress, highlight
+function drawBumpOrBaby(c, p, P, t, x, y, sitting) {
+  const TS = PERSON_SCALE;
+  if (p.pregnant) {
+    let bx = x, by = y - (P.labour ? (P.col === 1 ? 8 : 6) : sitting ? 8 : 7) * TS, rx = 4.8, ry = 3.8;
+    if (P.anim === 'hurt' && !P.labour) return;
+    if (P.dir === 'up' && !P.labour) return; // from behind you can't tell
+    if (!P.labour && (P.dir === 'left' || P.dir === 'right')) { bx += P.dir === 'left' ? -3.4 : 3.4; rx = 3.6; }
+    ell(c, bx, by, rx + 0.6, ry + 0.6); c.fillStyle = BUMP[0]; c.fill();
+    ell(c, bx, by, rx, ry); c.fillStyle = BUMP[1]; c.fill();
+    ell(c, bx - 0.5, by - 0.5, rx - 0.8, ry - 0.8); c.fillStyle = BUMP[2]; c.fill();
+    ell(c, bx - 1.4, by - 1.3, 1.2, 0.9); c.fillStyle = BUMP[3]; c.fill();
+    return;
+  }
+  // the baby: a swaddled bundle in her arms (or on her lap while she's still on the floor)
+  if (P.dir === 'up' && !P.labour) return;
+  const side = P.dir === 'left' ? -2 : P.dir === 'right' ? 2 : 0;
+  const bx = x + side + (P.labour ? 0 : 0.5), by = y - (P.labour ? 5.5 : sitting ? 10 : 12) * TS + Math.sin(t * 4) * 0.3;
+  const fresh = G && G.time - p.baby.born < 20; // a newborn cries a lot; later on it mostly sleeps
+  const cry = fresh ? Math.floor(t * 3) % 2 === 0 : Math.floor(t * 0.5 + p.id) % 7 === 0;
+  c.drawImage(babySprite(p.baby.girl, cry, P.dir === 'right'), Math.round((bx - 4.5) * 2) / 2, Math.round((by - 3) * 2) / 2, 9, 6);
+}
+// 18x12 pixel art, drawn at half a world unit per pixel (the same pixel size as the characters)
+const BABY_ROWS = [
+  '....ooooooo.......',
+  '..ooBBlllBBoo.....',
+  '.oBBllwwwlBBoooooo',
+  'oBlwwwwwwwwlBBBlBo',
+  'oBwssrrsssswBBlBBo',
+  'oBwseesseeswBlBBbo',
+  'oBwcssmmsscwBBBbbo',
+  'obwsskkkkkswBBbbbo',
+  '.obwwwwwwwwBBbbbo.',
+  '.obbBBBBBBBbbbbo..',
+  '..oobbbbbbbbbboo..',
+  '....oooooooooo....',
+];
+const BABY_CRY = { 5: 'oBweesssseewBlBBbo', 6: 'oBwtsmmmmstwBBBbbo', 7: 'obwskmmmmkswBBbbbo' }; // eyes screwed shut, tears, mouth wide open
+const BABY_PAL = { o: '#3a1f2c', w: '#fffaf4', s: '#fad6be', k: '#e6ac92', c: '#f49696', e: '#462828', m: '#a03240', r: '#966034', t: '#96d2ff' };
+const BABY_WRAP = { boy: { B: '#9fd0ff', b: '#6898d6', l: '#d6ecff' }, girl: { B: '#ffb6d6', b: '#de74a6', l: '#ffe0ee' } };
+const _babyCache = new Map();
+function babySprite(girl, cry, flip) {
+  const key = (girl ? 'g' : 'b') + (cry ? 'c' : 's') + (flip ? 'f' : '');
+  let cv = _babyCache.get(key);
+  if (!cv) {
+    const pal = Object.assign({}, BABY_PAL, BABY_WRAP[girl ? 'girl' : 'boy']);
+    cv = mkCanvas(18, 12); const x = cv.getContext('2d');
+    BABY_ROWS.forEach((row, j) => {
+      row = (cry && BABY_CRY[j]) || row;
+      for (let i = 0; i < row.length; i++) { const col = pal[row[i]]; if (col) { x.fillStyle = col; x.fillRect(flip ? 17 - i : i, j, 1, 1); } }
+    });
+    _babyCache.set(key, cv);
+  }
+  return cv;
 }
 drawPersonFull = (function (orig) {
   return function (c, p, t) {

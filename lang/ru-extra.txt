@@ -243,3 +243,39 @@ The only one here who knows all the Russian toast rules.|Единственна�
 Looks calm. Knows exactly where every guest is at all times.|Выглядит спокойной. Точно знает, где каждый гость в любой момент.
 Beige waistcoat, now with added red wine.|Бежевый жилет, теперь с красным вином.
 Still not over the cake. Do NOT mention the goat.|Всё ещё переживает из-за торта. Только НЕ упоминайте козу.
+MY WATERS HAVE BROKEN!|У МЕНЯ ОТОШЛИ ВОДЫ!
+{0}'s waters have broken! The bridesmaid is having the baby. Here. Now.|{0}: отошли воды! Подружка невесты рожает. Прямо здесь. Прямо сейчас.
+!! {0} HAS GONE INTO LABOUR !!|!! {0} РОЖАЕТ !!
+BABY ALERT! {0} IS IN LABOUR|ТРЕВОГА! {0} РОЖАЕТ
+STAND BACK! I've seen Call the Midwife!|ВСЕ НАЗАД! Я смотрела «Вызовите акушерку»!
+{0} has rolled up her sleeves and taken charge.|{0} закатала рукава и взяла всё в свои руки.
+IS THERE A DOCTOR IN THE HOUSE?!|ЗДЕСЬ ЕСТЬ ВРАЧ?!
+{0} took one look and fainted.|{0} взглянул и упал в обморок.
+What happened? Is it over?|Что случилось? Всё уже?
+I just needed a little lie down.|Я просто решил немного полежать.
+Can she not hold it in until after the cake?!|А нельзя потерпеть хотя бы до торта?!
+THIS IS MY DAY, {0}!|ЭТО МОЙ ДЕНЬ, {0}!
+IT'S A GIRL!|ДЕВОЧКА!
+IT'S A BOY!|МАЛЬЧИК!
+{0} has had a baby girl in the middle of a wedding. She will be called {1}.|{0} родила девочку прямо посреди свадьбы. Её назовут {1}.
+{0} has had a baby boy in the middle of a wedding. He will be called {1}.|{0} родила мальчика прямо посреди свадьбы. Его назовут {1}.
+We're calling her {0}!|Назовём её {0}!
+We're calling him {0}!|Назовём его {0}!
+I'm... honestly quite touched?|Я... честно говоря, даже тронута?
+That is the nicest thing anyone has ever ruined.|Это самое милое, что мне когда-либо испортили.
+He has my nose! ...wait, no.|У него мой нос! ...стоп, нет.
+I'm going to cry. Again.|Я сейчас заплачу. Опять.
+HEE HEE HOOOO!|ХИ-ХИ-ХУУУ!
+PUSH?! I AM PUSHING!|ТУЖЬСЯ?! Я ТУЖУСЬ!
+WHO PICKED THIS SONG?!|КТО ВЫБРАЛ ЭТУ ПЕСНЮ?!
+NOBODY FILM THIS!|НЕ СНИМАЙТЕ!
+CONTRACTIONS: 5 MINS APART|СХВАТКИ: КАЖДЫЕ 5 МИНУТ
+CONTRACTIONS: 2 MINS APART|СХВАТКИ: КАЖДЫЕ 2 МИНУТЫ
+PUSH!!! PUSH!!!|ТУЖЬСЯ!!! ТУЖЬСЯ!!!
+Right! Where were we? Is the bar still open?|Так! На чём мы остановились? Бар ещё открыт?
+Somebody hold the baby. I want to dance!|Подержите кто-нибудь ребёнка. Я хочу танцевать!
+{0} is back on her feet, baby in arms, and back to the party.|{0} снова на ногах, с ребёнком на руках, и вернулась на вечеринку.
+waah!|уаа!
+HAVING A BABY!|РОЖАЕТ!
+Delivering a baby|Принимает роды
+Watching the birth|Смотрит на роды

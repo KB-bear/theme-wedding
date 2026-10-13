@@ -71,6 +71,8 @@ const SFX = {
   shot() { if (AU.sfx && AU.ctx) { noiseHit(0.25, 0.6, 0, 300, AU.sbus); tone(140, 0.12, 'square', 0.5); } },
   squeak() { tone(1800, 0.06, 'square', 0.3); tone(2200, 0.08, 'square', 0.3, 0.07); tone(1900, 0.05, 'square', 0.25, 0.16); },
   thunder() { if (AU.sfx && AU.ctx) { noiseHit(1.6, 0.5, 0, 0, AU.sbus); noiseHit(1.0, 0.35, 0.3, 0, AU.sbus); tone(55, 1.2, 'sine', 0.5); } },
+  siren() { for (let i = 0; i < 6; i++) tone(i % 2 ? 660 : 880, 0.22, 'square', 0.3, i * 0.24); }, // nee-naw nee-naw
+  waah() { [0, 0.55].forEach(w => { tone(620, 0.12, 'sawtooth', 0.22, w); tone(760, 0.3, 'sawtooth', 0.22, w + 0.1); tone(540, 0.14, 'sawtooth', 0.2, w + 0.38); }); },
   sick() { tone(180, 0.25, 'sawtooth', 0.3); tone(120, 0.35, 'sawtooth', 0.3, 0.15); },
 };
 

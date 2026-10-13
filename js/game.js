@@ -364,6 +364,14 @@ function setupSpecials() {
   G.exploder = en ? G.people.find(p => p.kind === 'guest' && (p.name.toLowerCase() === en || p.name.split(' ')[0].toLowerCase() === en)) : null;
   G.explodeAt = G.exploder ? rnd(1165, 1195) : 0; // early in the party
   G.dogAt = GL.dog === '' ? 0 : rnd(603, 612);
+  // half the time one of the bridesmaids is heavily pregnant... and the baby decides today is the day
+  // (guest-names.js pregnantBridesmaid picks which one; otherwise it's any of them)
+  const pn = (GL.pregnantBridesmaid || '').trim().toLowerCase();
+  const named = pn ? G.bridesmaids.find(b => b.name.toLowerCase() === pn || b.name.split(' ')[0].toLowerCase() === pn) : null;
+  G.mum2b = chance(0.5) ? (named || pick(G.bridesmaids)) : null;
+  if (G.mum2b) G.mum2b.pregnant = true;
+  G.labourAt = G.mum2b ? rnd(700, 1370) : 0;
+  G.labour = null; labourBanner(null);
 }
 function explodeGuest(p) {
   interrupt(p);
@@ -384,6 +392,123 @@ function explodeGuest(p) {
     msg(p.name + ' has strolled back in, slightly singed, and carried on partying.', 'good');
     later(8, () => { const g = guestNear(p.x, p.y, 6, p); if (g) say(g, ['Did ' + p.name + ' just... explode?', 'Is nobody going to mention that?']); });
   });
+}
+// ---------- the pregnant bridesmaid goes into labour, mid-wedding ----------
+// Purely for laughs: it gives no Joy, costs no mood and leaves no mess to clean up.
+const LABOUR_FROM = ['idle', 'walk', 'chat', 'watch', 'dance', 'seated', 'queue'];
+const LABOUR_LEN = 26; // game minutes from waters breaking to her getting back up with the baby
+function labourCheck(t) {
+  const p = G.mum2b;
+  if (!p || t > 1380 || ['sendoff', 'end'].includes(G.phase)) { G.labourAt = 0; return; }
+  if (p.present && !p.hidden && LABOUR_FROM.includes(p.state) && !['ceremony', 'firstdance'].includes(G.phase) && !G.conga) { G.labourAt = 0; startLabour(p); }
+  else G.labourAt = t + 3;
+}
+function labourBanner(text) {
+  if (typeof document === 'undefined') return;
+  let b = document.getElementById('labourbar');
+  if (!text) { if (b) b.remove(); return; }
+  if (!b) { b = document.createElement('div'); b.id = 'labourbar'; document.body.appendChild(b); }
+  if (b.textContent !== text) b.textContent = text;
+}
+function panicAround(p, r) { // everyone nearby scatters in a flap
+  for (const q of guests()) {
+    if (q === p || q.hidden || !q.present || dist(q.x, q.y, p.x, p.y) > r || !['idle', 'chat', 'walk', 'watch', 'dance'].includes(q.state)) continue;
+    interrupt(q); q.hyper = 5; think(q, 'bang', 4);
+    const ax = q.x - p.x || rnd(-1, 1), ay = q.y - p.y || rnd(-1, 1), d = Math.hypot(ax, ay) || 1;
+    q.state = 'walk'; q.walkT = 0;
+    if (!goTo(q, clamp(Math.floor(q.x + ax / d * rnd(2, 4)), 1, MW - 2), clamp(Math.floor(q.y + ay / d * rnd(2, 4)), 1, MH - 2), (z) => { z.state = 'idle'; z.idleT = 2; z.dir = 'down'; })) { q.state = 'idle'; q.idleT = 1; }
+  }
+}
+function startLabour(p) {
+  interrupt(p); p.sitting = false; p.state = 'labour'; p.dir = 'down'; p.labourPose = 'hunch';
+  // off the chairs and tables, so she has room
+  if (p.seatC || p.seatD) { const tx = Math.floor(p.x), ty = Math.floor(p.y), o = occ[ty] && occ[ty][tx]; if (o) for (const [dx, dy] of [[0, 1], [1, 0], [-1, 0], [0, -1], [1, 1], [-1, 1]]) if (walk(tx + dx, ty + dy) && !occ[ty + dy][tx + dx]) { p.x = tx + dx + 0.5; p.y = ty + dy + 0.5; break; } }
+  G.labour = { p, t0: G.time, done: {}, midwife: null };
+  const s = iso(p.x, p.y);
+  for (let i = 0; i < 24; i++) spawnP('puke', s.x + rnd(-2, 2), s.y - 8, { vx: rnd(-26, 26), vy: rnd(-30, -6), grav: 140, life: 0.5, max: 0.5, col: pick(['#9fd4ff', '#c8e8ff', '#7ab8f0']) });
+  shout(p, 'MY WATERS HAVE BROKEN!', 3);
+  msg(p.name + "'s waters have broken! The bridesmaid is having the baby. Here. Now.", 'gold');
+  toast('!! ' + p.name.toUpperCase() + ' HAS GONE INTO LABOUR !!', 'pink');
+  G.shake = 0.5; SFX.siren();
+  crowdReact('bang', 0.7);
+  panicAround(p, 5);
+  labourBanner('BABY ALERT! ' + p.name.toUpperCase() + ' IS IN LABOUR');
+}
+function faceTowards(q, p) {
+  const dx = p.x - q.x, dy = p.y - q.y, sx = (dx - dy) * 16, sy = (dx + dy) * 8;
+  q.dir = sy < 0 && Math.abs(sy) > Math.abs(sx) * 0.8 ? 'up' : Math.abs(sx) > Math.abs(sy) * 1.2 ? (sx < 0 ? 'left' : 'right') : 'down';
+}
+function labourGawkersDone() { for (const q of G.people) if (q.state === 'gawk') { q.state = 'idle'; q.idleT = rnd(0, 3); } }
+// who says what, and when (game minutes after her waters break), one shout at a time so they don't pile up
+const LABOUR_LINES = [
+  [3, 'midwife', "STAND BACK! I've seen Call the Midwife!", 3],
+  [6, 'doctor', 'IS THERE A DOCTOR IN THE HOUSE?!', 2.5],
+  [8.5, 'mum', 'HEE HEE HOOOO!', 2],
+  [10.5, 'groom', 'Can she not hold it in until after the cake?!', 2.5],
+  [13, 'mum', 'PUSH?! I AM PUSHING!', 2],
+  [15, 'bride', 'THIS IS MY DAY, {mum}!', 2.5],
+  [17.5, 'mum', 'NOBODY FILM THIS!', 1.5],
+];
+function labourTick() {
+  const L = G.labour, p = L.p, e = G.time - L.t0;
+  const once = (k, at, f) => { if (e >= at && !L.done[k]) { L.done[k] = true; f(); } };
+  const free = (q) => q && q.present && !q.hidden && q !== p && ['idle', 'walk', 'chat', 'watch', 'dance', 'seated', 'queue'].includes(q.state);
+  if (!p.present) { G.labour = null; labourBanner(null); labourGawkersDone(); return; }
+  once('midwife', 1.5, () => { // a mum rolls her sleeves up and takes charge
+    const m = [G.gmum, G.mob].find(free) || guestNear(p.x, p.y, 30, p);
+    if (!m) return;
+    L.midwife = m; interrupt(m); m.state = 'walk'; m.walkT = -99; m.hyper = 6;
+    const settle = (q) => { q.path = []; q.x = p.x + 0.8; q.y = p.y + 0.15; q.state = 'midwife'; q.dir = 'left'; q.moving = false; };
+    if (!goTo(m, Math.floor(p.x + 0.8), Math.floor(p.y), settle)) settle(m);
+    msg(m.name + ' has rolled up her sleeves and taken charge.', '');
+  });
+  once('kneel', 3, () => { p.labourPose = 'kneel'; });
+  once('faint', 7, () => { // a best man sees too much and goes down like a sack of potatoes
+    const b = [G.bestMan, G.bestMan2].find(free);
+    if (!b) return;
+    interrupt(b); b.state = 'fallen'; b.timer = 14; b.onTimer = (q) => { q.state = 'idle'; q.idleT = 0; say(q, ['What happened? Is it over?', 'I just needed a little lie down.'], { force: true }); };
+    msg(b.name + ' took one look and fainted.', '');
+  });
+  LABOUR_LINES.forEach(([at, who, line, mins], i) => once('line' + i, at, () => {
+    const q = who === 'mum' ? p : who === 'midwife' ? L.midwife : who === 'groom' ? G.groom : who === 'bride' ? G.bride : guestNear(p.x, p.y, 10, p);
+    if (q && q.present && !q.hidden && q !== (who === 'doctor' ? L.midwife : null)) shout(q, line.replace('{mum}', p.name.split(' ')[0].toUpperCase()), mins);
+  }));
+  // onlookers gather round in a ring to gawp, but leave her room (and leave her in view)
+  if (e < LABOUR_LEN) for (const q of guests()) {
+    if (q === p || q === L.midwife || q.hidden || q.moving || !['idle', 'chat', 'watch', 'gawk'].includes(q.state)) continue;
+    const d = dist(q.x, q.y, p.x, p.y);
+    if (d > 4) continue;
+    if (d > 1.9) { if (q.state !== 'gawk') { interrupt(q); q.state = 'gawk'; think(q, 'bang', 3); } faceTowards(q, p); continue; }
+    const ax = (q.x - p.x) / (d || 1) || 0.7, ay = (q.y - p.y) / (d || 1) || 0.7;
+    interrupt(q); q.state = 'walk'; q.walkT = 0;
+    if (!goTo(q, clamp(Math.floor(p.x + ax * 2.6), 1, MW - 2), clamp(Math.floor(p.y + ay * 2.6), 1, MH - 2), (z) => { z.state = 'gawk'; faceTowards(z, p); })) q.state = 'idle';
+  }
+  once('pop', 19, () => { // and here they are!
+    const girl = chance(0.5), s = iso(p.x, p.y);
+    p.pregnant = false; p.baby = { girl, born: G.time };
+    spawnP('flash', s.x, s.y - 10, { life: 0.6, max: 0.6 });
+    confettiAt(p.x, p.y, 50); heartsAt(p.x, p.y, 16);
+    G.shake = 0.3; SFX.triumph(); SFX.waah();
+    const named = girl ? G.bName : G.gName;
+    toast("IT'S A " + (girl ? 'GIRL' : 'BOY') + '!', 'pink');
+    msg(p.name + ' has had a baby ' + (girl ? 'girl' : 'boy') + ' in the middle of a wedding. ' + (girl ? 'She' : 'He') + ' will be called ' + named + '.', 'gold');
+    shout(p, "We're calling " + (girl ? 'her' : 'him') + ' ' + named + '!', 4);
+    crowdReact('heart', 0.85);
+    labourBanner("IT'S A " + (girl ? 'GIRL' : 'BOY') + '!');
+  });
+  once('react', 23, () => {
+    const g = (p.baby.girl ? G.bride : G.groom);
+    if (g.present) say(g, p.baby.girl ? ["I'm... honestly quite touched?", 'That is the nicest thing anyone has ever ruined.'] : ['He has my nose! ...wait, no.', "I'm going to cry. Again."], { force: true, mins: 3 });
+  });
+  if (e >= 3 && e < 19) labourBanner(e < 9 ? 'CONTRACTIONS: 5 MINS APART' : e < 14 ? 'CONTRACTIONS: 2 MINS APART' : 'PUSH!!! PUSH!!!');
+  if (e >= LABOUR_LEN) { // up she gets, baby in her arms, back to the party
+    p.state = 'idle'; p.idleT = 2; p.labourPose = null;
+    const m = L.midwife; if (m && m.state === 'midwife') { m.state = 'idle'; m.idleT = 1; }
+    labourGawkersDone();
+    shout(p, pick(['Right! Where were we? Is the bar still open?', 'Somebody hold the baby. I want to dance!']), 5);
+    msg(p.name + ' is back on her feet, baby in arms, and back to the party.', 'good');
+    G.labour = null; labourBanner(null);
+  }
 }
 function spawnDog() {
   const GL = window.GUEST_LIST || {};
@@ -628,6 +753,8 @@ function minuteTick() {
   if (G.powerOut > 0) { G.powerOut--; if (G.powerOut <= 0) msg('The power is back on!', 'good'); }
   if (G.goatAt && t >= G.goatAt && !G.people.some(a => a.role === 'goat' && a.present)) { G.goatAt = 0; const gt = spawnAnimal('goat', false); msg('A goat has wandered in from next door!', 'bad'); later(4, () => { const g = guestNear(gt.x, gt.y, 8); if (g) say(g, ['Is that... a goat?', 'Did anyone invite the goat?', 'Aww, a goat! Wait. Why is there a goat?']); }); }
   if (G.dogAt && t >= G.dogAt) { G.dogAt = 0; spawnDog(); }
+  if (G.labourAt && t >= G.labourAt) labourCheck(t);
+  if (G.labour) labourTick();
   if (G.explodeAt && t >= G.explodeAt) {
     const p = G.exploder;
     if (!p || !p.present && !p.exploded && G.time > 1380) G.explodeAt = 0;
@@ -797,6 +924,11 @@ function ambientParticles(dt) {
       for (const p of guests()) if (p.state === 'watch' && chance(0.5)) { const s = iso(p.x, p.y); spawnP('star', s.x + 4 + rnd(-2, 2), s.y - 22 + rnd(-3, 3), { life: 0.4, max: 0.4, vy: rnd(-10, 10), vx: rnd(-10, 10) }); }
     }
     if (G.fireworks > 0) { G.fireworks--; const s = iso(rnd(2, 20), rnd(2, 14)); fireworkAt(s.x, s.y - rnd(60, 120)); }
+    for (const p of G.people) {
+      if (!p.present || p.hidden) continue;
+      if (p.state === 'labour' && chance(0.6)) { const s = iso(p.x, p.y); spawnP('puke', s.x + rnd(-4, 4), s.y - 24, { vx: rnd(-8, 8), vy: rnd(-12, -4), grav: 60, life: 0.5, max: 0.5, col: '#bfe4ff' }); } // sweat
+      if (p.baby && chance(p.state === 'labour' ? 0.5 : 0.06)) { const s = iso(p.x, p.y); spawnP('text', s.x + 6, s.y - 14, { text: 'waah!', col: '#ffffff', vy: -10, life: 1.2, max: 1.2 }); }
+    }
     for (const p of G.people) if (p.present && p.state === 'sleep' && chance(0.3)) { const s = iso(p.x, p.y); spawnP('text', s.x - 4, s.y - 10, { text: 'z', col: '#ffffff', vy: -10, life: 1.2, max: 1.2 }); }
   }
 }
